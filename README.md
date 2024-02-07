@@ -1,26 +1,26 @@
  <p align="center"> 
     <picture>
-      <img src="./demo/logo2.png" height="100">
+      <img src="./demo/logo2.png" height="180">
     </picture>
 </p>
 
-<p align="center">
-  <a href="https://github.com/DevonGifford/DeVim/commit/main">
-    <img alt="LastCommit" src="https://img.shields.io/github/last-commit/DevonGifford/DeVim/main?style=for-the-badge&logo=github&color=7dcfff">
-  </a>
-  <a href="https://github.com/devongifford/DeVim/actions/workflows/sync.yml">
-    <img alt="SyncStatus" src="https://img.shields.io/github/workflow/status/DevonGifford/DeVim/Sync%20to%20dots?style=for-the-badge&logo=github&label=Sync%20to%20dots&color=bb9af7">
-  </a>
-  <a href="https://github.com/devongifford/DeVim/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/DevonGifford/DeVim?style=for-the-badge&logo=github&color=9ece6a">
-  </a>
-  <a href="https://github.com/DevonGifford/DeVim/stargazers">
-    <img alt="Stars" src="https://img.shields.io/github/stars/DevonGifford/DeVim?style=for-the-badge&logo=github&color=f7768e">
-  </a>
-</p>
+<div align="center">
+  <img src="https://img.shields.io/github/last-commit/DevonGifford/DeVim?style=for-the-badge" alt="Last Commit">
+  <img src="https://img.shields.io/badge/synced-yes-green?style=for-the-badge" alt="Synced">
+  <img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge" alt="Build">
+  <img src="https://img.shields.io/badge/version-v1.0-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/maintenance-low-orange?style=for-the-badge" alt="Maintenance">
+</div>
 
+<div align="center">
+  <img src="https://img.shields.io/badge/code%20quality-excellent-brightgreen?style=for-the-badge" alt="Code Quality">
+  <img src="https://img.shields.io/github/stars/DevonGifford/DeVim?style=for-the-badge" alt="Stars">
+</div>
 
-## _**Who says you can't vim and look good on Windows?**_
+<br/>
+
+## _**Who says you can't Vim and look good on Windows?**_
+
 Hi my name is Devon and this is DeVim, my personal curated collection of Windows tools I use for everyday full-stack development. This collection integrates NeoVim seamlessly into Windows, consolidating scattered config files into one convenient location.
 
 Feel free to explore and customize these tools to enhance your development experience! Your suggestions for improvements are always welcome! ❤
@@ -28,7 +28,6 @@ Feel free to explore and customize these tools to enhance your development exper
 > [!NOTE]\
 > This repository is **not intended** to be cloned and run as-is.
 > It consists of my personal configuration files, which you'll need to set up and configure according to your preferences.
-
 
  <p align="center"> 
     <picture>
@@ -91,11 +90,11 @@ The setup process is fairly straightforward and can be figured out with minimal 
 
 A huge thank you to the following individuals for their support:
 
-- @jayson-lennon
-- @scottmckendry
-- @JazzyGrim (Sindo)
-- @devaslife
-- @tjdevries
-- @ThePrimeagen
+- [@jayson-lennon](https://github.com/jayson-lennon)
+- [@scottmckendry](https://github.com/scottmckendry)
+- [@JazzyGrim](https://github.com/JazzyGrim) (Sindo)
+- [@devaslife](https://www.devas.life/)
+- [@tjdevries](https://github.com/tjdevries)
+- [@ThePrimeagen](https://github.com/theprimeagen)
 
 ---
