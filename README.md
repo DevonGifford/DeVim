@@ -9,7 +9,6 @@
   <img src="https://img.shields.io/badge/synced-yes-green?style=for-the-badge" alt="Synced">
   <img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge" alt="Build">
   <img src="https://img.shields.io/badge/version-v1.0-blue?style=for-the-badge" alt="Version">
-  <img src="https://img.shields.io/badge/maintenance-low-orange?style=for-the-badge" alt="Maintenance">
 </div>
 
 <div align="center">
@@ -46,7 +45,7 @@ A curated list of tools that I use on a daily basis for my development workflow.
 
 #### General Tools:
 
-- [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher): An application launcher for Window, quickly open files, folders and apps - think poor mans spotlight/raycast.
+- [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher): An application launcher for Windows - think poor mans spotlight/raycast
 - [PowerToys](https://github.com/microsoft/PowerToys): A set of utilities for power users to improve productivity and efficiency on Windows.
 - [Obsidian](https://github.com/obsidianmd): A lightweight note taking app that plays well with vim.
 
