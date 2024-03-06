@@ -1,26 +1,26 @@
  <p align="center"> 
     <picture>
-      <img src="demo/logo2" height="100">
+      <img src="./demo/logo2.png" height="100">
     </picture>
-  </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/devongifford/devwin/commit">
-    <img alt="LastCommit" src="https://img.shields.io/github/last-commit/devongifford/devwin/main?style=for-the-badge&logo=github&color=%237dcfff">
+  <a href="https://github.com/DevonGifford/DeVim/commit/main">
+    <img alt="LastCommit" src="https://img.shields.io/github/last-commit/DevonGifford/DeVim/main?style=for-the-badge&logo=github&color=7dcfff">
   </a>
-    <img alt="SyncStatus" src="https://img.shields.io/github/actions/workflow/status/devongifford/devwin/sync.yml?style=for-the-badge&logo=github&label=Sync%20to%20dots&color=%23bb9af7">
-
-  <a href="https://github.com/devongifford/devim/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/devongifford/devim?style=for-the-badge&logo=github&color=%239ece6a">
+  <a href="https://github.com/devongifford/DeVim/actions/workflows/sync.yml">
+    <img alt="SyncStatus" src="https://img.shields.io/github/workflow/status/DevonGifford/DeVim/Sync%20to%20dots?style=for-the-badge&logo=github&label=Sync%20to%20dots&color=bb9af7">
   </a>
-  <a href="https://github.com/devongifford/devim/stars">
-    <img alt="stars" src="https://img.shields.io/github/stars/devongifford/devim?style=for-the-badge&logo=github&color=%23f7768e">
+  <a href="https://github.com/devongifford/DeVim/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/DevonGifford/DeVim?style=for-the-badge&logo=github&color=9ece6a">
+  </a>
+  <a href="https://github.com/DevonGifford/DeVim/stargazers">
+    <img alt="Stars" src="https://img.shields.io/github/stars/DevonGifford/DeVim?style=for-the-badge&logo=github&color=f7768e">
   </a>
 </p>
 
-**Who says you can't vim and look good on Windows?**
 
+## _**Who says you can't vim and look good on Windows?**_
 Hi my name is Devon and this is DeVim, my personal curated collection of Windows tools I use for everyday full-stack development. This collection integrates NeoVim seamlessly into Windows, consolidating scattered config files into one convenient location.
 
 Feel free to explore and customize these tools to enhance your development experience! Your suggestions for improvements are always welcome! ❤
@@ -29,14 +29,17 @@ Feel free to explore and customize these tools to enhance your development exper
 > This repository is **not intended** to be cloned and run as-is.
 > It consists of my personal configuration files, which you'll need to set up and configure according to your preferences.
 
-> [!WARNING]\
-> Under _**active development**_, expect changes. Existing configuration files will be overwritten. Please make a backup of any files you wish to keep before proceeding.
 
  <p align="center"> 
     <picture>
-      <img src="demo/demo1" height="100">
+      <img src="./demo/demo1.png" height="500">
     </picture>
 </p>
+
+> [!WARNING]\
+> Under _**active development**_, expect changes. Existing configuration files will be overwritten. Please make a backup of any files you wish to keep before proceeding.
+
+<br />
 
 ## 📝Developer Tools Collection
 
@@ -61,6 +64,8 @@ A curated list of tools that I use on a daily basis for my development workflow.
 - [Lazy Vim](https://github.com/LazyVim/LazyVim): A starting point for NeoVim I branch from for day to day development.
 - [VsCode](https://code.visualstudio.com/): My go to pair programming editor, enhanced with a little Vim magic.
 
+<br />
+
 ## ✔Prerequisites:
 
 Ensure you have the following:
@@ -70,6 +75,8 @@ Ensure you have the following:
 - Basic Lua understanding
 - Proficiency in Vim and CLI
 
+<br />
+
 ## 🛠️ Setup and Learning Resources
 
 **The bad news:**
@@ -78,15 +85,17 @@ As mentioned, this repository doesn't offer automated installation procedures or
 **The good news:**
 The setup process is fairly straightforward and can be figured out with minimal effort. Additionally, I've compiled a collection of learning notes and resources to help you get started with learning Vim and installing lazyvim. [Check it out here](https://devon-gifford.notion.site/Vim-NeoVim-LazyVim-VsCode-emulation-ab098b5f8a8c43c6824633d218a2caf6).
 
+<br />
+
 ## 🙌 Special Thanks
 
 A huge thank you to the following individuals for their support:
 
-- Jayson
-- scottmckendry
-- Sindo
-- devaslife
-- TJ DeVries
-- Primegan
+- @jayson-lennon
+- @scottmckendry
+- @JazzyGrim (Sindo)
+- @devaslife
+- @tjdevries
+- @ThePrimeagen
 
 ---
