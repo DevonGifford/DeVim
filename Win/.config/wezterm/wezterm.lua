@@ -1,26 +1,20 @@
 -- 🧠 Personal WezTerm Config - Developer Edition
 -- ================================================================================
+-- 📍 File Location & Editing Notes:
+-- - Native file lives on Windows:   C:\Users\<user-name>\.wezterm.lua
+-- - Edited from WSL via symlink     ~/.config/wezterm/wezterm.lua -> /mnt/c/Users/<user-name>/.wezterm.lua
+--
+--   Symlink setup (run once from WSL):
+--     mkdir -p ~/.config/wezterm
+--     ln -s /mnt/c/Users/giffordde/.wezterm.lua ~/.config/wezterm/wezterm.lua
+--
 -- ✅ Prerequisites:
 -- - wezterm >= 2023.x
--- - Nerd Font for icons in prompts (e.g., Starship, Zsh, etc.)
--- - WSL2 (if on Windows) for full Linux CLI dev stack
-
--- 🎯 Goals:
--- - Minimalist, fast terminal startup
--- - Clean font rendering with Nerd Fonts
--- - WSL-friendly config with platform detection
-
--- 📦 Features:
--- - Tokyo Night theme for consistency with Neovim & Starship
--- - Automatic detection of CMD/Ctrl modifier per OS
--- - Smart scrollback clearing
--- - Tab bar disabled for cleaner UI
--- - Mouse and triple-click support
-
--- ⚙️ Pro Tip:
--- Edit this file and run `Ctrl+Shift+R` to reload WezTerm instantly (no restart needed).
+-- - Nerd Font for glyphs and icons (Starship, Zsh, Neovim)
+-- - WSL2 (Windows) for full Linux-based development workflow
+--
+-- ⚙️ Pro Tip :Reload config with Ctrl+Shift+R (no restart required)
 -- ================================================================================
-
 
 -- Base wezterm modules
 -- 'mux' handles multiplexed terminal windows
@@ -54,7 +48,15 @@ config.font = wezterm.font_with_fallback {
   "Hack Nerd Font",
   "JetBrains Mono",
 }
-config.font_size = 11
+config.font_size = 10.5
+
+-- No extra padding around the terminal window
+config.window_padding = {
+  top = 0,
+  bottom = 0,
+  left = 0,
+  right = 0,
+}
 
 -- Cursor
 config.default_cursor_style = 'BlinkingBar'
@@ -65,7 +67,6 @@ config.foreground_text_hsb = {
   saturation = 1.2,
   brightness = 1.5,
 }
-
 
 
 -- === Behavior & UX ===

@@ -1,19 +1,14 @@
 # ================================================================================
 # TÜV Rheinland Developer Starship Config
 # ================================================================================
+# 📍 File Location: ~/.config/starship.toml
+#
 # ✅ Prerequisites
-# Core: Starship (>=1.18), Nerd Font
-# Tools surfaced in prompt: git, Node.js (via nvm)  # optional but recommended
-# Theme: Catppuccin Mocha palette (defined below)
-
-# Placement
-# Save as: ~/.config/starship.toml
-
-# Modules Shown
-# OS → username → directory → git_branch/status → nodejs → (optional) time → prompt
-
-# ⚠️ Notes
-# - Restart your shell or run `exec zsh` / `exec bash` after edits
+# - Core: Starship (>=1.18), Nerd Font
+# - Tools surfaced in prompt: git, Node.js (via nvm)  # optional but recommended
+# - Theme: Catppuccin Mocha palette (defined below)
+#
+# ⚠️ Note: Restart your shell or run `exec zsh` / `exec bash` after edits
 # ================================================================================
 
 "$schema" = 'https://starship.rs/config-schema.json'

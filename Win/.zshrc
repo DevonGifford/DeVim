@@ -1,11 +1,13 @@
 # 🧠 Personal ZSH Config - Developer Edition
 # ================================================================================
-# ✅ Prerequisites
-# Core: Oh My Zsh, zsh-autosuggestions, zsh-syntax-highlighting, Nerd Font
-# Tools (via Homebrew/Linuxbrew): starship, bat, eza, fd, fzf, zoxide, nvm
-# Optional: corporate CA (Zscaler), SSH keys for GitHub/GitLab
+# 📍 File Location: ~/.zshrc
 #
-# ⚠️ Notes: restart terminal or `exec zsh` after edit
+# ✅ Prerequisites:
+# - Core: Oh My Zsh, zsh-autosuggestions, zsh-syntax-highlighting, Nerd Font
+# - Tools (via Homebrew/Linuxbrew): starship, bat, eza, fd, fzf, zoxide, nvm
+# - Optional: corporate CA (Zscaler), SSH keys for GitHub/GitLab
+#
+# ⚙️ Pro Tp: Reload config with `exec zsh` (no restart required)
 # ================================================================================
 
 # ---- Oh My Zsh Config ----
@@ -30,9 +32,21 @@ export NVM_DIR="$HOME/.nvm"
 export BAT_THEME=tokyonight_night
 
 # ---- Eza (better ls) -----
-alias ls='eza --icons=always --color=always -1'
-alias la='eza --icons=always --color=always -1 -a'
-alias lt='eza --color=always --git --icons=always --group-directories-first -lT --level=2'
+# Tree view with git status and limited depth 
+alias ls="eza -lT --level=1 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls1="eza -lT --level=2 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls2="eza -lT --level=3 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls3="eza -lT --level=4 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+# Tree view with all files, including hidden ones (dotfiles)
+alias la="eza -lTa --level=1 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias la1="eza -lTa --level=2 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias la2="eza -lTa --level=3 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias la3="eza -lTa --level=4 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+# Tree view with all files, and full ownership details (user, group, permissions)
+alias lta="eza -lTag --level=1 --icons"
+alias lta1="eza -lTag --level=2 --icons"
+alias lta2="eza -lTag --level=3 --icons"
+alias lta3="eza -lTag --level=4 --icons"
 
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
@@ -73,11 +87,14 @@ _fzf_comprun() {
   esac
 }
 
-# ----- WORK: SSH Agent / Keys Setup ------
+# ----- SSH Agent / Keys Setup ------
 
-# ---- WORK: Custom ZSCALAR CERT ----
 
-# --- WORK: Proxy presets ---
+# ---- Custom ZSCALAR CERT ----
+
+
+# --- Proxy presets ---
+
 
 # ----- Personal Quick Aliases ------
 alias syncdevim="bash ~/personal/DeVim/Win/sync-to-devim.sh"
@@ -100,8 +117,6 @@ _attach_complete() {
 }
 compdef _attach_complete attach
 
-
 # ---- starship prompts (must be at end of file!) ----
 eval "$(starship init zsh)"
-
 

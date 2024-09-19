@@ -1,4 +1,4 @@
--- Global settings (vim.g)
+-- Vim: Global settings (vim.g)
 local global_options = {
     mapleader = ' ',
     loaded_perl_provider = 0,
@@ -14,7 +14,7 @@ local global_options = {
 }
 for k, v in pairs(global_options) do vim.g[k] = v end
 
--- Editor behavior (vim.opt)
+-- Vim: Editor behavior (vim.opt)
 local o_options = {
     winborder = "rounded",
     autoindent = true,
@@ -43,14 +43,14 @@ local o_options = {
 }
 for k, v in pairs(o_options) do vim.opt[k] = v end
 
--- Window-local settings (vim.wo)
+-- Vim: Window-local settings (vim.wo)
 local wo_options = {number = true, signcolumn = 'yes', relativenumber = true}
 for k, v in pairs(wo_options) do vim.wo[k] = v end
 
--- Treat `-` as part of words (e.g. `foo-bar` = one word)
+-- CSS/Tailwind: Treat `-` as part of words (e.g. `foo-bar` = one word)
 vim.api.nvim_command("set iskeyword+=-")
 
--- Diagnostic display settings (LSP/UI)
+-- Vim: Diagnostic display settings (LSP/UI)
 vim.diagnostic.config({
     underline = true,
     virtual_text = {source = 'if_many', spacing = 2},
@@ -58,7 +58,6 @@ vim.diagnostic.config({
     update_in_insert = false,
     severity_sort = true
 })
-
 
 -- NVIM SETUP (lazy.nvim bootstrap)
 local uv = vim.uv or vim.loop
@@ -83,62 +82,57 @@ local oi = require("custom.open_import")
 
 -- CUSTOM KEYBINDINGS
 local keymap = vim.keymap
---
 -- Basic movement
 keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
 keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
--- Scroll with center
-keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down (centered)" })
-keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up (centered)" })
+keymap.set("n", "<C-d>", "<C-d>zz", { desc = "[D]own scroll (centered)" })
+keymap.set("n", "<C-u>", "<C-u>zz", { desc = "[U]p scroll (centered)" })
 -- Increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "[+] Increment number" })
 keymap.set("n", "<leader>-", "<C-x>", { desc = "[-] Decrement number" })
 -- File management (NvimTree and Oil integration)
-keymap.set("n", "<leader>f", ":NvimTreeFindFile<CR>", { desc = "[F]ind file in [N]vimTree" })
-keymap.set("n", "<c-b>", ":Oil<CR>", { silent = true, desc = "Open [O]il file explorer" })
+keymap.set("n", "<leader>f", ":NvimTreeFindFile<CR>", { desc = "[F]ind file in NvimTree" })
+keymap.set("n", "<c-b>", ":Oil<CR>", { silent = true, desc = "[O]il file explorer" })
 -- File and buffer navigation (Tab management)
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "[T]ab [O]pen new" })
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "[T]ab e[X]it current" })
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "[T]ab [N]ext" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "[T]ab [P]revious" })
-keymap.set("n", "<Tab>", ":tabnext<CR>", { desc = "Next tab" })
-keymap.set("n", "<S-Tab>", ":tabprev<CR>", { desc = "Previous tab" })
+keymap.set("n", "<Tab>", ":tabnext<CR>", { desc = "Next [TAB]" })
+keymap.set("n", "<S-Tab>", ":tabprev<CR>", { desc = "Previous [S-TAB]" })
 -- Window splitting
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "[S]plit [V]ertical" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "[S]plit [H]orizontal" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "[S]plit [E]qual size" })
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "[S]plit e[X]it current" })
 -- Resize windows
-keymap.set("n", "<leader><leader>+", ":exe 'vertical resize ' . (winwidth(0) * 3/2)<CR>", { desc = "[+] Resize wider", silent = true })
-keymap.set("n", "<leader><leader>-", ":exe 'vertical resize ' . (winwidth(0) * 2/3)<CR>", { desc = "[-] Resize narrower", silent = true })
+keymap.set("n", "<leader><Left>",  ":exe 'vertical resize ' .. (winwidth(0) * 0.8)<CR>", { silent = true, desc = "[←] Narrow split" })
+keymap.set("n", "<leader><Right>",  ":exe 'vertical resize ' .. (winwidth(0) * 1.2)<CR>", { silent = true, desc = "[←] Narrow split" })
 -- Diagnostics
-keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, { desc = "Go to previous diagnostic message" })
-keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, { desc = "Go to next diagnostic message" })
-keymap.set("n", "<leader>t", vim.diagnostic.open_float, { desc = "[T]oggle diagnostic float" })
+keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, { desc = "([) previous [D]iagnostic message" })
+keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, { desc = "([) next [D]iagnostic message" })
 keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "[E]rror float window" })
 keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "[Q]uickfix diagnostics list" })
 -- Custom Jump to import target
-keymap.set("n", "<leader>go", oi.go, { desc = "Go to import target" })
-keymap.set("n", "<leader>gos", function() oi.go("vsplit") end, { desc = "Go to import target (vsplit)" })
-keymap.set("n", "<leader>goh", function() oi.go("split") end, { desc = "Go to import target (split)" })
-keymap.set("n", "<leader>got", function() oi.go("tabedit") end, { desc = "Go to import target (tab)" })
--- Custom LSP code actions
-keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
-keymap.set("v", "<leader>ca", function() vim.lsp.buf.code_action() end, { desc = "Code Action (range)" })
+keymap.set("n", "<leader>go", oi.go, { desc = "[GO] to object import" })
+keymap.set("n", "<leader>gos", function() oi.go("vsplit") end, { desc = "[GO] to import ([S]plit vertical)" })
+keymap.set("n", "<leader>goh", function() oi.go("split") end, { desc = "[GO] to import ([H]orizontal split)" })
+keymap.set("n", "<leader>got", function() oi.go("tabedit") end, { desc = "[GO] to import (New [T]ab)" })
+-- Custom LSP Code Actions
+keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
+keymap.set("v", "<leader>ca", function() vim.lsp.buf.code_action() end, { desc = "[C]ode [A]ction (range)" })
 -- Git (Telescope)
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "[G]it [S]tatus" })
-keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "[G]it [C]ommits (project)" })
-keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "[G]it [B]ranches" })
-keymap.set("n", "<leader>gl", "<cmd>Telescope git_bcommits<CR>", { desc = "[G]it [L]og (buffer)" })
+keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "[G]it [C]ommits (repo history)" })
+keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "[G]it [B]ranches (list & checkout)" })
+keymap.set("n", "<leader>gl", "<cmd>Telescope git_bcommits<CR>", { desc = "[G]it [L]og (current file history)" })
 -- Misc
-keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all in buffer" })
-keymap.set("i", "<S-Tab>", "<C-D>", { desc = "Decrease indent (Insert mode)" })
-keymap.set({ "n", "v" }, "<Space>", "<Nop>", { desc = "Disable Space", silent = true })
--- File ops
--- keymap.set("n", "<leader>w", ":w<CR>", { desc = "[W]rite/save file", noremap = true, silent = true })
--- keymap.set("n", "<leader>Q", ":q<CR>", { desc = "[Q]uit file", noremap = true, silent = true })
--- keymap.set("n", "<Leader>QA", ":qa<CR>", { desc = "[Q]uit [A]ll", noremap = true, silent = true })
-
+keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "[S]elect [A]ll in buffer" })          -- Select all text
+keymap.set("i", "<S-Tab>", "<C-D>", { desc = "[D]ecrease indent (Insert)" })         -- Enables using shift TAB to decrease indentation
+keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })                      -- Disable <Space> in normal and visual mode to avoid conflicts
+-- keymap.set("n", "<leader>w", ":w<CR>", opts)                                      -- Save file (same as <Leader>w)
+-- keymap.set("n", "<leader>q", ":q<CR>", opts)                                      -- Quit file (same as <Leader>q)
+-- keymap.set("n", "<Leader>Q", ":qa<Return>", opts)                                 -- Quit all open windows (custom action)
 
 -- CUSTOM PLUGINS
 require 'custom.formatting'
@@ -154,6 +148,7 @@ require('lazy').setup({
     require 'custom.copilot',
     require 'custom.flash',
     require 'custom.gitsigns',
+    require 'custom.diffview',
     require 'custom.lsp',
     require 'custom.nvim-cmp',
     require 'custom.telescope',
@@ -165,13 +160,13 @@ require('lazy').setup({
     require 'custom.mdx',
     require 'custom.highlight-colors',
     require 'custom.lualine',
-    require 'custom.tokyonight',
     require 'custom.conflict-marker',
     require 'custom.spectre',
     require 'custom.refactoring',
     require 'custom.tree',
     require 'custom.bufferline',
+    require 'custom.tokyonight',
     require 'custom.lazygit',
     require 'custom.which-key',
-    -- require 'custom.theme'
 }, {})
+

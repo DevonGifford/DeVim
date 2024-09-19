@@ -1,7 +1,8 @@
 return {
     'neovim/nvim-lspconfig',
     dependencies = {
-        'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim',
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
         'folke/lazydev.nvim'
     },
     config = function()
@@ -146,33 +147,16 @@ return {
                                 end
 
                                 nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-                                nmap('<leader>ca', vim.lsp.buf.code_action,
-                                '[C]ode [A]ction')
-
-                                nmap('gd',
-                                require('telescope.builtin').lsp_definitions,
-                                '[G]oto [D]efinition')
-                                nmap('gr',
-                                require('telescope.builtin').lsp_references,
-                                '[G]oto [R]eferences')
-                                nmap('gI',
-                                require('telescope.builtin').lsp_implementations,
-                                '[G]oto [I]mplementation')
-                                nmap('gD', vim.lsp.buf.declaration,
-                                '[G]oto [D]eclaration')
-                                nmap('<leader>D',
-                                require('telescope.builtin').lsp_type_definitions,
-                                'Type [D]efinition')
-                                nmap('<leader>ds',
-                                require('telescope.builtin').lsp_document_symbols,
-                                '[D]ocument [S]ymbols')
-                                nmap('<leader>ws',
-                                require('telescope.builtin').lsp_dynamic_workspace_symbols,
-                                '[W]orkspace [S]ymbols')
-
+                                nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+                                nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+                                nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+                                nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+                                nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+                                nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
+                                nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+                                nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
                                 nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-                                nmap('<C-k>', vim.lsp.buf.signature_help,
-                                'Signature Documentation')
+                                nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
                             end,
                             settings = servers[server_name],
                             filetypes = (servers[server_name] or {}).filetypes

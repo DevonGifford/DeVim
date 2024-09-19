@@ -1,12 +1,20 @@
 return {
-    'nvim-pack/nvim-spectre',
-    dependencies = {'nvim-lua/plenary.nvim'},
-    config = function()
-        require("spectre").setup({
-            replace_engine = {["sed"] = {cmd = "sed", args = {"-i", "", "-E"}}}
-        })
+  "nvim-pack/nvim-spectre",
+  dependencies = { "nvim-lua/plenary.nvim" },
 
-        vim.keymap.set('n', '<leader>sw',
-                       '<cmd>lua require("spectre").toggle()<CR>')
-    end
+  config = function()
+    -- Project-wide search & replace with preview
+    require("spectre").setup({
+      replace_engine = {
+        ["sed"] = {
+          cmd = "sed",
+          args = { "-i", "", "-E" }, -- in-place, extended regex
+        },
+      },
+    })
+
+    vim.keymap.set("n", "<leader>sw", function()
+      require("spectre").toggle()
+    end, { desc = "[S]earch project [W]ide & replace" })
+  end,
 }

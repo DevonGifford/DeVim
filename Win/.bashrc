@@ -1,49 +1,30 @@
 # 🧠 Personal Bash Config - Developer Edition
 # ================================================================================
-# It's sourced automatically for non-login, interactive shells (e.g., new terminal tabs).
-
-# ✅ Prerequisites / Assumptions:
-# - Bash is your default shell (or used via scripts/compat mode)
-# - Some tools like `notify-send`, `dircolors`, and `lesspipe` are installed
-# - You’re okay with auto-switching to Zsh if it’s available (see bottom)
-
-# 💻 What This Config Does:
-# - Improves history handling and terminal resizing
-# - Adds sane defaults for colorized output and aliases
-# - Sets up a colored, context-aware prompt
-# - Boots Homebrew and Starship (if present)
-# - Loads autocompletion support
-# - Switches to Zsh if available — because we live in the future
-
+# ✅ Prerequisites
+# Core: bash, bash-completion, Nerd Font
+# Tools (brew/linxbrew): starship, bat, eza, fd, fzf, zoxide, nvm
+# Optional: corporate CA (Zscaler), SSH keys (GitHub/GitLab)
+#
+# ⚠️ Run `exec bash` after edits to reload
 # ================================================================================
 
-
-## --- Bail Early if Not Interactive ---
+# === Interactive shells only (Bail Early) ===
 case $- in *i*) ;; *) return ;; esac
 
-
-# === History Behavior ===
+# === History / tty resize ===
 HISTCONTROL=ignoreboth        # Skip dupes & lines starting w/ space
 shopt -s histappend           # Don't overwrite history, append it
 HISTSIZE=1000                 # Max lines in history per session
 HISTFILESIZE=2000             # Max lines in history file
+shopt -s checkwinsize	      # Resize terminal if window size changed
 
-# Resize terminal if window size changed
-shopt -s checkwinsize
-
-
-
-# === Less: handle non-text input nicely ===
+# === less / non-text handling ===
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-
 
 # === Detect chroot (if any) for prompt context ===
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 	debian_chroot=$(cat /etc/debian_chroot)
 fi
-
-
 
 # === Prompt Setup ===
 case "$TERM" in
@@ -72,8 +53,6 @@ case "$TERM" in
 		;;
 esac
 
-
-
 # === Colors for ls, grep, etc ===
 if [ -x /usr/bin/dircolors ]; then
 	eval "$(test -r ~/.dircolors && dircolors -b ~/.dircolors || dircolors -b)"
@@ -83,25 +62,16 @@ if [ -x /usr/bin/dircolors ]; then
 	alias egrep='egrep --color=auto'
 fi
 
-
 # === ls Shortcuts ===
 alias ll='ls -alF'    # long + classify
 alias la='ls -A'      # all except . and ..
 alias l='ls -CF'      # column output + classify
 
-
-
 # === Alert after long-running commands ===
-# Example: sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history | tail -n1 | sed -E '\''s/^\s*[0-9]+\s*//;s/[;&|]\s*alert$//'\'' )"'
 
-
-
 # === Extra Aliases ===
-# You can drop your custom ones in ~/.bash_aliases
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
-
-
 
 # === Autocompletion Goodness ===
 if ! shopt -oq posix; then
@@ -112,12 +82,10 @@ if ! shopt -oq posix; then
 	fi
 fi
 
-
 # === Homebrew & Starship ===
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"   # Setup brew
 eval "$(starship init bash)"                             # Prompt on steroids
 
-
-
 # === Switch to Zsh if present and interactive ===
 [ -t 1 ] && exec zsh
+
