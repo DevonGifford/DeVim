@@ -45,22 +45,22 @@ A curated list of tools that I use on a daily basis for my development workflow.
 
 #### General Tools:
 
-- [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher): An application launcher for Windows - think poor mans spotlight/raycast
-- [PowerToys](https://github.com/microsoft/PowerToys): A set of utilities for power users to improve productivity and efficiency on Windows.
-- [Obsidian](https://github.com/obsidianmd): A lightweight note taking app that plays well with vim.
+-   [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher): An application launcher for Windows - think poor mans spotlight/raycast
+-   [PowerToys](https://github.com/microsoft/PowerToys): A set of utilities for power users to improve productivity and efficiency on Windows.
+-   [Obsidian](https://github.com/obsidianmd): A lightweight note taking app that plays well with vim.
 
 #### Terminal:
 
-- [Windows Terminal](https://github.com/microsoft/terminal): A modern, feature-rich terminal application for Windows - think poor mans Tmux.
-- [PowerShell7](https://github.com/PowerShell/PowerShell): Decent all purpose terminal with cross-platform environments - think poor mans iTerm2.
-- [Chocolatey](https://chocolatey.org/): Modern package manager - think Sudo for Windows.
-- [Starship](https://github.com/starship/starship): A minimal, fast, and customizable shell prompt for a better CLI experience - think Oh-My-ZSH.
-- [Nerd Fonts](https://www.nerdfonts.com/): A collection of fonts designed for programmers.
+-   [Windows Terminal](https://github.com/microsoft/terminal): A modern, feature-rich terminal application for Windows - think poor mans Tmux.
+-   [PowerShell7](https://github.com/PowerShell/PowerShell): Decent all purpose terminal with cross-platform environments - think poor mans iTerm2.
+-   [Chocolatey](https://chocolatey.org/): Modern package manager - think Sudo for Windows.
+-   [Starship](https://github.com/starship/starship): A minimal, fast, and customizable shell prompt for a better CLI experience - think Oh-My-ZSH.
+-   [Nerd Fonts](https://www.nerdfonts.com/): A collection of fonts designed for programmers.
 
 #### Editors:
 
-- [Lazy Vim](https://github.com/LazyVim/LazyVim): A starting point for NeoVim I branch from for day to day development.
-- [VsCode](https://code.visualstudio.com/): My go to pair programming editor, enhanced with a little Vim magic.
+-   [Lazy Vim](https://github.com/LazyVim/LazyVim): A starting point for NeoVim I branch from for day to day development.
+-   [VsCode](https://code.visualstudio.com/): My go to pair programming editor, enhanced with a little Vim magic.
 
 <br />
 
@@ -68,10 +68,10 @@ A curated list of tools that I use on a daily basis for my development workflow.
 
 Ensure you have the following:
 
-- Node.js
-- A C-compiler (or Zig, if you're cool)
-- Basic Lua understanding
-- Proficiency in Vim and CLI
+-   Node.js
+-   A C-compiler (or Zig, if you're cool)
+-   Basic Lua understanding
+-   Proficiency in Vim and CLI
 
 <br />
 
@@ -89,11 +89,11 @@ The setup process is fairly straightforward and can be figured out with minimal 
 
 A huge thank you to the following individuals for their support:
 
-- [@jayson-lennon](https://github.com/jayson-lennon)
-- [@scottmckendry](https://github.com/scottmckendry)
-- [@JazzyGrim](https://github.com/JazzyGrim) (Sindo)
-- [@devaslife](https://www.devas.life/)
-- [@tjdevries](https://github.com/tjdevries)
-- [@ThePrimeagen](https://github.com/theprimeagen)
+-   [@jayson-lennon](https://github.com/jayson-lennon)
+-   [@scottmckendry](https://github.com/scottmckendry)
+-   [@JazzyGrim](https://github.com/JazzyGrim) (Sindo)
+-   [@devaslife](https://www.devas.life/)
+-   [@tjdevries](https://github.com/tjdevries)
+-   [@ThePrimeagen](https://github.com/theprimeagen)
 
 ---
