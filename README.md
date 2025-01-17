@@ -1,6 +1,6 @@
  <p align="center"> 
     <picture>
-      <img src="./demo/logo2.png" height="180">
+      <img src="./Docs/logo2.png" height="180">
     </picture>
 </p>
 
@@ -30,7 +30,7 @@ Feel free to explore and customize these tools to enhance your development exper
 
  <p align="center"> 
     <picture>
-      <img src="./demo/demo1.png" height="500">
+      <img src="./Docs/demo1.png" height="500">
     </picture>
 </p>
 
