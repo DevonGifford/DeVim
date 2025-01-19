@@ -1,0 +1,541 @@
+/*
+=================================================================================
+📁 Windows Terminal Settings - Personal Setup (Dev Edition)
+=================================================================================
+
+📍 Location:
+This file usually lives at:
+C:\Users\<your_username>\AppData\Local\Packages\Microsoft.WindowsTerminal_*\LocalState\settings.json
+
+🚀 Overview:
+This is my custom Windows Terminal configuration file.
+It includes multiple profiles (Neovim, Dev Server, Test Server, Git, WSL),
+custom keybindings, appearance tweaks, and color schemes I use across projects.
+
+✅ Prerequisites (for things to work out of the box):
+- PowerShell 7 installed: https://aka.ms/powershell
+- Nerd Fonts installed (I use FiraCode & Hack Nerd Font)
+- Background images located at the paths defined (e.g., F:\Pictures\...)
+- Git Bash profile (auto-detected if Git for Windows is installed)
+- WSL2 with Ubuntu 20.04 installed
+- Optional: custom logos/icons for each profile
+
+🧠 How I Use This Terminal:
+This terminal is mostly for **Windows-native workflows** like:
+- Running PowerShell with admin privileges
+- Navigating Windows drives (outside WSL)
+- Git operations via Git Bash
+- Miscellaneous scripts/tools that don't work well in WSL
+
+📓 Tip:
+Make sure to adjust paths like `F:\\ReactProjects` and image/icon paths to match your system.
+
+=================================================================================
+*/
+{
+    // Documentation and schema reference
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+
+    // === Global UI / Behavior Settings ===
+    "defaultProfile": "{d71772bd-a6af-498d-bba8-3633f08bae42}", // Default profile to launch
+    "firstWindowPreference": "defaultProfile", // Open default profile in the first window
+    // Window behavior
+    "alwaysOnTop": false, // Do not keep terminal always on top
+    "centerOnLaunch": true, // Center window on screen when launching
+    "launchMode": "focus", // Focus the new window when launched
+    "initialCols": 190, // Width of the terminal in columns
+    "initialRows": 60, // Height of the terminal in rows
+    "initialPosition": ",", // Let system decide window coordinates
+    // Tab appearance
+    "showTabsInTitlebar": true, // Integrate tab bar into window titlebar
+    "alwaysShowTabs": true, // Always show the tab bar (even if one tab)
+    "useAcrylicInTabRow": false, // Disable acrylic (blur) effect in tab row
+    "themes": [], // No custom themes loaded
+    // Clipboard behavior
+    "copyOnSelect": false, // Do not auto-copy when text is selected
+    "copyFormatting": "none", // Strip formatting on copy
+    // Startup behavior
+    "startOnUserLogin": false, // Do not launch on system startup
+    // New tab button behavior
+    "newTabMenu": [
+        { "type": "remainingProfiles" } // Show all other profiles in the new tab menu
+    ],
+
+    // === Keybindings and Actions ===
+
+    "actions": [
+        // Disable default keybindings you don't use
+        { "command": "unbound", "keys": "ctrl+f12" },
+        { "command": "unbound", "keys": "ctrl+shift+f" },
+        { "command": "unbound", "keys": "ctrl+alt+8" },
+        { "command": "unbound", "keys": "ctrl+alt+7" },
+        { "command": "unbound", "keys": "ctrl+shift+9" },
+        { "command": "unbound", "keys": "ctrl+shift+v" },
+        { "command": "unbound", "keys": "ctrl+v" },
+
+        // Custom keybindings
+        {
+            "command": {
+                "action": "copy",
+                "singleLine": false // Allow multiline copy
+            },
+            "keys": "ctrl+c"
+        },
+        { "command": "paste" }, // Use default paste binding (Ctrl+Shift+V)
+        {
+            "command": {
+                "action": "splitPane", // Split current pane into two
+                "split": "auto", // Auto choose split direction
+                "splitMode": "duplicate" // Duplicate current pane command
+            },
+            "keys": "alt+shift+d"
+        },
+        { "command": "find" }, // Trigger search (usually Ctrl+Shift+F)
+        {
+            "command": "toggleFocusMode", // Toggle minimal UI
+            "keys": "f12"
+        }
+    ],
+
+    // === Profile Defaults ===
+
+    "profiles": {
+        "defaults": {
+            // Appearance
+            "tabTitle": "DevWin",
+            "backgroundImage": "C:\\Users\\Nitropc\\Pictures\\current_wallpaper.jpg",
+            "opacity": 30,
+            "padding": "10",
+            "useAcrylic": true,
+
+            // Behavior
+            "startingDirectory": "F:\\ReactProjects",
+            "bellStyle": "none" // Disable bell notifications
+        },
+        "list": [
+            {
+                "name": "DeVim",
+                "tabTitle": "Nvim",
+                "commandline": "\"C:\\Program Files (x86)\\PowerShell\\7\\pwsh.exe\"",
+                "startingDirectory": "F:\\ReactProjects",
+                "icon": "F:\\Pictures\\Logos\\Neovim.png",
+                "guid": "{d71772bd-a6af-498d-bba8-3633f08bae42}",
+
+                // Appearance
+                "backgroundImage": null,
+                "backgroundImageOpacity": 0.34,
+                "colorScheme": "Campbell",
+                "cursorHeight": 20,
+                "cursorShape": "bar",
+                "font": {
+                    "face": "FiraCode Nerd Font",
+                    "size": 12.0,
+                    "weight": "thin"
+                },
+                "opacity": 30,
+                "padding": "0",
+                "scrollbarState": "hidden",
+
+                // Behavior
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "experimental.retroTerminalEffect": false,
+                "hidden": false,
+                "historySize": 9001,
+                "intenseTextStyle": "none",
+                "snapOnInput": true,
+                "suppressApplicationTitle": false,
+                "useAcrylic": true
+            },
+            {
+                "name": "Dev-Server",
+                "tabTitle": "Dev Server",
+                "commandline": "\"C:\\Program Files (x86)\\PowerShell\\7\\pwsh.exe\"",
+                "startingDirectory": "F:\\ReactProjects",
+                "icon": "F:\\Pictures\\Logos\\Projects\\Terminals\\dev-logo.jpg",
+                "guid": "{03b3eb56-a623-4b70-92d4-e26c03a0c3fb}",
+
+                // Appearance
+                "backgroundImage": "F:\\Pictures\\Logos\\Projects\\Terminals\\dev-server.jpg",
+                "backgroundImageAlignment": "center",
+                "backgroundImageOpacity": 0.18,
+                "backgroundImageStretchMode": "uniformToFill",
+                "colorScheme": "Campbell",
+                "cursorHeight": 20,
+                "cursorShape": "bar",
+                "font": {
+                    "face": "Hack Nerd Font",
+                    "size": 11.0,
+                    "weight": "normal"
+                },
+                "opacity": 30,
+                "padding": "10",
+                "scrollbarState": "hidden",
+
+                // Behavior
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "experimental.retroTerminalEffect": false,
+                "hidden": false,
+                "historySize": 9001,
+                "intenseTextStyle": "none",
+                "snapOnInput": true,
+                "suppressApplicationTitle": true,
+                "useAcrylic": true
+            },
+            {
+                "name": "Test-Server",
+                "tabTitle": "disabled",
+                "commandline": "\"C:\\Program Files (x86)\\PowerShell\\7\\pwsh.exe\"",
+                "startingDirectory": "F:\\ReactProjects",
+                "icon": "F:\\Pictures\\Logos\\Projects\\Terminals\\test-logo.png",
+                "guid": "{aade6686-d5c1-45cb-83e4-560d9447e051}",
+
+                // Appearance
+                "backgroundImage": "F:\\Pictures\\Logos\\Projects\\Terminals\\testing-background.jpeg",
+                "backgroundImageAlignment": "center",
+                "backgroundImageOpacity": 0.18,
+                "backgroundImageStretchMode": "uniformToFill",
+                "colorScheme": "Campbell",
+                "cursorHeight": 20,
+                "cursorShape": "bar",
+                "font": {
+                    "face": "Hack Nerd Font",
+                    "size": 11.0,
+                    "weight": "normal"
+                },
+                "opacity": 30,
+                "padding": "10",
+                "scrollbarState": "hidden",
+
+                // Behavior
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "experimental.retroTerminalEffect": false,
+                "hidden": false,
+                "historySize": 9001,
+                "intenseTextStyle": "none",
+                "snapOnInput": true,
+                "suppressApplicationTitle": true,
+                "useAcrylic": true
+            },
+            {
+                "name": "Ubuntu 20.04.6 LTS",
+                "tabTitle": "Ubuntu",
+                "guid": "{4dd1e689-b517-5f39-947d-78e8a8bdf958}",
+
+                // Appearance
+                "backgroundImage": null,
+                "backgroundImageOpacity": 1.0,
+                "colorScheme": "Campbell",
+                "font": {
+                    "face": "FiraCode Nerd Font",
+                    "size": 9.0
+                },
+                "opacity": 25,
+                "padding": "0",
+                "scrollbarState": "hidden",
+                "useAcrylic": true,
+
+                // Behavior
+                "source": "CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc",
+                "hidden": false
+            },
+            {
+                "name": "Git Bash",
+                "tabTitle": "Git",
+                "commandline": "\"C:\\Program Files (x86)\\PowerShell\\7\\pwsh.exe\"",
+                "startingDirectory": "F:\\ReactProjects",
+                "icon": "F:\\Pictures\\Logos\\Projects\\Terminals\\git-logo.ico",
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+
+                // Appearance
+                "backgroundImage": "F:\\Pictures\\Logos\\Projects\\Terminals\\git-background.png",
+                "backgroundImageAlignment": "center",
+                "backgroundImageOpacity": 0.2,
+                "opacity": 65,
+                "useAcrylic": true,
+
+                // Behavior
+                "source": "Git",
+                "hidden": false
+            },
+            {
+                "name": "PowerShell v7",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": true,
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "name": "Windows PowerShell",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": true
+            },
+            {
+                "name": "Ubuntu-20.04",
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": true,
+                "source": "Windows.Terminal.Wsl"
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Campbell",
+            "background": "#0F262E",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#059C64",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "name": "Campbell Powershell",
+            "background": "#012456",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "name": "One Half Dark",
+            "background": "#282C34",
+            "black": "#282C34",
+            "blue": "#61AFEF",
+            "brightBlack": "#5A6374",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B6C2",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C678DD",
+            "brightRed": "#E06C75",
+            "brightWhite": "#DCDFE4",
+            "brightYellow": "#E5C07B",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#56B6C2",
+            "foreground": "#DCDFE4",
+            "green": "#98C379",
+            "purple": "#C678DD",
+            "red": "#E06C75",
+            "selectionBackground": "#FFFFFF",
+            "white": "#DCDFE4",
+            "yellow": "#E5C07B"
+        },
+        {
+            "name": "One Half Light",
+            "background": "#FAFAFA",
+            "black": "#383A42",
+            "blue": "#0184BC",
+            "brightBlack": "#4F525D",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B5C1",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C577DD",
+            "brightRed": "#DF6C75",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#E4C07A",
+            "cursorColor": "#4F525D",
+            "cyan": "#0997B3",
+            "foreground": "#383A42",
+            "green": "#50A14F",
+            "purple": "#A626A4",
+            "red": "#E45649",
+            "selectionBackground": "#FFFFFF",
+            "white": "#FAFAFA",
+            "yellow": "#C18301"
+        },
+        {
+            "name": "Solarized Dark",
+            "background": "#002B36",
+            "black": "#002B36",
+            "blue": "#268BD2",
+            "brightBlack": "#073642",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#2AA198",
+            "foreground": "#839496",
+            "green": "#859900",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "name": "Solarized Light",
+            "background": "#FDF6E3",
+            "black": "#002B36",
+            "blue": "#268BD2",
+            "brightBlack": "#073642",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#002B36",
+            "cyan": "#2AA198",
+            "foreground": "#657B83",
+            "green": "#859900",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "name": "Tango Dark",
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#06989A",
+            "foreground": "#D3D7CF",
+            "green": "#4E9A06",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "name": "Tango Light",
+            "background": "#FFFFFF",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#000000",
+            "cyan": "#06989A",
+            "foreground": "#555753",
+            "green": "#4E9A06",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "name": "Ubuntu-20.04-ColorScheme",
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
+            "name": "Ubuntu-ColorScheme",
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
+            "name": "Vintage",
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#000080",
+            "brightBlack": "#808080",
+            "brightBlue": "#0000FF",
+            "brightCyan": "#00FFFF",
+            "brightGreen": "#00FF00",
+            "brightPurple": "#FF00FF",
+            "brightRed": "#FF0000",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFF00",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#008080",
+            "foreground": "#C0C0C0",
+            "green": "#008000",
+            "purple": "#800080",
+            "red": "#800000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#C0C0C0",
+            "yellow": "#808000"
+        }
+    ]
+}
