@@ -112,6 +112,11 @@ keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnos
 keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
 keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+-- General Git navigation
+keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "[G]it [S]tatus" })
+keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "[G]it [C]ommits (project)" })
+keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "[G]it [B]ranches" })
+keymap.set("n", "<leader>gl", "<cmd>Telescope git_bcommits<CR>", { desc = "[G]it [L]og (buffer)" })
 -- Custom  Misc actions/commands
 keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all in the current buffer" }) -- Select all text
 keymap.set("i", "<S-Tab>", "<C-D>", { desc = "Decrease indentation in insert mode" }) -- Enables using shift TAB to decrease indentation 
