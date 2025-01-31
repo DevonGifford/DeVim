@@ -3,7 +3,7 @@ return {
   config = function()
     require("gitsigns").setup({
       current_line_blame = true,
-      on_attach = function(_) end, -- All keymaps removed
+      on_attach = function(_) end,
     })
 
     -- Global keybinding: toggle inline blame

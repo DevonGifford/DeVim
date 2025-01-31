@@ -1,9 +1,5 @@
 -- 🧠 Personal WezTerm Config - Developer Edition
 -- ================================================================================
--- 📍 Location (WSL/Linux/macOS):
--- This file lives at: ~/.wezterm.lua
--- It's loaded every time WezTerm launches and defines all appearance & behavior.
-
 -- ✅ Prerequisites:
 -- - wezterm >= 2023.x
 -- - Nerd Font for icons in prompts (e.g., Starship, Zsh, etc.)
@@ -12,20 +8,14 @@
 -- 🎯 Goals:
 -- - Minimalist, fast terminal startup
 -- - Clean font rendering with Nerd Fonts
--- - Easy pane and tab navigation using Vim-style keys
--- - Mouse behavior similar to Windows Terminal
 -- - WSL-friendly config with platform detection
--- - Maximize terminal window on startup
 
 -- 📦 Features:
 -- - Tokyo Night theme for consistency with Neovim & Starship
--- - Custom keybindings for tabs, panes, and reloads
 -- - Automatic detection of CMD/Ctrl modifier per OS
 -- - Smart scrollback clearing
--- - Window decorations set to RESIZE-only (no title bar)
 -- - Tab bar disabled for cleaner UI
 -- - Mouse and triple-click support
--- - Tweakable scaffolding for keys, launch menu, and mouse_bindings
 
 -- ⚙️ Pro Tip:
 -- Edit this file and run `Ctrl+Shift+R` to reload WezTerm instantly (no restart needed).
@@ -90,7 +80,7 @@ local CMD = is_windows and "CTRL" or "CMD"
 -- Define the leader key
 config.leader = {
   key = 'Space',
-  mods = 'CTRL',
+  mods = 'CTRL|ALT',
   timeout_milliseconds = 1000
 }
 
@@ -104,6 +94,22 @@ config.keys = {
 
   -- === Config Reload ===
   { key = 'R', mods = 'CTRL|SHIFT', action = act.ReloadConfiguration },
+  
+  -- === Copy & Paste (Leader-based to avoid tmux conflicts) ===
+  {
+   key = 'y',
+   mods = 'CTRL|ALT',
+   action = act.CopyTo 'Clipboard',
+  },
+  {
+    key = 'p',
+    mods = 'CTRL|ALT',
+    action = act.PasteFrom 'Clipboard',
+  },
+  {
+    key = "F11",
+    action = wezterm.action.ToggleFullScreen,
+  },
 
   -- === Disabled/Unused bindings (for now) ===
   -- { key = '+', mods = 'CTRL', action = act.IncreaseFontSize },

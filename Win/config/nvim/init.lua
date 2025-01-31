@@ -74,56 +74,51 @@ vim.opt.rtp:prepend(lazypath)
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 -- Basic movement
-keymap.set("n", "n", "nzzzv", { desc = "Move to next search result and center" })
-keymap.set("n", "N", "Nzzzv", { desc = "Move to previous search result and center" })
+keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
+keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
 -- Scroll with center
-keymap.set("n", "<c-d>", "<c-d>zz", { desc = "Scroll down half screen" })
-keymap.set("n", "<c-u>", "<c-u>zz", { desc = "Scroll up half screen" })
+keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down (centered)" })
+keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up (centered)" })
 -- Increment/decrement numbers
-keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
-keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
+keymap.set("n", "<leader>+", "<C-a>", { desc = "[+] Increment number" })
+keymap.set("n", "<leader>-", "<C-x>", { desc = "[-] Decrement number" })
 -- File management (NvimTree and Oil integration)
-keymap.set("n", "<leader>f", ":NvimTreeFindFile<CR>", { desc = "Find file in NvimTree" })
-keymap.set("n", "<c-b>", ":Oil<CR>", { silent = true, desc = "Open Oil file explorer" })
+keymap.set("n", "<leader>f", ":NvimTreeFindFile<CR>", { desc = "[F]ind file in [N]vimTree" })
+keymap.set("n", "<c-b>", ":Oil<CR>", { silent = true, desc = "Open [O]il file explorer" })
 -- File and buffer navigation (Tab management)
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
-keymap.set("n", "<Tab>", ":tabnext<CR>", { desc = "Go to next tab" })
-keymap.set("n", "<S-Tab>", ":tabprev<CR>", { desc = "Go to previous tab" })
+keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "[T]ab [O]pen new" })
+keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "[T]ab e[X]it current" })
+keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "[T]ab [N]ext" })
+keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "[T]ab [P]revious" })
+keymap.set("n", "<Tab>", ":tabnext<CR>", { desc = "Next tab" })
+keymap.set("n", "<S-Tab>", ":tabprev<CR>", { desc = "Previous tab" })
 -- Window splitting
-keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
-keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
-keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
-keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "[S]plit [V]ertical" })
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "[S]plit [H]orizontal" })
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "[S]plit [E]qual size" })
+keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "[S]plit e[X]it current" })
 -- Resize windows
-keymap.set("n", "<leader>+", ":exe 'vertical resize ' . (winwidth(0) * 3/2)<CR>", { silent = true })
-keymap.set("n", "<leader>-", ":exe 'vertical resize ' . (winwidth(0) * 2/3)<CR>", { silent = true })
--- Window navigation (Shift to be more natural for movement)
-keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
-keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
-keymap.set("n", "<leader>se", "<C-w>=", { desc = "Equalize split sizes" })
-keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close the current split" })
--- Additional diagnostic handling
-keymap.set("n", "<leader>t", vim.diagnostic.open_float, { desc = "Show diagnostic in floating window" })
--- Diagnostic navigation
-keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
-keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
-keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
--- General Git navigation
+keymap.set("n", "<leader><leader>+", ":exe 'vertical resize ' . (winwidth(0) * 3/2)<CR>", { desc = "[+] Resize wider", silent = true })
+keymap.set("n", "<leader><leader>-", ":exe 'vertical resize ' . (winwidth(0) * 2/3)<CR>", { desc = "[-] Resize narrower", silent = true })
+-- Diagnostics
+keymap.set("n", "<leader>t", vim.diagnostic.open_float, { desc = "[T]oggle diagnostic float" })
+keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev [D]iagnostic" })
+keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next [D]iagnostic" })
+keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "[E]rror float window" })
+keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "[Q]uickfix diagnostics list" })
+-- Git (Telescope)
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "[G]it [S]tatus" })
 keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "[G]it [C]ommits (project)" })
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "[G]it [B]ranches" })
 keymap.set("n", "<leader>gl", "<cmd>Telescope git_bcommits<CR>", { desc = "[G]it [L]og (buffer)" })
--- Custom  Misc actions/commands
-keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all in the current buffer" }) -- Select all text
-keymap.set("i", "<S-Tab>", "<C-D>", { desc = "Decrease indentation in insert mode" }) -- Enables using shift TAB to decrease indentation 
-keymap.set({"n", "v"}, "<Space>", "<Nop>", { silent = true }) -- Disable <Space> in normal and visual mode to avoid conflicts
-keymap.set("n", "<leader>w", ":w<CR>", opts) -- Save file (same as <Leader>w)
-keymap.set("n", "<leader>q", ":q<CR>", opts) -- Quit file (same as <Leader>q)
-keymap.set("n", "<Leader>Q", ":qa<Return>", opts) -- Quit all open windows (custom action)
+-- Misc
+keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all in buffer" })
+keymap.set("i", "<S-Tab>", "<C-D>", { desc = "Decrease indent (Insert mode)" })
+keymap.set({ "n", "v" }, "<Space>", "<Nop>", { desc = "Disable Space", silent = true })
+-- File ops
+keymap.set("n", "<leader>w", ":w<CR>", { desc = "[W]rite/save file", noremap = true, silent = true })
+keymap.set("n", "<leader>q", ":q<CR>", { desc = "[Q]uit file", noremap = true, silent = true })
+keymap.set("n", "<Leader>Q", ":qa<CR>", { desc = "[Q]uit [A]ll", noremap = true, silent = true })
 
 
 -- CUSTOM PLUGINS
