@@ -103,7 +103,6 @@ _fzf_comprun() {
 # ---- Custom ZSCALAR CERT ----
 export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
-
 # ----- SSH Keys Setup ------
 eval "$(ssh-agent -s)" > /dev/null
 ssh-add -q ~/.ssh/ssh-gitlab-tuv ~/.ssh/ssh-github-personal 2>/dev/null

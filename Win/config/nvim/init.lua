@@ -117,8 +117,8 @@ keymap.set("i", "<S-Tab>", "<C-D>", { desc = "Decrease indent (Insert mode)" })
 keymap.set({ "n", "v" }, "<Space>", "<Nop>", { desc = "Disable Space", silent = true })
 -- File ops
 keymap.set("n", "<leader>w", ":w<CR>", { desc = "[W]rite/save file", noremap = true, silent = true })
-keymap.set("n", "<leader>q", ":q<CR>", { desc = "[Q]uit file", noremap = true, silent = true })
-keymap.set("n", "<Leader>Q", ":qa<CR>", { desc = "[Q]uit [A]ll", noremap = true, silent = true })
+keymap.set("n", "<leader>Q", ":q<CR>", { desc = "[Q]uit file", noremap = true, silent = true })
+keymap.set("n", "<Leader>QA", ":qa<CR>", { desc = "[Q]uit [A]ll", noremap = true, silent = true })
 
 
 -- CUSTOM PLUGINS
