@@ -54,7 +54,6 @@ But let’s be real — it’s still Windows underneath. Some things just don’
 
 Before you dive in, make sure you have these installed:
 
-
 -   [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) – Windows Subsystem for Linux. Lets you pretend Windows isn’t running under your terminal.
 -   [Ubuntu (via WSL)](https://ubuntu.com/wsl) – South African for “humanity toward others.” Fitting — it mostly works and stays out of the way.
 -   [Node.js](https://nodejs.org/) - Recommended to have node version manager installed too.
@@ -73,19 +72,16 @@ Before you dive in, make sure you have these installed:
 A curated list of tools that I use on a daily basis for my development workflow. Below are the main tools included:
 
 #### General Tools:
-
-Windows doesn’t make dev life easy — you’ve got to duct-tape your own workflow together.
-
 -   **[Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher)**: Basically the poor mans Raycast/Spotlight for Windows. Launch apps, search files, run scripts etc.
 -   **[PowerToys](https://github.com/microsoft/PowerToys)**: Useful Windows tools (snapping, color picker, etc.) that should’ve been built-in years ago.
 -   **[Obsidian](https://github.com/obsidianmd)**: Markdown-based, local-first, Vim-friendly, cross-platform note-taking app, Excalidraw plugin is cool too.
 -   **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
-
+> *Windows doesn’t make dev life easy — you’ve got to duct-tape your own workflow together.*
 <br/>
 
 #### Terminal:
-- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, and Lua-configurable — the one I actually use. Works across Linux, macOS, and WSL, and powered by Rust so I can pretend I’m fast too.
-- **[Windows Terminal](https://github.com/microsoft/terminal)**: Still the best native Windows terminal — my fallback when WSL isn’t enough.  Just don't forget to grab [PowerShell7](https://github.com/PowerShell/PowerShell), unless you enjoy living in the 90s.
+- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, and Lua-configurable — the one I actually use. Works across Linux, macOS, and WSL, and powered by Rust.
+- **[Windows Terminal](https://github.com/microsoft/terminal)**: Still the best native Windows terminal — my fallback when WSL isn’t enough.  Just don't forget [PowerShell7](https://github.com/PowerShell/PowerShell), unless you enjoy living in the 90s.
 > *For fonts, I use [Nerd Fonts](https://www.nerdfonts.com/), usually use Hacker Nerd Font, but sometimes I switch it up just to feel something.*
 <br/>
 
@@ -96,7 +92,7 @@ Windows doesn’t make dev life easy — you’ve got to duct-tape your own work
 <br/>
 
 #### Prompt
-- **[Starship](https://starship.rs/)**: Fast, portable, and Rust-powered. One binary, one starship.toml, and it just works across every shell I care about.  
+- **[Starship](https://starship.rs/)**: Fast, portable, and Rust-powered. One binary, one starship.toml, works across every shell I care about.  
 > *Custom minimal styling — Tokyo Night meets power10k inspired, but nothing too loud.*
 <br/>
 
@@ -117,19 +113,19 @@ Over the years, I’ve used everything from Notepad and Sublime to the cursed Xc
 
 #### 🧰 Other CLI Tools
 These tools are now part of the core experience (via Homebrew in WSL):
-- **[`zoxide`](https://github.com/ajeetdsouza/zoxide)** – Like `cd`, but actually useful. Tracks the directories you visit most and lets you jump to them with fuzzy-matched shortcuts. Written in Rust.  
-- **[`eza`](https://github.com/eza-community/eza)** – Modern replacement for `ls`, with built-in color, icons, and better defaults. Easier on the eyes and much more useful out of the box.  
-- **[`bat`](https://github.com/sharkdp/bat)** – Drop-in replacement for `cat` with syntax highlighting, line numbers, and paging support. Makes reading code and logs way easier.  
-- **[`fzf`](https://github.com/junegunn/fzf)** – Fuzzy finder for your terminal — search files, command history, Git commits, whatever. Type a few characters and it’ll guess what you meant.  
-- **[`ripgrep`](https://github.com/BurntSushi/ripgrep)** – Fast recursive text search tool. Used under the hood by many modern editors and CLI tools — much faster and more intuitive than `grep`.  
+- **[`zoxide`](https://github.com/ajeetdsouza/zoxide)** – Modern `cd`. Learns your most used dirs, jump to them faster with fuzzy matches.  (Rust gang)  
+- **[`eza`](https://github.com/eza-community/eza)** – Modern `ls`, the rewrite of deprecated exa with built-in color, icons, and better defaults.   (Rust gang)  
+- **[`fzf`](https://github.com/junegunn/fzf)** – Fuzzy search for files, history, Git, you name it. Type less, find more it’ll guess what you meant.  (Go gang)
+- **[`bat`](https://github.com/sharkdp/bat)** – Drop-in replacement for `cat` with syntax highlighting, line numbers, and paging support. Tokyo themed.
+- **[`ripgrep`](https://github.com/BurntSushi/ripgrep)** – Blazing fast `grep` alternative. Used by modern editors. (Rust gang) 
 - **[`fd`](https://github.com/sharkdp/fd)** – A simpler, faster alternative to `find`. Better syntax, better defaults, less pain.  
-- **[`lazygit`](https://github.com/jesseduffield/lazygit)** – TUI Git client that simplifies staging, branching, rebasing, and reviewing commits. Great for quick Git workflows without leaving the terminal.  
-- **[`tldr`](https://tldr.sh/)** – Simplified, community-driven man pages. Shows real-world examples and just enough context to get things done.  
-- **[`thefuck`](https://github.com/nvbn/thefuck)** – Messed up a terminal command? Just type `fuck` and it’ll suggest the right one. Surprisingly useful, endlessly satisfying.  
-- **[`GitHub Copilot CLI`](https://github.com/github/cli-copilot)** – Copilot for your terminal. Generate commands, explain errors, and pretend you typed it all yourself. Requires `gh auth login`.  
-- **[`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)** – Suggests commands from your history as you type. Makes repetition fast and muscle memory even faster.  
-- **[`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)** – Adds real-time syntax highlighting to your Zsh input. Great for spotting mistakes before they happen.  
-- **[`nvm`](https://github.com/nvm-sh/nvm)** – Node version manager. Cross-platform, reliable, and keeps global installs from leaking everywhere. Works great in WSL and macOS.
+- **[`lazygit`](https://github.com/jesseduffield/lazygit)** – TUI Git client that simplifies staging, branching, rebasing, and reviewing commits.(Go gang) 
+- **[`tldr`](https://tldr.sh/)** – Simplified, community-driven man pages, with real-world examples and no fluff.
+- **[`nvm`](https://github.com/nvm-sh/nvm)** – Node version manager. Staple tool, cross-platform and reliable.
+- **[`thefuck`](https://github.com/nvbn/thefuck)** – Messed up a command? It’ll suggest the right one. Surprisingly useful, endlessly satisfying. (Python gang)
+- **[`GitHub Copilot CLI`](https://github.com/github/cli-copilot)** – AI for your terminal, generate commands, explain errors and pretend you did it yourself. 
+- **[`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)** – Suggests commands from your history as you type.
+- **[`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)** – Adds real-time syntax highlighting to your Zsh input. 
 
 <br/>
 <br/>
