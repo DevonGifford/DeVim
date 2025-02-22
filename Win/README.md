@@ -80,9 +80,11 @@ A curated list of tools that I use on a daily basis for my development workflow.
 <br/>
 
 #### Terminal:
-- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, and Lua-configurable — the one I actually use. Works across Linux, macOS, and WSL, and powered by Rust.
-- **[Windows Terminal](https://github.com/microsoft/terminal)**: Still the best native Windows terminal — my fallback when WSL isn’t enough.  Just don't forget [PowerShell7](https://github.com/PowerShell/PowerShell), unless you enjoy living in the 90s.
+- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, lua-configurable and powered by Rust — the one I actually use.
+- **[Windows Terminal](https://github.com/microsoft/terminal)**: Still the best native terminal on Windows — my fallback for tasks beyond WSL's scope.
+
 > *For fonts, I use [Nerd Fonts](https://www.nerdfonts.com/), usually use Hacker Nerd Font, but sometimes I switch it up just to feel something.*
+> <br/> *Don't forget [PowerShell7](https://github.com/PowerShell/PowerShell).*
 <br/>
 
 #### Shell
