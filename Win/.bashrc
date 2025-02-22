@@ -1,7 +1,5 @@
 # 🧠 Personal Bash Config - Developer Edition
 # ================================================================================
-# 📍 Location:
-# This file is typically found at: ~/.bashrc
 # It's sourced automatically for non-login, interactive shells (e.g., new terminal tabs).
 
 # ✅ Prerequisites / Assumptions:
