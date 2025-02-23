@@ -1,4 +1,8 @@
--- VIM SETUP
+-- Personal Neovim configuration
+-- Inspired by several public dotfiles and refined for personal use.
+-- And by “inspired,” I mean Ctrl+C’d and Ctrl+V’d — with love.
+
+-- Global settings (vim.g)
 local global_options = {
     mapleader = ' ',
     loaded_perl_provider = 0,
@@ -12,9 +16,9 @@ local global_options = {
     netrw_localrmdir = 'rm -rf',
     netrw_list_hide = [['\(^\|\s\s\)\zs\.\S\+']]
 }
-
 for k, v in pairs(global_options) do vim.g[k] = v end
 
+-- Editor behavior (vim.opt)
 local o_options = {
     autoindent = true,
     breakindent = true,
@@ -40,15 +44,16 @@ local o_options = {
     updatetime = 250,
     wrap = true,
 }
-
 for k, v in pairs(o_options) do vim.opt[k] = v end
 
+-- Window-local settings (vim.wo)
 local wo_options = {number = true, signcolumn = 'yes', relativenumber = true}
-
 for k, v in pairs(wo_options) do vim.wo[k] = v end
 
+-- Treat `-` as part of words (e.g. `foo-bar` = one word)
 vim.api.nvim_command("set iskeyword+=-")
 
+-- Diagnostic display settings (LSP/UI)
 vim.diagnostic.config({
     underline = true,
     virtual_text = {source = 'if_many', spacing = 2},
@@ -57,8 +62,7 @@ vim.diagnostic.config({
     severity_sort = true
 })
 
-
--- NVIM SETUP
+-- Lazy.nvim bootstrap
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system {
@@ -67,7 +71,6 @@ if not vim.loop.fs_stat(lazypath) then
     }
 end
 vim.opt.rtp:prepend(lazypath)
-
 
 
 -- CUSTOM KEYBINDINGS
