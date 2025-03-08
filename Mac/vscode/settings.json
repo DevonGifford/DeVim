@@ -1,0 +1,253 @@
+{
+  // Key bindings
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // === Tab Handling ===
+    {
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabnew"] // Open a new tab
+    },
+    {
+      "before": ["<Leader>", "n"],
+      "commands": [":tabnext"] // Switch to the next tab
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "commands": [":tabprev"] // Switch to the previous tab
+    },
+    {
+      "before": ["<Leader>", "t", "c"],
+      "commands": [":tabo"] // Close all other tabs
+    },
+
+    // === Split Navigation ===
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"] // Move to the left split
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"] // Move to the split below
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"] // Move to the split above
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"] // Move to the right split
+    },
+
+    // === Quick Navigation ===
+    {
+      "before": ["J"],
+      "after": ["5", "j"] // Jump 5 lines down
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"] // Jump 5 lines up
+    },
+    {
+      "before": ["<Leader>", "j"],
+      "after": ["J"] // Join lines
+    },
+
+    // === Miscellaneous ===
+    {
+      "before": ["<Leader>", "/"],
+      "commands": [":noh"] // Clear search highlights
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // === File Operations ===
+    {
+      "before": ["<Leader>", "w"],
+      "commands": ["workbench.action.files.save"] // Write (Save current file)
+    },
+    {
+      "before": ["<Leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"] // Quit (Close current file)
+    },
+    {
+      "before": ["<Leader>", "a"],
+      "commands": ["workbench.action.files.saveAll"] // Write all (Save all files)
+    },
+    // Uncomment if needed:
+    // {
+    //   "before": ["<Leader>", "w", "q"],
+    //   "commands": ["workbench.action.files.save", "workbench.action.closeActiveEditor"] // Write and quit
+    // },
+    // {
+    //   "before": ["<Leader>", "x"],
+    //   "commands": ["workbench.action.closeEditorsInGroup"] // Close all editors in group
+    // },
+    {
+      "before": ["<Leader>", "e"],
+      "commands": ["workbench.view.explorer"] // Open file explorer
+    },
+
+    // === Go To and Navigation ===
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"] // Show definition preview hover
+    },
+    {
+      "before": ["g", "t"],
+      "commands": ["editor.action.goToTypeDefinition"] // Go to type definition
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"] // Go to implementation
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"] // Trigger reference search
+    },
+
+    // === Peek Features ===
+    {
+      "before": ["g", "p", "d"],
+      "commands": ["editor.action.peekDefinition"] // Peek definition
+    },
+    {
+      "before": ["g", "p", "i"],
+      "commands": ["editor.action.peekImplementation"] // Peek implementation
+    },
+    {
+      "before": ["g", "p", "t"],
+      "commands": ["editor.action.peekTypeDefinition"] // Peek type definition
+    },
+
+    // === Code Actions ===
+    {
+      "before": ["g", "q"],
+      "commands": ["editor.action.quickFix"] // Trigger quick fixes
+    },
+
+    // === Enable VsCode Multi-Cursor Editing ===
+    {
+      "before": ["<C-d>"],
+      "commands": ["editor.action.addSelectionToNextFindMatch"] // Add selection to next match
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["<C-d>"],
+      "commands": ["editor.action.addSelectionToNextFindMatch"] // Add selection in insert mode
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<C-d>"],
+      "commands": ["editor.action.addSelectionToNextFindMatch"] // Add selection in visual mode
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-d>": true // Enable handling of Ctrl+D
+  },
+
+  // Vim-related settings
+  "vim.hlsearch": true,
+  "vim.smartRelativeLine": true,
+  "vim.showMarksInGutter": true,
+  "vim.useSystemClipboard": true,
+  "vim.surround": true,
+  "vim.targets.enable": true,
+  "vim.sneak": true,
+  "vim.easymotion": true,
+  "editor.cursorSurroundingLines": 8,
+  "vim.leader": "<space>",
+  "vim.foldfix": true,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?", //skip inline styling
+  // Cursor styling per mode
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.visual": "line",
+  // Yank highlighting
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "#a9dc7660",
+  "vim.highlightedyank.duration": 500,
+  // Background and highlight colors
+  "vim.searchHighlightColor": "#FCF0A9",
+  "vim.searchMatchColor": "#FCE24E",
+  "workbench.colorCustomizations": {
+    "terminalCursor.foreground": "#992b2b",
+    "editor.findMatchHighlightBackground": "#31cee2a6",
+    "editor.findMatchHighlightBorder": "#0066ffb4",
+    "editor.selectionBackground": "#016efcaf"
+    // "editorCursor.foreground": "#0066ffb4",  //for different themes
+    // "editorCursor.background": "#3b3c5a",   //for different themes
+  },
+
+  // Miscellaneous settings
+  // Workbench settings
+  "workbench.colorTheme": "Default Dark Modern", // Set the color theme
+  "workbench.iconTheme": "material-icon-theme", // Set the icon theme
+  "workbench.activityBar.location": "top", // Place activity bar at the top
+  "workbench.sideBar.location": "right", // Place sidebar on the right
+  "workbench.layoutControl.enabled": false, // Disable layout control
+  "workbench.editor.wrapTabs": true, // Enable tab wrapping in the editor
+  // Editor settings
+  "editor.wordWrap": "off", // Disable word wrapping
+  "editor.minimap.enabled": false, // Disable the minimap
+  "editor.linkedEditing": true, // Enable linked editing (e.g., HTML tags)
+  "editor.accessibilitySupport": "off", // Disable accessibility features
+  "editor.mouseWheelScrollSensitivity": 2, // Increase mouse wheel scroll sensitivity
+  // TypeScript and JavaScript settings
+  "typescript.suggest.paths": false, // Disable path suggestions in TypeScript
+  "javascript.suggest.paths": false, // Disable path suggestions in JavaScript
+  "typescript.updateImportsOnFileMove.enabled": "always", // Auto-update TypeScript imports on file move
+  "javascript.updateImportsOnFileMove.enabled": "always", // Auto-update JavaScript imports on file move
+  // Terminal settings
+  "terminal.integrated.localEchoStyle": "dim", // Set terminal local echo style
+  "gitlens.launchpad.indicator.enabled": false,
+
+  // Window settings
+  "window.zoomLevel": -1, // Set zoom level
+  "window.commandCenter": false, // Disable the command center
+  // Experimental settings
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1 // Affinity setting for Neovim extension
+  },
+
+  // Code Formatting defaults
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // Legacy Code Formatting settings
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[handlebars]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // Spelling settings
+  "cSpell.ignoreWords": [
+    "Easeier",
+    "Nitropc",
+    "ZTESTING",
+    "asvetliakov",
+    "constuction",
+    "donot",
+    "easymotion",
+    "esbenp",
+    "handeling",
+    "highlightedyank",
+    "hlsearch",
+    "neovim",
+    "tabnew",
+    "tabnext",
+    "tabo",
+    "tabprev",
+    "Colour",
+    "foldfix"
+  ],
+  "cSpell.userWords": [
+    "firestore",
+    "Gifford",
+    "hookform",
+    "lucide",
+    "notif",
+    "tailwindcss"
+  ]
+}
