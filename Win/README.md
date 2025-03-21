@@ -17,26 +17,17 @@
 </div>
 
 <br/>
-
-> [!WARNING]\
-> Under _**active development**_, expect changes. Existing configuration files will be overwritten.
-> <br/> _Please make a backup of any files you wish to keep before proceeding._
+<br/>
 
 ## _**Who says you can't Vim and look good on Windows?**_
 
-Hi my name is Devon and this is DeVim, my personal curated collection of Windows + WSL tools I use for everyday full-stack development. This collection integrates NeoVim seamlessly into Windows via WSL2, consolidating scattered config files into one convenient location.
+Hey, I’m Devon — and this is DeVim, my personal, curated dotfiles and tooling setup for Windows + WSL2. It’s built around a Linux-first workflow, blending the best of WSL, PowerShell, and NeoVim to keep development fast and terminal-focused.
 
-Feel free to explore and customize these tools to enhance your development experience! Your suggestions for improvements are always welcome! ❤
+Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
-> ⚠️ **The bad news:**  
-> This repo doesn’t come with an installer, wizard, or training montage.  
-> It also won’t teach you Vim or NeoVim from scratch.
-
-<br/>
-
-> ✅ **The good news:**  
-> If you know your way around a terminal, setup is chill.  
-> I’ve also dropped a bunch of learning resources below to help you hit the ground running.See below
+> [!WARNING]\
+> This setup is under **active development**. Things may change frequently, and existing config files might get overwritten.  
+> <br /> _Make sure to back up anything you want to keep._  
 
 <br />
 <br />
@@ -49,9 +40,9 @@ Windows out of the box isn’t exactly dev-friendly. Thankfully, even Microsoft 
 
 But let’s be real — it’s still Windows underneath. Some things just don’t play nice inside the WSL sandbox: disk partitioning, system-level tweaks, certain admin utilities. Some of these scars/configs are left over from the pre-WSL era, so yeah a few essentials still live on the native side:
 
--   **Windows Terminal**, with profiles for WSL and PowerShell.
--   **PowerShell7**, for scripting and admin wrangling.
--   **Chocolatey**, for managing core native apps.
+-   **[Windows Terminal](https://github.com/microsoft/terminal)**: Profiles for WSL and PowerShell, tabbed UI, theming — the default terminal for modern Windows devs.
+-   **[PowerShell 7](https://github.com/PowerShell/PowerShell)**: For scripting, automation, and native admin tasks.
+-   **[Chocolatey](https://chocolatey.org/)**: Windows package manager for installing core CLI apps and tools.
 
 > So yeah, it’s a hybrid setup — Because no matter how far you run... you're still on Windows. 🙃
 > <br/> _Linux shell for real work, Windows shell when you have no choice._
@@ -61,8 +52,10 @@ But let’s be real — it’s still Windows underneath. Some things just don’
 
 ## ✔ Prerequisites
 
-Make sure you’ve got the following installed before diving in:
+Before you dive in, make sure you have these installed:
 
+
+-   [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) – Ideally Ubuntu. Your Linux playground inside Windows.
 -   [Node.js](https://nodejs.org/) - recommended to have node version manager installed too.
 -   [C compiler](https://clang.llvm.org/) - check out `gcc`, `clang`, or [Zig](https://ziglang.org/) if you’re feeling spicy.
 -   [Lua](https://www.lua.org/) - just enough to tweak configs without crying.
@@ -118,23 +111,23 @@ The config lives at `~/.config/starship.toml`, and tweaking it is surprisingly p
 
 #### Editors:
 
-From the days of Notepad, Sublime, and cursed Xcode, the reigning stable GOAT [VSCode](https://code.visualstudio.com/) has been my go-to — fast to set up, Vim mode actually works, and it doesn’t fight you every step of the way. But after years of shipping code (and the rise of LazyVim), I fell into the [Neovim](https://neovim.io/) rabbit hole. No ragrats.
+Over the years, I’ve used everything from Notepad and Sublime to Xcode and VSCode. These days, [VSCode](https://code.visualstudio.com/) remains a reliable fallback — quick to set up, solid Vim support, and flexible enough for most workflows.
 
-Neovim is lean, keyboard-driven, and fully customizable — everything’s in [Lua](https://www.lua.org/). My config is based on [LazyVim](https://github.com/LazyVim/LazyVim), which saves me from losing full weekends to plugin rabbit holes. That said, I still keep that thang on me (referring to VSCode, obviously).
+That said, I’ve fully transitioned to [Neovim](https://neovim.io/) as my primary editor. It’s fast, keyboard-focused, and fully configurable in [Lua](https://www.lua.org/). My setup is built on [LazyVim](https://github.com/LazyVim/LazyVim), which handles the plugin ecosystem without getting in the way.
 
-And then there’s the new [Cursor](https://cursor.sh/) — something I’ve been playing with more and more. It’s basically VSCode with AI running through its veins. Think Copilot++, and having ChatGPT-style prompts _inside_ your editor is weirdly _a vibe_.
+More recently, I’ve been experimenting with [Cursor](https://cursor.sh/), an AI-enhanced editor built on top of VSCode. Integrated Copilot and inline prompt support make it surprisingly productive — especially for quick prototyping or exploring unfamiliar code.
 
 <br/>
 
 #### Persistent Terminal Sessions with tmux
 
-[`tmux`](https://en.wikipedia.org/wiki/Tmux) is a terminal multiplexer — think tabs and splits, but for your terminal.
+[`tmux`](https://en.wikipedia.org/wiki/Tmux) is a terminal multiplexer that lets you manage multiple terminal sessions within a single window.
 
--   Split your terminal into multiple panes (vertical, horizontal, whatever)
--   Run different commands side by side (`npm run dev` in one, Git in another)
--   Detach from a session and pick up where you left off — even after closing the terminal
+- Split your terminal into multiple panes (vertically or horizontally)  
+- Run parallel processes side by side (e.g., server logs, Git, build tools)  
+- Detach and resume sessions without losing progress — even after closing the terminal  
 
-Great for keeping dev servers, builds, and SSH sessions alive while you jump between tasks — no restarts, no lost progress, no rage.
+It's especially useful for keeping long-running processes or remote sessions active across workflows, without restarting
 
 <br/>
 <br/>
@@ -154,15 +147,5 @@ These tools are now part of the core experience (via Homebrew in WSL):
 <br/>
 <br/>
 
-## 🙌 Special Thanks
-
-A huge thank you to the following individuals for their support:
-
--   [@jayson-lennon](https://github.com/jayson-lennon)
--   [@scottmckendry](https://github.com/scottmckendry)
--   [@JazzyGrim](https://github.com/JazzyGrim "Sindo")
--   [@devaslife](https://www.devas.life/)
--   [@tjdevries](https://github.com/tjdevries)
--   [@ThePrimeagen](https://github.com/theprimeagen)
 
 ---
