@@ -107,6 +107,9 @@ export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 eval "$(ssh-agent -s)" > /dev/null
 ssh-add -q ~/.ssh/ssh-gitlab-tuv ~/.ssh/ssh-github-personal 2>/dev/null
 
+# ----- Quick Aliases ------
+alias syncdevim="bash ~/personal/DeVim/Win/sync-to-devim.sh"
+
 # ---- starship prompts (must be at end of file!) ----
 eval "$(starship init zsh)"
 
