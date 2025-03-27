@@ -1,0 +1,126 @@
+// Place your key bindings in this file to override the defaults
+[
+  // Rebind Cmd+B to toggle the sidebar visibility (explicit binding)
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  // Split editor vertically (leader s v)
+  {
+    "key": "cmd+space s v",
+    "command": "workbench.action.splitEditorRight",
+    "when": "editorTextFocus"
+  },
+  // Split editor horizontally (leader s h)
+  {
+    "key": "cmd+space s h",
+    "command": "workbench.action.splitEditorDown",
+    "when": "editorTextFocus"
+  },
+  // File tree navigation commands:
+  // These keybindings are specifically for interacting with the file explorer.
+  {
+    "key": "space e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "f",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  // Open the quick file search menu when the editor text is focused (also referred to as "Quick Open")
+  // This opens a search bar to quickly locate and open files in the workspace.
+  {
+    "key": "; f",
+    "command": "workbench.action.quickOpen",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+p",
+    "command": "workbench.action.quickOpen"
+  },
+  // Navigate through the Quick Open menu using Cmd+J and Cmd+K allow cycling through search results when Quick Open is active.
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  // Navigate the Quick Fix menu with Cmd+J (next) and Cmd+K (previous) - let you select from available quick fixes or code actions.
+  {
+    "key": "cmd+k",
+    "when": "codeActionMenuVisible",
+    "command": "selectPrevCodeAction"
+  },
+  {
+    "key": "cmd+j",
+    "when": "codeActionMenuVisible",
+    "command": "selectNextCodeAction"
+  },
+
+  // Unbind and rebind GitLens file blame commands
+  // Removes the chorded keymap binding for toggling file blame in GitLens.
+  {
+    "key": "cmd+shift+g b",
+    "command": "-gitlens.toggleFileBlame",
+    "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /blameable/"
+  },
+  // Binds Cmd+Alt+B to toggle blame on the left diff view in GitLens.
+  {
+    "key": "cmd+alt+b",
+    "command": "gitlens.toggleFileBlameInDiffLeft"
+  },
+
+  // Alternate keymap for GitLens file blame toggle (Alt+B)
+  // Removes the existing Alt+B keybinding and adds a new one for toggling blame.
+  // This applies only if the alternate GitLens keymap is in use.
+  {
+    "key": "alt+b",
+    "command": "gitlens.toggleFileBlame",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+  },
+  {
+    "key": "alt+b",
+    "command": "-gitlens.toggleFileBlame",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+  }
+]
