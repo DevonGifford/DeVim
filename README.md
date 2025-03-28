@@ -1,6 +1,6 @@
  <p align="center"> 
     <picture>
-      <img src="./Docs/logo2.png" height="180">
+      <img src="./Docs/images/Devim_logo.png" height="180">
     </picture>
 </p>
 
@@ -30,7 +30,7 @@ Feel free to explore, tweak, or shamelessly steal — most of it was stolen to b
 
  <p align="center"> 
     <picture>
-      <img src="./Docs/demo1.png" height="500">
+      <img src="./Docs/images/Devim_showcase.png" height="500">
     </picture>
 </p>
 
