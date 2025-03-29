@@ -39,14 +39,14 @@ macOS is a solid base for dev work — Unix roots, slick UI, and fewer headaches
 
 #### Because macOS Still Needs a Bit of Help
 
-Under the hood, it’s powerful — but you’ll need some upgrades to make it sing. These tools fix the friction points: smarter multitasking, better terminal, faster navigation, and less time wasted
+These tools fix the friction points, smarter multitasking, better window management, faster navigation and less time wasted:
 
 - **[Raycast](https://www.raycast.com/)**: Like Spotlight, but actually good. App launcher, script runner, and productivity Swiss Army knife.
 - **[Rectangle](https://rectangleapp.com/)**: Snap windows like it’s Windows. One of the first things I install on any Mac.
 - **[AltTab](https://alt-tab-macos.netlify.app/)**: Cmd+Tab the way it was meant to be — with full previews and sanity restored.
 
 > macOS does 80% of the job with style. This setup’s for the last 20% that actually matters.
-> <br /> _It’s clean, it’s quiet, it mostly Just Works™ _ 🙌
+> <br /> *It’s clean, it’s quiet, it mostly Just Works™* 🙌
 
 <br />
 <br />
@@ -72,8 +72,8 @@ A curated list of tools I use daily to support a fast, keyboard-driven developme
 
 #### General Tools:
 -   **[Raycast](https://www.raycast.com/)**: The macOS launcher Apple wishes it built. Run scripts, manage extensions, control your system — all from your keyboard.
--   **[Obsidian](https://github.com/obsidianmd)**: My second brain. Markdown-based, local-first, Vim-friendly, cross-platform note-taking app. Perfect for documenting setups, writing brain dumps, or avoiding actual work.
--   **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app I use to keep track of personal tasks, dev stuff, and whatever chaos I’m pretending to control.
+-   **[Obsidian](https://github.com/obsidianmd)**: Markdown-based, local-first, Vim-friendly, cross-platform note-taking app, Excalidraw plugin is cool too.
+-   **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
 > *macOS is a solid base for development, but there are still areas where the default experience falls short.*
 <br/>
 
