@@ -24,9 +24,12 @@ DeVim is my personal dotfiles and tooling setup for full-stack development. It h
 
 Feel free to explore, tweak, or shamelessly steal — most of it was stolen to begin with. Suggestions welcome. ❤️
 
-> [!WARNING]\
-> This setup is under **active development**. Things may change frequently, and existing config files might get overwritten.  
-> _Make sure to back up anything you want to keep._  
+> [!NOTE]\
+> **DeVim is intentionally split into macOS and Windows setups.**  
+>  
+> This separation allows me to keep *personal* and *work* environments isolated, reducing the risk of unintentional breakage. <br />
+> Configs stay as close as possible across platforms for a consistent dev experience — still giving the confidence to experiment safely.
+> *Consistency where it matters. Flexibility where it counts.* 🌶️
 
  <p align="center"> 
     <picture>
