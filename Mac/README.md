@@ -1,6 +1,6 @@
  <p align="center"> 
     <picture>
-      <img src="../Docs/logo2.png" height="180">
+      <img src="../Docs/images/Devim_logo.png" height="180">
     </picture>
 </p>
 
@@ -39,14 +39,14 @@ macOS is a solid base for dev work — Unix roots, slick UI, and fewer headaches
 
 #### Because macOS Still Needs a Bit of Help
 
-Under the hood, it’s powerful — but you’ll need some upgrades to make it sing. These tools fix the friction points: smarter multitasking, better terminal, faster navigation, and less time wasted
+These tools fix the friction points, smarter multitasking, better window management, faster navigation and less time wasted:
 
 - **[Raycast](https://www.raycast.com/)**: Like Spotlight, but actually good. App launcher, script runner, and productivity Swiss Army knife.
 - **[Rectangle](https://rectangleapp.com/)**: Snap windows like it’s Windows. One of the first things I install on any Mac.
 - **[AltTab](https://alt-tab-macos.netlify.app/)**: Cmd+Tab the way it was meant to be — with full previews and sanity restored.
 
 > macOS does 80% of the job with style. This setup’s for the last 20% that actually matters.
-> <br /> _It’s clean, it’s quiet, it mostly Just Works™ _ 🙌
+> <br /> *It’s clean, it’s quiet, it mostly Just Works™* 🙌
 
 <br />
 <br />
@@ -71,70 +71,60 @@ Before diving in, make sure you’ve got these installed — or at least know wh
 A curated list of tools I use daily to support a fast, keyboard-driven development workflow on macOS. These fill in the gaps, improve the defaults, and make terminal-first dev life smoother.
 
 #### General Tools:
-
-macOS is a solid base for development, but there are still areas where the default experience falls short. These tools improve window management, productivity, and app navigation:
-
 -   **[Raycast](https://www.raycast.com/)**: The macOS launcher Apple wishes it built. Run scripts, manage extensions, control your system — all from your keyboard.
--   **[Obsidian](https://github.com/obsidianmd)**: My second brain. Markdown-based, local-first, Vim-friendly, cross-platform note-taking app. Perfect for documenting setups, writing brain dumps, or avoiding actual work.
--   **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app I use to keep track of personal tasks, dev stuff, and whatever chaos I’m pretending to control.
-
+-   **[Obsidian](https://github.com/obsidianmd)**: Markdown-based, local-first, Vim-friendly, cross-platform note-taking app, Excalidraw plugin is cool too.
+-   **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
+> *macOS is a solid base for development, but there are still areas where the default experience falls short.*
 <br/>
 
 #### Terminal:
-
-I bounce between [WezTerm](https://wezfurlong.org/wezterm/index.html) and [iTerm2](https://iterm2.com/) — both are GPU-accelerated, highly configurable, and better than Apple's default terminal in every possible way. WezTerm wins on cross-platform consistency and Lua config. iTerm2 wins on polish and being mac-native.
-
-For fonts, [Nerd Fonts](https://www.nerdfonts.com/) are a must. I'm partial to Hack Nerd and JetBrains Mono — aesthetic and readable.
-
+- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, Lua-configurable, and powered by Rust — my daily driver.
+- **[iTerm2](https://iterm2.com/)**: Polished and mac-native. Still a strong contender.
+> *For fonts, I use [Nerd Fonts](https://www.nerdfonts.com/), usually Hack Nerd or JetBrains Mono. Because vibes matter.*
 <br/>
 
-#### Shell
-
-Zsh is the default on macOS, and I lean into it with [`Oh My Zsh`](https://ohmyz.sh/). Plugins, themes, autosuggestions, Git helpers — it’s all here. My config is in `.zshrc`.
-
+#### Shell:
+- **[Zsh](https://www.zsh.org/)** + **[Oh My Zsh](https://ohmyz.sh/)**: Fast, scriptable, and gets out of the way. With just enough plugins to feel modern.
+> *Don't skip the extras — autosuggestions and syntax highlighting go a long way.*
 <br/>
 
-#### Prompt
-
-I'm currently using [`Powerlevel10k`](https://github.com/romkatv/powerlevel10k) — fast, flexible, and highly customizable. That said, I’m gradually moving to [`Starship`](https://starship.rs) for a cleaner, cross-shell experience that doesn’t require juggling multiple config files.
-
+#### Prompt:
+- **[Powerlevel10k](https://github.com/romkatv/powerlevel10k)**: Flashy, customizable, and great if you want everything *just so*.
+> *Phasing it out in favor of [Starship](https://starship.rs/) – for lighter, cross-shell setup*
 <br/>
 
 #### Editors
-
-Over the years, I’ve used everything from Notepad and Sublime to Xcode and VSCode. These days, [VSCode](https://code.visualstudio.com/) remains a reliable fallback — quick to set up, solid Vim support, and flexible enough for most workflows.
-
-That said, I’ve fully transitioned to [Neovim](https://neovim.io/) as my primary editor. It’s fast, keyboard-focused, and fully configurable in [Lua](https://www.lua.org/). My setup is built on [LazyVim](https://github.com/LazyVim/LazyVim), which handles the plugin ecosystem without getting in the way.
-
-More recently, I’ve been experimenting with [Cursor](https://cursor.sh/), an AI-enhanced editor built on top of VSCode. Integrated Copilot and inline prompt support make it surprisingly productive — especially for quick prototyping or exploring unfamiliar code.
-
+Over the years, I’ve used everything from Notepad and Sublime to the cursed Xcode.
+- **[VSCode](https://code.visualstudio.com/)**: The GOAT fallback — fast to spin up, decent Vim support, and reliable across platforms.
+- **[Neovim](https://neovim.io/)**: My main job, I mean editor — blazingly fast, keyboard-first, and fully configurable with [Lua](https://www.lua.org/).
+- **[Cursor](https://cursor.sh/)**: The experimental one — AI-heavy, Copilot-native, and weirdly useful when vibe matters more than precision.
+> *Use what works, configure what doesn't, and pretend the defaults were fine all along.*
 <br/>
 
-#### Persistent Terminal Sessions with tmux
-
-[`tmux`](https://en.wikipedia.org/wiki/Tmux) is a terminal multiplexer that lets you manage multiple terminal sessions within a single window.
-
-- Split your terminal into multiple panes (vertically or horizontally)  
-- Run parallel processes side by side (e.g., server logs, Git, build tools)  
-- Detach and resume sessions without losing progress — even after closing the terminal  
-
-It's especially useful for keeping long-running processes or remote sessions active across workflows, without restarting
+#### Terminal Multiplexing with tmux
+**[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive — even after closing the terminal.
+> *WezTerm’s pane support is tempting, but tmux has the ecosystem, the shortcuts, and years of muscle memory behind it.*
 
 <br/>
 <br/>
 
 #### 🧰 Other CLI Tools
+These tools are now part of the core experience (via Homebrew in WSL):
+- **[`zoxide`](https://github.com/ajeetdsouza/zoxide)** – Modern `cd`. Learns your most used dirs, jump to them faster with fuzzy matches.  (Rust gang)  
+- **[`eza`](https://github.com/eza-community/eza)** – Modern `ls`, the rewrite of deprecated exa with built-in color, icons, and better defaults.   (Rust gang)  
+- **[`fzf`](https://github.com/junegunn/fzf)** – Fuzzy search for files, history, Git, you name it. Type less, find more it’ll guess what you meant.  (Go gang)
+- **[`bat`](https://github.com/sharkdp/bat)** – Drop-in replacement for `cat` with syntax highlighting, line numbers, and paging support. Tokyo themed.
+- **[`ripgrep`](https://github.com/BurntSushi/ripgrep)** – Blazing fast `grep` alternative. Used by modern editors. (Rust gang) 
+- **[`fd`](https://github.com/sharkdp/fd)** – A simpler, faster alternative to `find`. Better syntax, better defaults, less pain.  
+- **[`lazygit`](https://github.com/jesseduffield/lazygit)** – TUI Git client that simplifies staging, branching, rebasing, and reviewing commits.(Go gang) 
+- **[`tldr`](https://tldr.sh/)** – Simplified, community-driven man pages, with real-world examples and no fluff.
+- **[`nvm`](https://github.com/nvm-sh/nvm)** – Node version manager. Staple tool, cross-platform and reliable.
+- **[`thefuck`](https://github.com/nvbn/thefuck)** – Messed up a command? It’ll suggest the right one. Surprisingly useful, endlessly satisfying. (Python gang)
+- **[`GitHub Copilot CLI`](https://github.com/github/cli-copilot)** – AI for your terminal, generate commands, explain errors and pretend you did it yourself. 
+- **[`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)** – Suggests commands from your history as you type.
+- **[`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)** – Adds real-time syntax highlighting to your Zsh input. 
 
-These tools are now part of the core experience via Homebrew:
-
--   **[`zoxide`](https://github.com/ajeetdsouza/zoxide)** is like `cd`, but actually useful. It tracks the directories you visit most often, and then lets you jump to them with fuzzy-matched shortcuts. It’s written in Rust (so you can pretend it’s fast and secure™) and basically replaces the part of your brain that remembers folder paths.
--   **[eza](https://github.com/eza-community/eza)** A modern replacement for `ls` with colors, icons, tree views, and actual readability. Once you see your files in `eza`, going back to `ls` feels like reading source code on Notepad.
--   **[bat](https://github.com/sharkdp/bat)** It’s `cat`, but with syntax highlighting, line numbers, and a bit of flair. If `cat` is a flip phone, `bat` is an iPhone with dark mode enabled.
--   **[fzf](https://github.com/junegunn/fzf)** Fuzzy finder for your terminal — search files, command history, Git commits, whatever. Type a few characters and it’ll guess what you meant. Like a mind reader, but for file paths.
--   **[ripgrep](https://github.com/BurntSushi/ripgrep)** A super fast text search tool that makes `grep` feel like it’s running on dial-up. Used by tools like Telescope in Neovim, it’s your go-to for searching across codebases in milliseconds.
--   **[thefuck](https://github.com/nvbn/thefuck)** Messed up a terminal command? Just type `fuck` and it’ll suggest the right one. Hit enter, and boom — fixed. Surprisingly useful, endlessly satisfying.
--   **[GitHub Copilot CLI](https://github.com/github/cli-copilot)** Copilot, but for your terminal. Generate commands, explain errors, and pretend you're doing twice the work with half the effort. Requires setup via `gh auth login`, but totally worth it.
-
+<br/>
 <br/>
 
 ---

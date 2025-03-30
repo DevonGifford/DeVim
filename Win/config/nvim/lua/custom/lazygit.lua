@@ -1,4 +1,3 @@
--- plugins/lazygit.lua
 return {
   "kdheepak/lazygit.nvim",
   keys = {

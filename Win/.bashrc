@@ -1,11 +1,9 @@
 # 🧠 Personal Bash Config - Developer Edition
 # ================================================================================
-# 📍 Location:
-# This file is typically found at: ~/.bashrc
 # It's sourced automatically for non-login, interactive shells (e.g., new terminal tabs).
 
 # ✅ Prerequisites / Assumptions:
-# - Bash is your default shell (or fallback for scripts/compat mode)
+# - Bash is your default shell (or used via scripts/compat mode)
 # - Some tools like `notify-send`, `dircolors`, and `lesspipe` are installed
 # - You’re okay with auto-switching to Zsh if it’s available (see bottom)
 
