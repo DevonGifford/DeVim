@@ -1,49 +1,22 @@
-
-# 🧠 Personal ZSH Config - Developer Edition
 # ================================================================================
-# ✅ Prerequisites:
-# - Oh My Zsh: https://ohmyz.sh/
-# - Plugins: zsh-autosuggestions, zsh-syntax-highlighting
-# - Nerd Font for prompt icons
-# - Optional: Starship prompt, bat, eza, fzf, zoxide, etc.
-
-# 💻 How I Use This:
-# - Customized prompt via Starship
-# - Aliases and enhancements for bat, eza, zoxide, fd, and fzf
-# - Homebrew-based tools and NVM managed Node.js versions
-# - SSH keys autoloaded at shell start
-# - Neovim is life. Vim is the fallback.
-
-# ⚠️ Note:
-# Make sure to restart your terminal or run `exec zsh` after edits to apply changes.
+# TÜV Rheinland Developer ZSH Config
+# ================================================================================
+# ✅ Prerequisites
+# Core: Oh My Zsh, zsh-autosuggestions, zsh-syntax-highlighting, Nerd Font
+# Tools (via Homebrew/Linuxbrew): starship, bat, eza, fd, fzf, zoxide, nvm
+# Optional: corporate CA (Zscaler), SSH keys for GitHub/GitLab
+#
+# ⚠️ Notes: restart terminal or `exec zsh` after edit
 # ================================================================================
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
-# Path to your Oh My Zsh installation.
+# ---- Oh My Zsh Config ----
 export ZSH="$HOME/.oh-my-zsh"
-
-# --- Set name of the theme to load ---
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 
-
 # ---- Syntax Highlighting ----
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ---- Home Bew Config ----
@@ -58,8 +31,9 @@ export NVM_DIR="$HOME/.nvm"
 export BAT_THEME=tokyonight_night
 
 # ---- Eza (better ls) -----
-alias ls="eza --icons=always"
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls='eza --icons=always --color=always -1'
+alias la='eza --icons=always --color=always -1 -a'
+alias lt='eza --color=always --git --icons=always --group-directories-first -lT --level=2'
 
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
@@ -100,18 +74,35 @@ _fzf_comprun() {
   esac
 }
 
-# ---- Custom ZSCALAR CERT ----
-export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+# ----- WORK: SSH Agent / Keys Setup ------
 
-# ----- SSH Keys Setup ------
-eval "$(ssh-agent -s)" > /dev/null
-ssh-add -q ~/.ssh/ssh-gitlab-tuv ~/.ssh/ssh-github-personal 2>/dev/null
+# ---- WORK: Custom ZSCALAR CERT ----
 
-# ----- Quick Aliases ------
+# --- WORK: Proxy presets ---
+
+# ----- Personal Quick Aliases ------
 alias syncdevim="bash ~/personal/DeVim/Win/sync-to-devim.sh"
+
+# Attach to a tmux session by name
+attach() {
+  if [[ -z "$1" ]]; then
+    echo "Available tmux sessions:"
+    tmux ls 2>/dev/null || echo "(none)"
+  else
+    tmux attach -t "$1"
+  fi
+}
+
+# Enable autocompletion for attach
+_attach_complete() {
+  local -a sessions
+  sessions=("${(@f)$(tmux ls 2>/dev/null | cut -d: -f1)}")
+  _describe 'sessions' sessions
+}
+compdef _attach_complete attach
+
 
 # ---- starship prompts (must be at end of file!) ----
 eval "$(starship init zsh)"
-
 
 
