@@ -1,3 +1,9 @@
-indent_type = "Spaces"
-indent_width = 2
-column_width = 120
+{
+  "extras": [
+
+  ],
+  "news": {
+    "NEWS.md": "4964"
+  },
+  "version": 4
+}
