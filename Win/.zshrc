@@ -19,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# ---- Home Bew Config ----
+# ---- Home Brew Config ----
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # ---- NVM Config ----
