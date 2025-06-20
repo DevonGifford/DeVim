@@ -1,5 +1,4 @@
-# ================================================================================
-# TÜV Rheinland Developer ZSH Config
+# 🧠 Personal ZSH Config - Developer Edition
 # ================================================================================
 # ✅ Prerequisites
 # Core: Oh My Zsh, zsh-autosuggestions, zsh-syntax-highlighting, Nerd Font
