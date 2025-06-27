@@ -1,0 +1,5 @@
+{
+  "format": "ddd D MMM - [Daily Meeting]",
+  "folder": "Notes",
+  "template": "Notes/Templates/Standup"
+}

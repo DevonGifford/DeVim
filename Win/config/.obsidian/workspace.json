@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "d81cdb2351d94d2e",
+    "type": "split",
+    "children": [
+      {
+        "id": "43b4283956278508",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f31e0f4c051bc06f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Escalation - PM Email.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Escalation - PM Email"
+            }
+          },
+          {
+            "id": "c8270be46dc5d88d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Random/Project Issues/A Formal Case Study.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "A Formal Case Study"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a970639cc6b5c226",
+    "type": "split",
+    "children": [
+      {
+        "id": "7ab1be7bc4b2edc7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "829f0cb11c6f05bc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e04445a54c92cfb6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#Discovery",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "367658edd6388941",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 266.5
+  },
+  "right": {
+    "id": "fc6bba661e524695",
+    "type": "split",
+    "children": [
+      {
+        "id": "dbfcf954e51ea215",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eae1bf9ebec31c60",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Meeting Notes/DevOps/01 - 31 Weekly DevOps Meeting.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 01 - 31 Weekly DevOps Meeting"
+            }
+          },
+          {
+            "id": "e9d256a1d6d42682",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Meeting Notes/DevOps/01 - 31 Weekly DevOps Meeting.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 01 - 31 Weekly DevOps Meeting"
+            }
+          },
+          {
+            "id": "ee0e8b31fc06a64d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c582614c909722af",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Meeting Notes/DevOps/01 - 31 Weekly DevOps Meeting.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 01 - 31 Weekly DevOps Meeting"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "zk-prefixer:Create new unique note": false,
+      "templates:Insert template": false,
+      "daily-notes:Open today's daily note": false,
+      "switcher:Open quick switcher": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "f31e0f4c051bc06f",
+  "lastOpenFiles": [
+    "Random/Project Issues/A Formal Case Study.md",
+    "Random/Project Issues/Tech Lead Strategies/Handling - Javier.md",
+    "Escalation - PM Email.md",
+    "Random/Project Issues/Tech Lead Strategies/My Own Self Review.md",
+    "Random/Project Issues/Tech Lead Strategies/My Own Leadership Advice.md",
+    "Random/Project Issues/Tech Lead Strategies/Handling - Marcel.md",
+    "Escalation - Frontend Team Cuts.md",
+    "Meeting with Testing Team.md",
+    "subtasks for the RenovateBot.md",
+    "RennovateBot.md",
+    "Localization POC Brainstorm.md",
+    "Developer Daily Routine.md",
+    "Design Epic Ideas.md",
+    "General Notes/info.md",
+    "Resources/Attachments/Pasted Image 20250626204457_411.png",
+    "My Meeting Notes/Frontend/Diagrams/_Frontend Diagrams.md",
+    "My Brainstorm Notes/Draft Tickets/NEW - LOCALIZATION POC.md",
+    "Random/Candidate Hiring/TASK - FE Candidate - Technical Interview Questions.md",
+    "Random/Candidate Hiring/TASK - FE Candidate - Software Engineer Job Posting.md",
+    "Random/Candidate Hiring/Candidate Frontend Interview - Meeting Notes.md",
+    "My Meeting Notes/DevOps/WIZ - Meeting II.md",
+    "Resources/Attachments/Pasted image 20250626133244.png",
+    "Resources/Attachments/Pasted image 20250626131953.png",
+    "General Notes/Env Variables.md",
+    "Random/Germany Trip/Egencia Germany Trip.md",
+    "QA Session with Javier - Meeting Notes.md",
+    "Random/Project Issues/Tech Lead Strategies/Handling - Adnan.md",
+    "Untitled/desktop.ini",
+    "My Personal Notes",
+    "Resources/Attachments/Pasted Image 20250622233018_000.png",
+    "Resources/Attachments/Pasted Image 20250622233002_984.png",
+    "My Meeting Notes/Frontend/Diagrams/Diagram - All Legacy.md",
+    "My Brainstorm Notes/Draft Tickets/HashiCorp Self-Hosting Epic.md",
+    "Random/Project Issues/Untitled/desktop.ini",
+    "Random/Project Issues/Tech Lead Strategies",
+    "Random/Project Issues/Research Gathering",
+    "Meeting Notes/Management/Adnan/Untitled/desktop.ini",
+    "My Meeting Notes/Management/Adnan/Archive",
+    "Random/Untitled/desktop.ini",
+    "Random/Scrum Reviews",
+    "Random/Germany Trip",
+    "Resources/Attachments/Pasted Image 20250617141508_451.png",
+    "Resources/Attachments/Pasted Image 20250617141453_481.png",
+    "Resources/Attachments/Pasted Image 20250617141453_438.png",
+    "Resources/Attachments/Pasted image 20250616140748.png",
+    "Resources/Attachments/Pasted image 20250616140715.png"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "imageEnableUploadToHost": false,
+  "useLegacyConverter": false,
+  "renderMetadata": true,
+  "temp": {
+    "createCalloutConfiguration": ""
+  },
+  "calloutConfigurations": [],
+  "imageUpload": {
+    "enabled": false,
+    "host": "",
+    "apiKey": "",
+    "username": "",
+    "password": ""
+  },
+  "version": "0.2.1"
+}

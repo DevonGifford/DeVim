@@ -1,0 +1,16 @@
+{
+  "vimMode": true,
+  "showLineNumber": true,
+  "promptDelete": false,
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 76
+  },
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "Resources/Attachments",
+  "newFileLocation": "root",
+  "newFileFolderPath": "General Notes"
+}

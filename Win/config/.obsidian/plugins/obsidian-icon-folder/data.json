@@ -1,0 +1,69 @@
+{
+  "settings": {
+    "migrated": 5,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": "#e7e8b5",
+    "recentlyUsedIcons": [
+      "LiNotepadText",
+      "LiTrello",
+      "LiFerrisWheel",
+      "LiUsers",
+      "LiFileLock"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "debugMode": false
+  },
+  "To do list.md": {
+    "iconName": "LiListTodo",
+    "iconColor": "#7b7b7b"
+  },
+  "Journals": {
+    "iconName": "LiCalendar",
+    "iconColor": "#7b7b7b"
+  },
+  "Resources": "LiFolderCog",
+  "Research Topics": {
+    "iconName": "LiFolderSearch",
+    "iconColor": "#7b7b7b"
+  },
+  "Projects": {
+    "iconName": "LiFolderTree",
+    "iconColor": "#7b7b7b"
+  },
+  "To-Do List.md": "LiListTodo",
+  "Documentation": "LiFileLineChart",
+  "Notes": "LiCassetteTape",
+  "Meetings": "LiNotebookPen",
+  "Documentation/Confluence/Frontend Documentation": "LiLaptop",
+  "Documentation/Confluence/Ticket Management & Issue Tracking": "LiTicketCheck",
+  "Documentation/Confluence/Contribution Guidelines": "LiPencilRuler",
+  "General Notes": "LiNotebookText",
+  "General Notes/info.md": "LiInfo",
+  "General Notes/Tips & Tricks.md": "LiBrain",
+  "General Notes/Env Variables.md": "LiFileLock",
+  "General Notes/Code": "LiCodeXml",
+  "Random": "LiFerrisWheel",
+  "General Notes/ADR's & SPIKE's": "LiTrello",
+  "My Brainstorm Notes": "LiBrainCircuit",
+  "My Meeting Notes": "LiNotebookPen",
+  "My Personal Notes": "LiNotepadText"
+}
