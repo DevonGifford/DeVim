@@ -1,153 +1,119 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# 🧠 Personal ZSH Config - Developer Edition
+# ================================================================================
+# 📍 This file lives at: ~/.zshrc
+# -- It's loaded whenever a new ZSH shell session starts (e.g., terminal tabs/windows).
+
+# - Oh My Zsh: https://ohmyz.sh/
+# - Nerd Font for prompt icons
+# - Plugins: zsh-autosuggestions, zsh-syntax-highlighting
+# - Customized prompt via Starship
+# - Aliases and enhancements for bat, eza, zoxide, fd, and fzf
+# - Homebrew-based tools and NVM managed Node.js versions
+# - SSH keys autoloaded at shell start
+# - Neovim is life. Vim is the fallback.
+
+# ⚠️ Notes: restart terminal or `exec zsh` after edit
+
+# ================================================================================
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# ---- Oh My Zsh Config ----
 export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions web-search)    
-
-
+plugins=(git web-search)
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# ---- Syntax Highlighting ----
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source /Users/mgt/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+# ---- NVM Config ----
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# ----- Bat (better cat) -----
+export BAT_THEME=tokyonight_night
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# ---- Eza (better ls) -----
+alias ls="eza --icons=always"
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ll="eza -lg --icons"
+alias la="eza -lag --icons"
+alias lt="eza -lTg --icons"
+alias lt1="eza -lTg --level=1 --icons"
+alias lt2="eza -lTg --level=2 --icons"
+alias lt3="eza -lTg --level=3 --icons"
+alias lta="eza -lTag --icons"
+alias lta1="eza -lTag --level=1 --icons"
+alias lta2="eza -lTag --level=2 --icons"
+alias lta3="eza -lTag --level=3 --icons"
 
+# ---- Zoxide (better cd) ----
+eval "$(zoxide init zsh)"
+alias cd="z"
 
-
-
+# ---- TheFuck -----
+eval $(thefuck --alias)
 
 # ---- FZF -----
-
 eval "$(fzf --zsh)"
-
-# --- setup fzf theme ---
-fg="#CBE0F0"
-bg="#011628"
-bg_highlight="#143652"
-purple="#B388FF"
-blue="#06BCE4"
-cyan="#2CF9ED"
-
-export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
-
-# -- Use fd instead of fzf --
+# Setup fzf theme
+fg="#CBE1F0"
+bg="#1a1b26"
+bg_highlight="#143653"
+purple="#B389FF"
+blue="#07BCE4"
+cyan="#3CF9ED"
+export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}
+--preview-window=right:60%:wrap
+--bind=ctrl-u:preview-page-up,ctrl-d:preview-page-down
+--bind=ctrl-/:toggle-preview"
+# Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
-# - The first argument to the function ($1) is the base path to start traversal
-# - See the source code (completion.{bash,zsh}) for the details.
-_fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
-}
-
+_fzf_compgen_path() { fd --follow --hidden --exclude .git . "$2"; }
 # Use fd to generate the list for directory completion
-_fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
-}
-
+_fzf_compgen_dir()  { fd --type=d --follow --hidden --exclude .git . "$2"; }
 # Setup fzf-git
-# fzf-Vgit is a really nice script to look for git related things (commits, hashes, files and more) with fzf.
 source ~/fzf-git.sh/fzf-git.sh
-
-
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
-
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -199; else bat -n --color=always --line-range :300 {}; fi"
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
-export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
-
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -199'"
 # Advanced customization of fzf options via _fzf_comprun function
-# - The first argument to the function is the name of the command.
-# - You should make sure to pass the rest of the arguments to fzf.
 _fzf_comprun() {
-  local command=$1
+  local command=$2
   shift
-
   case "$command" in
-    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    cd)           fzf --preview 'eza --tree --color=always {} | head -199' "$@" ;;
     export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
     ssh)          fzf --preview 'dig {}'                   "$@" ;;
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
 
-# ----- Bat (better cat) -----
+# ----- Personal Quick Aliases ------
 
-export BAT_THEME=tokyonight_night
+# Attach to a tmux session by name
+attach() {
+  if [[ -z "$1" ]]; then
+    echo "Available tmux sessions:"
+    tmux ls 2>/dev/null || echo "(none)"
+  else
+    tmux attach -t "$1"
+  fi
+}
 
+# Enable autocompletion for attach
+_attach_complete() {
+  local -a sessions
+  sessions=("${(@f)$(tmux ls 2>/dev/null | cut -d: -f1)}")
+  _describe 'sessions' sessions
+}
+compdef _attach_complete attach
 
-
-
-
-# ---- Eza (better ls) -----
-
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
-
-
-
-
-
-
-
-# ---- TheFuck -----
-
-# thefuck alias
-eval $(thefuck --alias)
-
-
-
-
-
-# ---- Zoxide (better cd) ----
-eval "$(zoxide init zsh)"
-
-alias cd="z"
+# ---- starship prompts (must be at end of file!) ----
+eval "$(starship init zsh)"

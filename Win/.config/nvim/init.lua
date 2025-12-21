@@ -1,7 +1,3 @@
--- Personal Neovim configuration
--- Inspired by several public dotfiles and refined for personal use.
--- And by “inspired,” I mean Ctrl+C’d and Ctrl+V’d — with love.
-
 -- Global settings (vim.g)
 local global_options = {
     mapleader = ' ',
@@ -20,6 +16,7 @@ for k, v in pairs(global_options) do vim.g[k] = v end
 
 -- Editor behavior (vim.opt)
 local o_options = {
+    winborder = "rounded",
     autoindent = true,
     breakindent = true,
     clipboard = 'unnamedplus',
@@ -62,20 +59,31 @@ vim.diagnostic.config({
     severity_sort = true
 })
 
--- Lazy.nvim bootstrap
-local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
-if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system {
-        'git', 'clone', '--filter=blob:none',
-        'https://github.com/folke/lazy.nvim.git', '--branch=stable', lazypath
-    }
+
+-- NVIM SETUP (lazy.nvim bootstrap)
+local uv = vim.uv or vim.loop
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+---@diagnostic disable-next-line: undefined-field
+if not uv.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
+--CUSTOM FUNCTIONS
+local oi = require("custom.open_import")
 
 -- CUSTOM KEYBINDINGS
 local keymap = vim.keymap
-local opts = { noremap = true, silent = true }
+--
 -- Basic movement
 keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
 keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
@@ -104,11 +112,19 @@ keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "[S]plit e[X]it current
 keymap.set("n", "<leader><leader>+", ":exe 'vertical resize ' . (winwidth(0) * 3/2)<CR>", { desc = "[+] Resize wider", silent = true })
 keymap.set("n", "<leader><leader>-", ":exe 'vertical resize ' . (winwidth(0) * 2/3)<CR>", { desc = "[-] Resize narrower", silent = true })
 -- Diagnostics
+keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, { desc = "Go to previous diagnostic message" })
+keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, { desc = "Go to next diagnostic message" })
 keymap.set("n", "<leader>t", vim.diagnostic.open_float, { desc = "[T]oggle diagnostic float" })
-keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev [D]iagnostic" })
-keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next [D]iagnostic" })
 keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "[E]rror float window" })
 keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "[Q]uickfix diagnostics list" })
+-- Custom Jump to import target
+keymap.set("n", "<leader>go", oi.go, { desc = "Go to import target" })
+keymap.set("n", "<leader>gos", function() oi.go("vsplit") end, { desc = "Go to import target (vsplit)" })
+keymap.set("n", "<leader>goh", function() oi.go("split") end, { desc = "Go to import target (split)" })
+keymap.set("n", "<leader>got", function() oi.go("tabedit") end, { desc = "Go to import target (tab)" })
+-- Custom LSP code actions
+keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
+keymap.set("v", "<leader>ca", function() vim.lsp.buf.code_action() end, { desc = "Code Action (range)" })
 -- Git (Telescope)
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "[G]it [S]tatus" })
 keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "[G]it [C]ommits (project)" })
@@ -119,9 +135,9 @@ keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all in buffer" })
 keymap.set("i", "<S-Tab>", "<C-D>", { desc = "Decrease indent (Insert mode)" })
 keymap.set({ "n", "v" }, "<Space>", "<Nop>", { desc = "Disable Space", silent = true })
 -- File ops
-keymap.set("n", "<leader>w", ":w<CR>", { desc = "[W]rite/save file", noremap = true, silent = true })
-keymap.set("n", "<leader>Q", ":q<CR>", { desc = "[Q]uit file", noremap = true, silent = true })
-keymap.set("n", "<Leader>QA", ":qa<CR>", { desc = "[Q]uit [A]ll", noremap = true, silent = true })
+-- keymap.set("n", "<leader>w", ":w<CR>", { desc = "[W]rite/save file", noremap = true, silent = true })
+-- keymap.set("n", "<leader>Q", ":q<CR>", { desc = "[Q]uit file", noremap = true, silent = true })
+-- keymap.set("n", "<Leader>QA", ":qa<CR>", { desc = "[Q]uit [A]ll", noremap = true, silent = true })
 
 
 -- CUSTOM PLUGINS

@@ -25,11 +25,11 @@ DeVim is my personal dotfiles and tooling setup for full-stack development. It h
 Feel free to explore, tweak, or shamelessly steal — most of it was stolen to begin with. Suggestions welcome. ❤️
 
 > [!NOTE]\
-> **DeVim is intentionally split into macOS and Windows setups.**  
->  
-> This separation allows me to keep *personal* and *work* environments isolated, reducing the risk of unintentional breakage. <br />
-> Configs stay as close as possible across platforms for a consistent dev experience — still giving the confidence to experiment safely.
-> *Consistency where it matters. Flexibility where it counts.* 🌶️
+> **DeVim is intentionally split into macOS and Windows setups.**
+>
+> This keeps personal and work environments isolated and reduces the risk of accidental breakage.  
+> The configs stay as aligned as possible across platforms, while still leaving room to experiment safely.
+> _Consistency where it matters. Flexibility where it counts._ 🌶️
 
  <p align="center"> 
     <picture>
@@ -37,15 +37,13 @@ Feel free to explore, tweak, or shamelessly steal — most of it was stolen to b
     </picture>
 </p>
 
-
 <br />
-
 
 ## 🛠️ Setup and Learning Resources
 
 > ⚠️ **The bad news:**  
 > This repo doesn’t come with an installer, wizard, or training montage.  
-> It also won’t teach you how to Vim or tweak Lua. 
+> It also won’t teach you how to Vim or tweak Lua.
 
 <br/>
 
@@ -58,14 +56,14 @@ Feel free to explore, tweak, or shamelessly steal — most of it was stolen to b
 
 ## 🙌 Special Thanks
 
-A huge thank you to the following individuals for their support:
+Shout-out to the following people for inspiration, ideas, and support:
 
--   [@maxischmaxi](https://github.com/maxischmaxi)
--   [@jayson-lennon](https://github.com/jayson-lennon)
--   [@scottmckendry](https://github.com/scottmckendry)
--   [@JazzyGrim](https://github.com/JazzyGrim) (Sindo)
--   [@devaslife](https://www.devas.life/)
--   [@tjdevries](https://github.com/tjdevries)
--   [@ThePrimeagen](https://github.com/theprimeagen)
+- [@maxischmaxi](https://github.com/maxischmaxi)
+- [@jayson-lennon](https://github.com/jayson-lennon)
+- [@scottmckendry](https://github.com/scottmckendry)
+- [@JazzyGrim](https://github.com/JazzyGrim) (Sindo)
+- [@devaslife](https://www.devas.life/)
+- [@tjdevries](https://github.com/tjdevries)
+- [@ThePrimeagen](https://github.com/theprimeagen)
 
 ---
