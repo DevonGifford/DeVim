@@ -1,0 +1,1 @@
+/home/devon/.config/omarchy/current/theme/neovim.lua
