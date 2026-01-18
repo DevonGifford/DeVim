@@ -35,7 +35,7 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤�
 
 ## ⚙️ System Overview
 
-[Omarchy](https://omarchy.com) is an opinionated Arch-based distro built by the controversial, the legendary, DHH. After hopping around a bit — some distros trying too hard to be Windows, some cosplaying macOS, most either undercooked or riced in all the wrong ways — this one just fits. It's riced roughly how I would have done it myself, which either says a lot about DHH's taste or raises some questions about where he got his inspiration.
+[Omarchy](https://omarchy.com) is an opinionated Arch-based distro built by the infamouse DHH. After distro hopping around a bit - some distros trying too hard to be Windows, some cosplaying macOS, most either undercooked or riced in all the wrong ways - this one just fits. It's riced roughly how I would have done it myself, which either says a lot about DHH's taste or raises some questions about where he got his inspiration.
 
 My setup barely differs from the defaults — a few keybindings, a custom Waybar module or two, and the usual NeoVim and tmux that are too deeply in my muscle memory to ever change. That's genuinely it.
 
@@ -65,21 +65,20 @@ A curated list of tools I use daily for a fast, keyboard-driven development work
 
 #### General Tools:
 - **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first, Vim-friendly note-taking. Cross-platform so your vault follows you everywhere.
+- **[`LocalSend`](https://localsend.org/)**: Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
 - **[KeePassXC](https://keepassxc.org/)**: Local password manager. No cloud, no subscription, no drama.
+- **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
 > *Linux doesn't need much help in the productivity department. The terminal IS the productivity layer.*
 
 #### Terminal:
 - **[Alacritty](https://Alacritty.org/)**: Omarchy's default terminal. Lightweight, fast. No config needed.
 - **[Ghostty](https://ghostty.org/)**: Linux backup — cross-platform, written in Zig, native feel on every OS.
-> *Omarchy has some opinionated terminals, normally I use wezterm, but DHH and I think the same. I use one. The others are just vibes.*
+> *Omarchy has some opinionated terminals, normally I use wezterm, but DHH and Alacritty is fine.*
 
-#### Shell:
+#### Shell & Prompt:
 - **[Bash](https://www.gnu.org/software/bash/)**: Omarchy default. I stay close to the base config and only add what's necessary.
-> *Normally prefer zsh but trying to stick xlose to DHH defaults here.*
-
-#### Prompt:
 - **[Starship](https://starship.rs/)**: Fast, portable, Rust-powered. One config across every machine and shell I care about.
-> * Cross-platform and every platform. That's the point.*
+> *Normally prefer zsh but trying to stick close to DHH and his opinon that zsh was a mistake.*
 
 #### Editors:
 - **[Neovim](https://neovim.io/)**: My main editor — blazingly fast, keyboard-first, fully configured in Lua.
@@ -87,8 +86,8 @@ A curated list of tools I use daily for a fast, keyboard-driven development work
 > *Use what works, configure what doesn't, and end up falling back to vscode.*
 
 #### Terminal Multiplexing with tmux:
-**[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Same config as macOS — muscle memory is worth protecting.
-> *Hyprland does window tiling at the OS level. tmux does it inside the terminal. Both. Always both.*
+- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Same config as macOS — muscle memory is worth protecting.
+> *Hyprland does window tiling at the OS level. tmux does it inside the terminal.*
 
 <br/>
 <br/>
@@ -104,8 +103,10 @@ Installed via `yay`, mostly shipped with omarchy.
 - **[`gh`](https://cli.github.com/)** — GitHub from the terminal. PRs, issues, workflows.
 - **[`mise`](https://mise.jdx.dev/)** — Runtime version manager. Node, Python, Ruby — one tool, XDG-compliant.
 - **[`jq`](https://jqlang.github.io/jq/)** — JSON processor. Essential for any API or DevOps work.
+- **[`docker`](https://docker.com)** + **[`docker-compose`](https://docs.docker.com/compose/)** — containers. lazydocker makes it bearable.
+- **[`tobi-try`](https://github.com/tobi/try)** — dated scratch directories for experiments. git worktrees under the hood.
 - **[`claude-code`](https://claude.ai/code)** — Claude in the terminal. Agentic coding, file editing, codebase questions.
-- **[`OpenCode`](https://opencode.ai/)** — AI coding assistant. Model-agnostic, terminal-native.
+- **[`opencode`](https://opencode.ai/)** — AI coding assistant. Model-agnostic, terminal-native.
 - **[`eza`](https://github.com/eza-community/eza)** — Modern `ls` with icons, color, and git status. (Rust gang)
 - **[`bat`](https://github.com/sharkdp/bat)** — `cat` with syntax highlighting. Tokyo Night themed.
 - **[`fzf`](https://github.com/junegunn/fzf)** — Fuzzy finder for everything. Files, history, git. (Go gang)
@@ -114,15 +115,16 @@ Installed via `yay`, mostly shipped with omarchy.
 - **[`fd`](https://github.com/sharkdp/fd)** — Better `find`. Sane syntax, faster results.
 - **[`dust`](https://github.com/bootandy/dust)** — Visual `du`. See what's eating your disk at a glance.
 - **[`tldr`](https://tldr.sh/)** — Man pages for humans. Real examples, no fluff.
-- **[`gum`](https://github.com/charmbracelet/gum)** — Makes shell scripts look beautiful.
+- **[`gum`](https://github.com/charmbracelet/gum)** — Makes shell scripts look beautiful. 
 - **[`wl-clipboard`](https://github.com/bugaevc/wl-clipboard)** — Wayland clipboard from the terminal (`wl-copy`, `wl-paste`).
-- **[`playerctl`](https://github.com/altdesktop/playerctl)** — Control media players from the terminal or keybinds.
+- **[`playerctl`](https://github.com/altdesktop/playerctl)** — Control media players from keybinds or terminal.
 - **[`btop`](https://github.com/aristocrathic/btop)** — System monitor that doesn't look like 1995.
 - **[`nvtop`](https://github.com/Syllo/nvtop)** — GPU equivalent of btop. NVIDIA/AMD process monitor.
 - **[`bluetui`](https://github.com/pythops/bluetui)** — Bluetooth manager TUI. No need to leave the terminal to pair headphones.
-- **[`impala`](https://github.com/pythops/impala)** — WiFi manager TUI. Same energy.
+- **[`impala`](https://github.com/pythops/impala)** — WiFi manager TUI. Same energy. 
+- **[`grim`](https://sr.ht/~emersion/grim/)** + **[`slurp`](https://github.com/emersion/slurp)** — screenshot capture. grim grabs, slurp selects the region.
 - **[`satty`](https://github.com/gabm/satty)** — Screenshot annotation. Draw on screenshots before sharing.
-- **[`localsend`](https://localsend.org/)** — Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
+- **[`gpu-screen-recorder`](https://git.dec05eba.com/gpu-screen-recorder)** — low overhead screen recording, GPU accelerated.
 
 
 #### 📁 What's Not In This Repo
