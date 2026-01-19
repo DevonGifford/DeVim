@@ -39,19 +39,13 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤�
 
 My setup barely differs from the defaults — a few keybindings, a custom Waybar module or two, and the usual NeoVim and tmux that are too deeply in my muscle memory to ever change. That's genuinely it.
 
-#### Omarchy. It uses Arch, btw.
-
+#### 🐧 Omarchy. It uses Arch, btw.
 - **[Arch Linux](https://archlinux.org/)** — rolling release, AUR access, and a wiki that answers everything.
 - **[Hyprland](https://hyprland.org/)** — tiling Wayland compositor. Snappy, GPU-accelerated, and genuinely fun once you stop fighting it.
 - **[Waybar](https://github.com/Alexays/Waybar)** — status bar with custom modules, including a live temperature monitor with color-coded alerts for CPU, GPU, and NVMe drives.
 
-<br />
-<br />
-
-## ✔ Prerequisites
-
+####  ✔ Prerequisites
 Normally I'd list out package managers, runtimes, fonts, and a handful of other things you need to hunt down yourself. Not here — Omarchy is opinionated and ships with all of that. So the list is short:
-
 - **[Omarchy](https://omarchy.com)** — installed and booted. Follow their guide, come back here when you're staring at your desktop.
 - **[A free SSD](https://wiki.archlinux.org/title/Installation_guide)** — or partition an existing drive if you know what you're doing. Either way, that's between you and the internet.
 - **[A healthy fear of GUIs](https://www.freecodecamp.org/news/command-line-for-beginners/)** — this setup assumes you're comfortable in the terminal and can Vim your way out of trouble.
@@ -126,9 +120,9 @@ Installed via `yay`, mostly shipped with omarchy.
 - **[`satty`](https://github.com/gabm/satty)** — Screenshot annotation. Draw on screenshots before sharing.
 - **[`gpu-screen-recorder`](https://git.dec05eba.com/gpu-screen-recorder)** — low overhead screen recording, GPU accelerated.
 
+<br/>
 
 #### 📁 What's Not In This Repo
-
 This repo only tracks configs that differ from Omarchy's defaults. The following are installed and configured on the machine but intentionally not tracked here:
 
 - `walker/` — app launcher
