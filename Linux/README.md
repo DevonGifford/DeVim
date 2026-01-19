@@ -65,7 +65,7 @@ A curated list of tools I use daily for a fast, keyboard-driven development work
 
 #### General Tools:
 - **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first, Vim-friendly note-taking. Cross-platform so your vault follows you everywhere.
-- **[`LocalSend`](https://localsend.org/)**: Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
+- **[LocalSend](https://localsend.org/)**: Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
 - **[KeePassXC](https://keepassxc.org/)**: Local password manager. No cloud, no subscription, no drama.
 - **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
 > *Linux doesn't need much help in the productivity department. The terminal IS the productivity layer.*
