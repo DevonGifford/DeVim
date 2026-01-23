@@ -85,7 +85,6 @@ A curated list of tools I use daily for a fast, keyboard-driven development work
 
 <br/>
 <br/>
-<br/>
 
 #### 🧰 CLI Tools
 
