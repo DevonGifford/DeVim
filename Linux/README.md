@@ -33,22 +33,22 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤�
 <br />
 <br />
 
-## ⚙️ System Overview
+## ⚙️System Overview
 
-[Omarchy](https://omarchy.com) is an opinionated Arch-based distro built by the infamouse DHH. After distro hopping around a bit - some distros trying too hard to be Windows, some cosplaying macOS, most either undercooked or riced in all the wrong ways - this one just fits. It's riced roughly how I would have done it myself, which either says a lot about DHH's taste or raises some questions about where he got his inspiration.
+After distro hopping for a while — some trying too hard to be Windows, some cosplaying macOS, most either undercooked or riced in all the wrong ways — Omarchy just fits. It's riced roughly how I would have done it myself, which either says a lot about DHH's taste or raises some questions about where he got his inspiration.
 
 My setup barely differs from the defaults — a few keybindings, a custom Waybar module or two, and the usual NeoVim and tmux that are too deeply in my muscle memory to ever change. That's genuinely it.
 
 #### 🐧 Omarchy. It uses Arch, btw.
+
 - **[Arch Linux](https://archlinux.org/)** — rolling release, AUR access, and a wiki that answers everything.
 - **[Hyprland](https://hyprland.org/)** — tiling Wayland compositor. Snappy, GPU-accelerated, and genuinely fun once you stop fighting it.
 - **[Waybar](https://github.com/Alexays/Waybar)** — status bar with custom modules, including a live temperature monitor with color-coded alerts for CPU, GPU, and NVMe drives.
 
-####  ✔ Prerequisites
-Normally I'd list out package managers, runtimes, fonts, and a handful of other things you need to hunt down yourself. Not here — Omarchy is opinionated and ships with all of that. So the list is short:
-- **[Omarchy](https://omarchy.com)** — installed and booted. Follow their guide, come back here when you're staring at your desktop.
-- **[A free SSD](https://wiki.archlinux.org/title/Installation_guide)** — or partition an existing drive if you know what you're doing. Either way, that's between you and the internet.
-- **[A healthy fear of GUIs](https://www.freecodecamp.org/news/command-line-for-beginners/)** — this setup assumes you're comfortable in the terminal and can Vim your way out of trouble.
+#### ✔ Prerequisites
+
+Normally I'd list out package managers, runtimes, and fonts you need to hunt down yourself. 
+Not here — Omarchy ships with all of that. Just have it [installed and booted](https://omarchy.com), a free SSD to put it on, and a healthy fear of GUIs. That's genuinely the whole list.
 
 <br />
 <br />
@@ -62,22 +62,18 @@ A curated list of tools I use daily for a fast, keyboard-driven development work
 - **[LocalSend](https://localsend.org/)**: Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
 - **[KeePassXC](https://keepassxc.org/)**: Local password manager. No cloud, no subscription, no drama.
 - **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
-> *Linux doesn't need much help in the productivity department. The terminal IS the productivity layer.*
 
 #### Terminal:
 - **[Alacritty](https://Alacritty.org/)**: Omarchy's default terminal. Lightweight, fast. No config needed.
 - **[Ghostty](https://ghostty.org/)**: Linux backup — cross-platform, written in Zig, native feel on every OS.
-> *Omarchy has some opinionated terminals, normally I use wezterm, but DHH and Alacritty is fine.*
 
 #### Shell & Prompt:
 - **[Bash](https://www.gnu.org/software/bash/)**: Omarchy default. I stay close to the base config and only add what's necessary.
 - **[Starship](https://starship.rs/)**: Fast, portable, Rust-powered. One config across every machine and shell I care about.
-> *Normally prefer zsh but trying to stick close to DHH and his opinon that zsh was a mistake.*
 
 #### Editors:
 - **[Neovim](https://neovim.io/)**: My main editor — blazingly fast, keyboard-first, fully configured in Lua.
 - **[VSCode](https://code.visualstudio.com/)**: The reliable fallback. Decent Vim support when you need a GUI.
-> *Use what works, configure what doesn't, and end up falling back to vscode.*
 
 #### Terminal Multiplexing with tmux:
 - **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Same config as macOS — muscle memory is worth protecting.
@@ -145,3 +141,8 @@ This repo only tracks configs that differ from Omarchy's defaults. The following
 - `github-copilot/` — auth tokens
 - `dconf/`, `fcitx5/`, `pulse/` — system managed
 - `nextjs-nodejs/` — Next.js telemetry (`NEXT_TELEMETRY_DISABLED=1`)
+
+<br/>
+<br/>
+
+---

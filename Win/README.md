@@ -21,90 +21,62 @@
 
 ## _**Who says you can't Vim and look good on Windows?**_
 
-Hey, I’m Devon — and this is DeVim, my personal, curated dotfiles and tooling setup for Windows + WSL2. It’s built around a Linux-first workflow, blending the best of WSL, PowerShell, and NeoVim to keep development fast and terminal-focused.
 
-Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
-
+Hey, I’m Devon — and this is DeVim, my personal, curated dotfiles and tooling setup for Windows + WSL2. It’s built around a keyboard-driven workflow, utilizing the best of WSL and NeoVim to keep development fast and terminal-focused.  Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 > [!WARNING]\
-> This setup is under **active development**. Things may change frequently, and existing config files might get overwritten.  
-> <br /> _Make sure to back up anything you want to keep._  
+> This setup is under active development. Things may change frequently, and existing config files might get overwritten.
+> _Make sure to back up anything you want to keep._
 
 <br />
 <br />
 
 ## ⚙️ System Overview
 
-Windows out of the box isn’t exactly dev-friendly. Thankfully, even Microsoft knew that — so they gave us [WSL2](https://learn.microsoft.com/en-us/windows/wsl/), which lets you run a full Linux distro inside Windows. No VM pain, no dual-boot drama. Most of my dev workflow lives entirely in WSL now, with NeoVim.
+Windows out of the box isn’t exactly dev-friendly. Thankfully, even Microsoft knew that — so they gave us [WSL2](https://learn.microsoft.com/en-us/windows/wsl/), which lets you run a real Linux environment inside Windows. No VM pain, no dual-boot drama.
+That means your macOS/Linux-style dev workflow — dotfiles, shell configs, Node tooling, package managers, SSH, Git, and Docker — works the same way and more importantly stays fast. Just use WSL.
 
-#### Because WSL Still Has a Landlord
+#### 🪟 Native Windows Essentials
 
-But let’s be real — it’s still Windows underneath. Some things just don’t play nice inside the WSL sandbox, like system-level tweaks, certain admin utilities. Some of these scars/configs are left over from my pre-WSL era, so yeah a few essentials still live on the native side:
+Because WSL Still Has a Landlord, it need's help. Not required, but strongly recommended — these apps fix the friction points and make the janky Windows OS feel slightly more usable.  
 
--   **[Windows Terminal](https://github.com/microsoft/terminal)**: Profiles for WSL and PowerShell, tabbed UI, theming — the default terminal for modern Windows devs.
--   **[PowerShell 7](https://github.com/PowerShell/PowerShell)**: For scripting, automation, and native admin tasks.
--   **[Chocolatey](https://chocolatey.org/)**: Windows package manager for installing core CLI apps and tools.
+- **[PowerToys](https://github.com/microsoft/PowerToys)** — should've been built-in years ago. Window snapping and a Raycast-style launcher. Non-negotiable.
+- **[Windows Terminal](https://github.com/microsoft/terminal)** — WSL, PowerShell, and CMD in one tabbed UI. You'll thank yourself during setup.
+- **[PowerShell 7](https://github.com/PowerShell/PowerShell)** — stop using the 1995 version.
 
-> So yeah, it’s a hybrid setup — Because no matter how far you run... you're still on Windows. 🙃
-> <br/> _Linux shell for real work, Windows shell when you have no choice._
+#### ✔ Prerequisites
 
-<br />
-<br />
+On Windows, there’s honestly a lot, and I’m not going to walk through every click. At a high level: fresh Windows install ([LinusTechTips](https://youtu.be/MBCiMK4AmEI?si=C1Hr_azvgjPjfAf2)) → debloat ([win11debloat](https://github.com/raphire/win11debloat)) → PowerToys + Windows-Terminal → PowerShell7 → WSL2 + Ubuntu + WezTerm. From there, you’re mostly living in Linux and you can take over.  Also, install a [Nerd Font](https://www.nerdfonts.com/) on the Windows side so your terminal renders correctly. And bring a healthy fear of GUIs.
 
-## ✔ Prerequisites
+_FYI - Don't bother setting up a dev environment in native windows (i.e PowerShell). You technically can get Neovim, SSH, Starship and replacement tools like oh_my_posh blah blah — but it's just not worth it, trust me. Sluggish, fragile and painful. Do everything through WSL and don't look back, I wish someone had told me that years ago._
 
-Before you dive in, make sure you have these installed:
-
--   [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) – Windows Subsystem for Linux. Lets you pretend Windows isn’t running under your terminal.
--   [Ubuntu (via WSL)](https://ubuntu.com/wsl) – South African for “humanity toward others.” Fitting — it mostly works and stays out of the way.
--   [Node.js](https://nodejs.org/) - Recommended to have node version manager installed too.
--   [C compiler](https://clang.llvm.org/) - Check out `gcc`, `clang`, or [Zig](https://ziglang.org/) if you’re cool.
--   [Lua](https://www.lua.org/) - Just enough to tweak configs without crying.
--   [GitHub CLI](https://cli.github.com/) – Needed for Copilot CLI magic.
--   [PowerShell 7](https://github.com/PowerShell/PowerShell) - For the native Windows scripting stuff you can’t escape.
--   [Nerd Fonts](https://www.nerdfonts.com/) - Ensure Hacker Nerd and Fira Code Nerd Fonts are accessable.
--   [A healthy fear of GUIs](https://www.freecodecamp.org/news/command-line-for-beginners/) - Assumes you're comfortable in the terminal and can Vim your way out of trouble.
+> So yeah, it's a hybrid setup — because no matter how far you run... you're still on Windows. 🙃
+> <br/> *WSL-Linux shell for real work, Windows shell when you have no choice.*
 
 <br />
 <br />
 
 ## 📝Developer Tools Collection
 
-A curated list of tools that I use on a daily basis for my development workflow. Below are the main tools included:
+A curated list of tools I use daily to support a fast, keyboard-driven terminal-first development workflow on Windows machine. These fill in the gaps, improve the defaults, 
+Dont forget the 'Native Windows Essentails' mentioned above.
 
 #### General Tools:
--   **[Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher)**: Basically the poor mans Raycast/Spotlight for Windows. Launch apps, search files, run scripts etc.
--   **[PowerToys](https://github.com/microsoft/PowerToys)**: Useful Windows tools (snapping, color picker, etc.) that should’ve been built-in years ago.
--   **[Obsidian](https://github.com/obsidianmd)**: Markdown-based, local-first, Vim-friendly, cross-platform note-taking app, Excalidraw plugin is cool too.
--   **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
-> *Windows doesn’t make dev life easy — you’ve got to duct-tape your own workflow together.*
-<br/>
+- **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first, Vim-friendly note-taking. Cross-platform so your vault follows you everywhere.
+- **[LocalSend](https://localsend.org/)**: Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
+- **[KeePassXC](https://keepassxc.org/)**: Local password manager. No cloud, no subscription, no drama.
+- **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
 
 #### Terminal:
 - **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, lua-configurable and powered by Rust — the one I actually use.
 - **[Windows Terminal](https://github.com/microsoft/terminal)**: Still the best native terminal on Windows — my fallback for tasks beyond WSL's scope.
 
-> *For fonts, I use [Nerd Fonts](https://www.nerdfonts.com/), usually use Hacker Nerd Font, but sometimes I switch it up just to feel something.*
-> <br/> *Don't forget [PowerShell7](https://github.com/PowerShell/PowerShell).*
-<br/>
-
-#### Shell
-- **[zsh](https://www.zsh.org/)** ([with Oh My Zsh](https://ohmyz.sh/)): Fast, scriptable, and gets out of the way. Selective plugins make it feel modern. 
-- **[PowerShell 7](https://github.com/PowerShell/PowerShell)**: Necessary evil on Windows. It’s not great, alias everything or suffer.
-> *Don’t forget to install Zsh plugins — autosuggestions and syntax highlighting go a long way.*
-<br/>
-
-#### Prompt
+#### Shell & Prompt
+- **[zsh](https://www.zsh.org/) + [Oh My Zsh](https://ohmyz.sh/)**: Fast, scriptable, and gets out of the way. Selective plugins make it feel modern. 
 - **[Starship](https://starship.rs/)**: Fast, portable, and Rust-powered. One binary, one starship.toml, works across every shell I care about.  
-> *Custom minimal styling — Tokyo Night meets power10k inspired, but nothing too loud.*
-<br/>
 
 #### Editors:
-Over the years, I’ve used everything from Notepad and Sublime to the cursed Xcode.
-- **[VSCode](https://code.visualstudio.com/)**: The GOAT fallback — fast to spin up, decent Vim support, and reliable across platforms.
 - **[Neovim](https://neovim.io/)**: My main job, I mean editor — blazingly fast, keyboard-first, and fully configurable with [Lua](https://www.lua.org/).
-- **[Cursor](https://cursor.sh/)**: The experimental one — AI-heavy, Copilot-native, and weirdly useful when vibe matters more than precision.
-> *Use what works, configure what doesn't, and pretend the defaults were fine all along.*
-<br/>
+- **[VSCode](https://code.visualstudio.com/)**: The GOAT fallback — fast to spin up, decent Vim support, and reliable across platforms.
 
 #### Terminal Multiplexing with tmux
 **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive — even after closing the terminal.
@@ -128,6 +100,25 @@ These tools are now part of the core experience (via Homebrew in WSL):
 - **[`GitHub Copilot CLI`](https://github.com/github/cli-copilot)** – AI for your terminal, generate commands, explain errors and pretend you did it yourself. 
 - **[`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)** – Suggests commands from your history as you type.
 - **[`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)** – Adds real-time syntax highlighting to your Zsh input. 
+
+<br/>
+
+#### 📁 What's Not In This Repo
+This repo only tracks configs that differ from Omarchy's defaults. The following are installed and configured on the machine but intentionally not tracked here:
+Windows still has its own pile of app state, GUI settings, tokens, caches, profiles, and “why is this locked by OneDrive?” nonsense. That stuff lives on the machine, not in git. If you’re copying this setup and something looks different, it’s probably one of these:
+
+- WSL distro install/state — the distro itself is not tracked; this repo assumes you already have WSL2 + Ubuntu installed
+- Windows Terminal settings — may be documented, but full local profile state is machine-specific
+- PowerToys — useful, but configured through Windows and not core dotfiles
+- PowerShell profile — separate from Linux shell config; only track it if you actually use it
+- Browser profiles — cookies, sessions, extensions, history; absolutely not
+- VS Code / Cursor Remote WSL state — extensions/settings may be documented, but full app state is not tracked
+- `C:\Users\<you>\.ssh\` — Windows-side SSH keys stay private
+- `/mnt/c/...` — Windows files mounted into WSL; do not build your Linux home inside there unless you enjoy pain
+- `~/.ssh/`, `~/.gnupg/` — keys and trust state stay private
+- `~/.docker/`, `~/.kube/` — local contexts, auth, and machine-specific config
+- `~/.aws/`, `~/.config/gcloud/`, `~/.azure/` — cloud credentials and profiles
+- `~/.npmrc`, `~/.yarnrc.yml` — package-manager auth/local settings
 
 <br/>
 <br/>
