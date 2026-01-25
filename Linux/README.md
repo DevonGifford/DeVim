@@ -21,12 +21,10 @@
 
 ## Daily driving Arch Linux for full-stack development.
 
-Hey, I'm Devon — and this is DeVim, my personal dotfiles and tooling setup for Linux, built on top of [Omarchy](https://omarchy.com) by DHH. Minimal diffs, maximum comfort, zero regrets.
-
+Hey, I'm Devon - and this is DeVim, my personal dotfiles and tooling setup for Linux, built on top of [Omarchy](https://omarchy.com) by DHH. Minimal diffs, maximum comfort, zero regrets.
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
 > [!WARNING]\
-> This setup is under **active development**. Things may change frequently, and existing config files might get overwritten.
 > <br /> This repo only tracks configs that differ from Omarchy's defaults. Install Omarchy first, then layer these on top.
 > <br /> _Make sure to back up anything you want to keep._
 
@@ -35,20 +33,20 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤�
 
 ## ⚙️System Overview
 
-After distro hopping for a while — some trying too hard to be Windows, some cosplaying macOS, most either undercooked or riced in all the wrong ways — Omarchy just fits. It's riced roughly how I would have done it myself, which either says a lot about DHH's taste or raises some questions about where he got his inspiration.
+After distro hopping for a while - some trying too hard to be Windows, some cosplaying macOS, most either undercooked or riced in all the wrong ways - Omarchy just fits. It's riced roughly how I would have done it myself, which either says a lot about DHH's taste or raises some questions about where he got his inspiration.
 
-My setup barely differs from the defaults — a few keybindings, a custom Waybar module or two, and the usual NeoVim and tmux that are too deeply in my muscle memory to ever change. That's genuinely it.
+My setup barely differs from the defaults - a few keybindings, a custom Waybar module or two, and the usual NeoVim and tmux that are too deeply in my muscle memory to ever change. That's genuinely it.
 
 #### 🐧 Omarchy. It uses Arch, btw.
 
-- **[Arch Linux](https://archlinux.org/)** — rolling release, AUR access, and a wiki that answers everything.
-- **[Hyprland](https://hyprland.org/)** — tiling Wayland compositor. Snappy, GPU-accelerated, and genuinely fun once you stop fighting it.
-- **[Waybar](https://github.com/Alexays/Waybar)** — status bar with custom modules, including a live temperature monitor with color-coded alerts for CPU, GPU, and NVMe drives.
+- **[Arch Linux](https://archlinux.org/)** - rolling release, AUR access, and a wiki that answers everything.
+- **[Hyprland](https://hyprland.org/)** - tiling Wayland compositor. Snappy, GPU-accelerated, and genuinely fun once you stop fighting it.
+- **[Waybar](https://github.com/Alexays/Waybar)** - status bar with custom modules, including a live temperature monitor with color-coded alerts for CPU, GPU, and NVMe drives.
 
 #### ✔ Prerequisites
 
 Normally I'd list out package managers, runtimes, and fonts you need to hunt down yourself. 
-Not here — Omarchy ships with all of that. Just have it [installed and booted](https://omarchy.com), a free SSD to put it on, and a healthy fear of GUIs. That's genuinely the whole list.
+Not here, Omarchy ships with all of that. Just have it [installed and booted](https://omarchy.com), a free SSD to put it on, and a healthy fear of GUIs. That's genuinely the whole list.
 
 <br />
 <br />
@@ -65,18 +63,18 @@ A curated list of tools I use daily for a fast, keyboard-driven development work
 
 #### Terminal:
 - **[Alacritty](https://Alacritty.org/)**: Omarchy's default terminal. Lightweight, fast. No config needed.
-- **[Ghostty](https://ghostty.org/)**: Linux backup — cross-platform, written in Zig, native feel on every OS.
+- **[Ghostty](https://ghostty.org/)**: The backup, also cross-platform, bonus for being written in Zig.
 
 #### Shell & Prompt:
-- **[Bash](https://www.gnu.org/software/bash/)**: Omarchy default. I stay close to the base config and only add what's necessary.
+- **[Bash](https://www.gnu.org/software/bash/)**: Omarchy default. Opinionated no zsh taking some adapting.
 - **[Starship](https://starship.rs/)**: Fast, portable, Rust-powered. One config across every machine and shell I care about.
 
 #### Editors:
-- **[Neovim](https://neovim.io/)**: My main editor — blazingly fast, keyboard-first, fully configured in Lua.
+- **[Neovim](https://neovim.io/)**: My main editor. Blazingly fast, keyboard-first, fully configured in Lua.
 - **[VSCode](https://code.visualstudio.com/)**: The reliable fallback. Decent Vim support when you need a GUI.
 
 #### Terminal Multiplexing with tmux:
-- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Same config as macOS — muscle memory is worth protecting.
+- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Same config as macOS - muscle memory is worth protecting.
 > *Hyprland does window tiling at the OS level. tmux does it inside the terminal.*
 
 <br/>
