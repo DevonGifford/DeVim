@@ -21,7 +21,7 @@
 
 ## _**A minimal Mac setup for full-stack development.**_
 
-Hi, I’m Devon — and this is DeVim, my personal, curated dotfiles setup for macOS. It’s the toolkit I use daily for full-stack development, optimized around the terminal and powered by NeoVim.
+Hi, I’m Devon - and this is DeVim, my personal, curated dotfiles setup for macOS. It’s the toolkit I use daily for full-stack development, optimized around the terminal and powered by NeoVim.
 
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
