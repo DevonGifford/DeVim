@@ -33,21 +33,21 @@ Hey, I’m Devon - and this is DeVim, my personal, curated dotfiles and tooling 
 ## ⚙️ System Overview
 
 Windows out of the box isn’t exactly dev-friendly. Thankfully, even Microsoft knew that — so they gave us [WSL2](https://learn.microsoft.com/en-us/windows/wsl/), which lets you run a real Linux environment inside Windows. No VM pain, no dual-boot drama.
-That means your macOS/Linux-style dev workflow — dotfiles, shell configs, Node tooling, package managers, SSH, Git, and Docker — works the same way and more importantly stays fast. Just use WSL.
+That means your macOS/Linux-style dev workflow - dotfiles, shell configs, Node tooling, package managers, SSH, Git, and Docker — works the same way and more importantly stays fast. Just use WSL.
 
 #### 🪟 Native Windows Essentials
 
-Because WSL Still Has a Landlord, it need's help. Not required, but strongly recommended — these apps fix the friction points and make the janky Windows OS feel slightly more usable.  
+Because WSL Still Has a Landlord, it need's help. Not required, but strongly recommended - these apps fix the friction points and make the janky Windows OS feel slightly more usable.  
 
-- **[PowerToys](https://github.com/microsoft/PowerToys)** — should've been built-in years ago. Window snapping and a Raycast-style launcher. Non-negotiable.
-- **[Windows Terminal](https://github.com/microsoft/terminal)** — WSL, PowerShell, and CMD in one tabbed UI. You'll thank yourself during setup.
-- **[PowerShell 7](https://github.com/PowerShell/PowerShell)** — stop using the 1995 version.
+- **[PowerToys](https://github.com/microsoft/PowerToys)** - should've been built-in years ago. Window snapping and a Raycast-style launcher. Non-negotiable.
+- **[Windows Terminal](https://github.com/microsoft/terminal)** - WSL, PowerShell, and CMD in one tabbed UI. You'll thank yourself during setup.
+- **[PowerShell 7](https://github.com/PowerShell/PowerShell)** - stop using the 1995 version.
 
 #### ✔ Prerequisites
 
 On Windows, there’s honestly a lot, and I’m not going to walk through every click. At a high level: fresh Windows install ([LinusTechTips](https://youtu.be/MBCiMK4AmEI?si=C1Hr_azvgjPjfAf2)) → debloat ([win11debloat](https://github.com/raphire/win11debloat)) → PowerToys + Windows-Terminal → PowerShell7 → WSL2 + Ubuntu + WezTerm. From there, you’re mostly living in Linux and you can take over.  Also, install a [Nerd Font](https://www.nerdfonts.com/) on the Windows side so your terminal renders correctly. And bring a healthy fear of GUIs.
 
-_FYI - Don't bother setting up a dev environment in native windows (i.e PowerShell). You technically can get Neovim, SSH, Starship and replacement tools like oh_my_posh blah blah — but it's just not worth it, trust me. Sluggish, fragile and painful. Do everything through WSL and don't look back, I wish someone had told me that years ago._
+_FYI — Don't bother setting up a dev environment in native windows (i.e PowerShell). You technically can get Neovim, SSH, Starship and replacement tools like oh_my_posh blah blah - but it's just not worth it, trust me. Sluggish, fragile and painful. Do everything through WSL and don't look back, I wish someone had told me that years ago._
 
 > So yeah, it's a hybrid setup — because no matter how far you run... you're still on Windows. 🙃
 > <br/> *WSL-Linux shell for real work, Windows shell when you have no choice.*
@@ -67,19 +67,19 @@ Dont forget the 'Native Windows Essentails' mentioned above.
 - **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
 
 #### Terminal:
-- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, lua-configurable and powered by Rust — the one I actually use.
-- **[Windows Terminal](https://github.com/microsoft/terminal)**: Still the best native terminal on Windows — my fallback for tasks beyond WSL's scope.
+- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, lua-configurable and powered by Rust - the one I actually use.
+- **[Windows Terminal](https://github.com/microsoft/terminal)**: Still the best native terminal on Windows - my fallback for tasks beyond WSL's scope.
 
 #### Shell & Prompt
 - **[zsh](https://www.zsh.org/) + [Oh My Zsh](https://ohmyz.sh/)**: Fast, scriptable, and gets out of the way. Selective plugins make it feel modern. 
 - **[Starship](https://starship.rs/)**: Fast, portable, and Rust-powered. One binary, one starship.toml, works across every shell I care about.  
 
 #### Editors:
-- **[Neovim](https://neovim.io/)**: My main job, I mean editor — blazingly fast, keyboard-first, and fully configurable with [Lua](https://www.lua.org/).
-- **[VSCode](https://code.visualstudio.com/)**: The GOAT fallback — fast to spin up, decent Vim support, and reliable across platforms.
+- **[Neovim](https://neovim.io/)**: My main job, I mean editor - blazingly fast, keyboard-first, and fully configurable with [Lua](https://www.lua.org/).
+- **[VSCode](https://code.visualstudio.com/)**: The GOAT fallback - fast to spin up, decent Vim support, and reliable across platforms.
 
 #### Terminal Multiplexing with tmux
-**[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive — even after closing the terminal.
+**[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal.
 > *WezTerm’s pane support is tempting, but tmux has the ecosystem, the shortcuts, and years of muscle memory behind it.*
 
 <br/>
