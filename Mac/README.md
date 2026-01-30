@@ -25,9 +25,9 @@ Hi, I’m Devon - and this is DeVim, my personal, curated dotfiles setup for mac
 
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
-> [!WARNING]\
-> This setup is under active development. Things may change frequently, and existing config files might get overwritten.
-> _Make sure to back up anything you want to keep._
+> [!WARNING]
+> These dotfiles are always under active development. Things may change, move, or stomp on your existing config.
+> <br /> Take what you want, but back up first — _getting mogged by fig files can lead to reckless copy-pasting. You’ve been warned._
 
 <br />
 <br />
