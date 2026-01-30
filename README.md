@@ -20,15 +20,17 @@
 
 ## _**Hi, my name is Devon and this is DeVim.**_
 
-DeVim is my personal dotfiles and tooling setup for full-stack development — consistent, fast to set up, and built to follow me across operating systems, Arch-Linux as my daily driver and then macOS & Windows for work.
+DeVim is my personal dotfiles and dev tooling setup for full-stack development - fast, portable, and mildly over-thought in all the right places.
 
-Feel free to explore, tweak, or shamelessly steal — most of it was stolen to begin with. Suggestions welcome. ❤️
+Arch Linux is the daily driver, macOS and Windows are the work machines I keep somewhat civilized. The goal is simple: keep my workflow familiar across operating systems without pretending they’re all the same.
+
+Feel free to explore, tweak or shamelessly steal. Most of this was stolen, remixed, broken, fixed and then stolen again anyway. Suggestions welcome. ❤️
 
 > [!NOTE]
 > **DeVim is split into three operating systems:** [Mac](./Mac), [Windows](./Win), and [Linux](./Linux).
+> <br /> Configs stay as aligned as possible across platforms, with enough room to experiment without nuking everything.
 >
-> Configs stay as aligned as possible across platforms while leaving room to experiment safely.
-> _Consistency where it matters. Flexibility where it counts._ 🌶️
+> _Consistency where it matters. Chaos where it’s productive._ 🌶️
 
 <p align="center"> 
     <picture>
@@ -47,22 +49,24 @@ Feel free to explore, tweak, or shamelessly steal — most of it was stolen to b
 <br/>
 
 > ✅ **The good news:**  
-> If you know your way around a terminal, setup is chill.  
-> I've dropped a lil markdown with my keybindings in the docs — should help you get started.
+> If you know your way around a terminal, setup is pretty chill.  
+> I’ve included some docs and keybinding notes to help you steal responsibly.
 
 <br />
 <br />
 
 ## 🙌 Special Thanks
 
-Shout-out to the following people for inspiration, ideas, and support:
+Shout-out to the following people for inspiration, ideas and support:
 
 - [@maxischmaxi](https://github.com/maxischmaxi)
 - [@jayson-lennon](https://github.com/jayson-lennon)
 - [@scottmckendry](https://github.com/scottmckendry)
-- [@JazzyGrim](https://github.com/JazzyGrim) (Sindo)
 - [@devaslife](https://www.devas.life/)
 - [@tjdevries](https://github.com/tjdevries)
 - [@ThePrimeagen](https://github.com/theprimeagen)
+- [@JazzyGrim](https://github.com/JazzyGrim) (Sindo)
+- [@David Heinemeier Hansson](https://github.com/dhh) (DHH)
+
 
 ---
