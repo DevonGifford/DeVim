@@ -24,9 +24,9 @@
 Hey, I'm Devon - and this is DeVim, my personal dotfiles and tooling setup for Linux, built on top of [Omarchy](https://omarchy.com) by DHH. Minimal diffs, maximum comfort, zero regrets.
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
-> [!WARNING]\
-> <br /> This repo only tracks configs that differ from Omarchy's defaults. Install Omarchy first, then layer these on top.
-> <br /> _Make sure to back up anything you want to keep._
+> [!WARNING]
+> This Linux setup is opinionated and always under active development. Things may change, move, or stomp on your existing config.
+> <br /> Take what you want, but back up your stuff first — _Omarchy doesn't negotiate with your existing dotfiles. You’ve been warned._
 
 <br />
 <br />
