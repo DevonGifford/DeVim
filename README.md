@@ -27,7 +27,7 @@ Arch Linux is the daily driver, macOS and Windows are the work machines I keep s
 Feel free to explore, tweak or shamelessly steal. Most of this was stolen, remixed, broken, fixed and then stolen again anyway. Suggestions welcome. ❤️
 
 > [!NOTE]
-> **DeVim is split into three operating systems:** [Mac](./Mac), [Windows](./Win), and [Linux](./Linux).
+> **DeVim is split into three operating systems:** [Mac](./Mac), [Windows](./Win) and [Linux](./Linux).
 > <br /> Configs stay as aligned as possible across platforms, with enough room to experiment without nuking everything.
 >
 > _Consistency where it matters. Chaos where it’s productive._ 🌶️
