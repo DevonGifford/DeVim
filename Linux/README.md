@@ -45,8 +45,8 @@ My setup barely differs from the defaults - a few keybindings, a custom Waybar m
 
 #### ✔ Prerequisites
 
-Normally I'd list out package managers, runtimes, and fonts you need to hunt down yourself. 
-Not here, Omarchy ships with all of that. Just have it [installed and booted](https://omarchy.com), a free SSD to put it on, and a healthy fear of GUIs. That's genuinely the whole list.
+Normally I'd list out package managers, runtimes and fonts you need to hunt down yourself. Not here - Omarchy ships with all of that.  
+<br /> Just have Omarchy [installed and booted](https://omarchy.com), ideally on a spare SSD you’re happy to wipe. Otherwise, use the manual install and partition carefully. That’s genuinely it.
 
 <br />
 <br />
