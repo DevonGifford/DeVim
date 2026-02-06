@@ -33,7 +33,7 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤�
 
 ## ⚙️System Overview
 
-I distro-hopped for a while. Some wanted to be Windows, some were cosplaying macOS and most were either undercooked or riced in all the wrong ways. Building from scratch with Arch always felt too much overhead for my lazy ahh.  <br /> Enter Omarchy. It just fits. It’s riced roughly how I would have done it myself, which either says a lot about DHH’s taste or raises some questions about where he got his inspiration.
+I distro-hopped for a while. Some wanted to be Windows, some were cosplaying macOS and most were either undercooked or riced in all the wrong ways. Building from scratch with Arch always felt too much overhead for my lazy ahh.  Enter Omarchy. It just fits.  It’s riced roughly how I would have done it myself, which either says a lot about DHH’s taste or raises some questions about where he got his inspiration.
 
 My setup barely differs from the defaults: a few keybindings, a custom Waybar module or two, and the usual Neovim and tmux tweaks that are too deep in my muscle memory to change. Nothing more.
 
