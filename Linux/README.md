@@ -45,7 +45,7 @@ My setup barely differs from the defaults: a few keybindings, a custom Waybar mo
 
 #### ✔ Prerequisites
 
-Normally I'd list out package managers, runtimes and fonts you need to hunt down yourself. Not here - Omarchy ships with all of that.  
+Normally I'd list out package managers, runtimes and fonts you need to hunt down yourself. Not here, Omarchy ships with all of that.  
 Just have Omarchy [installed and booted](https://omarchy.com), ideally on a spare SSD you’re happy to wipe. Otherwise, use the [manual install](https://learn.omacom.io/2/the-omarchy-manual/96/manual-installation) and partition carefully. That’s genuinely it.
 
 <br />
@@ -53,7 +53,7 @@ Just have Omarchy [installed and booted](https://omarchy.com), ideally on a spar
 
 ## 📝 Developer Tools Collection
 
-A curated list of tools I use daily for a fast, keyboard-driven development workflow on Linux. These either come with Omarchy or are installed on top.
+A curated list of tools I use daily to support a fast, keyboard-driven terminal-first development workflow on Omarchy machine. 
 
 #### General Tools:
 - **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first, Vim-friendly note-taking. Cross-platform so your vault follows you everywhere.
