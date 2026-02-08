@@ -79,7 +79,7 @@ Dont forget the 'Native MacOS Essentails' mentioned above.
 - **[VSCode](https://code.visualstudio.com/)**: The GOAT fallback - fast to spin up, decent Vim support, and reliable across platforms.
 
 #### Terminal Multiplexing with tmux
-**[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal.
+- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal.
 > *WezTerm’s pane support is tempting, but tmux has the ecosystem, the shortcuts, and years of muscle memory behind it.*
 
 <br/>
