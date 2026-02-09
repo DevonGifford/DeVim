@@ -34,8 +34,8 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤�
 
 ## ⚙️ System Overview
 
-macOS is a solid base for dev work - Unix roots, pretty UI, new sillicone chips and most importantly generally fewer headaches than compared to working on Windows. But it's far from perfect. 
-The stock terminal? Meh. Window or Tile management? Nonexistent. Xcode? No-thanks. This setup fills in the blanks with tools that actually keep up.
+MacOS is a solid machine for dev work. Unix roots, Apple silicone, pretty UI and generally fewer headaches than Windows. But let's not pretend it's perfect. 
+The stock terminal? Meh. Window management? Barely there. Tiling? Bring your own. Xcode? No thanks.  This setup fills in the blanks with tools that actually keep up.
 
 #### 🍎 Native MacOS Essentials
 
@@ -47,7 +47,7 @@ Because macOS still needs a bit of help.  Not required, but strongly recommended
 
 #### ✔ Prerequisites
 
-[Homebrew](https://brew.sh/) is the only real prerequisite - everything else flows from there. A Nerd Font helps ([Hack](https://www.nerdfonts.com/) or [JetBrains Mono](https://www.nerdfonts.com/) are solid choices), but honestly just `brew install` your way through the rest.  Oh, and a healthy fear of GUIs is recommended. This setup assumes you're comfortable in the terminal and can Vim your way out of trouble.
+[Homebrew](https://brew.sh/) is the only real prerequisite, everything else flows from there. A Nerd Font helps ([Hack](https://www.nerdfonts.com/) or [JetBrains Mono](https://www.nerdfonts.com/) are solid choices), but honestly just `brew install` your way through the rest.  Oh, and a healthy fear of GUIs is recommended. This setup assumes you're comfortable in the terminal and can Vim your way out of trouble.
 
 > macOS does 80% of the job with style. This setup’s for the last 20% that actually matters.
 > <br /> *It’s clean, it’s quiet, it mostly Just Works™* 🙌
@@ -75,8 +75,8 @@ Dont forget the 'Native MacOS Essentails' mentioned above.
 - **[Starship](https://starship.rs/)**: Fast, portable, Rust-powered cross-shell prompt. 
 
 #### Editors
-- **[Neovim](https://neovim.io/)**: My main job, I mean editor - blazingly fast, keyboard-first, and fully configurable with Lua.
-- **[VSCode](https://code.visualstudio.com/)**: The GOAT fallback - fast to spin up, decent Vim support, and reliable across platforms.
+- **[Neovim](https://neovim.io/)**: My main job, I mean editor. Blazingly fast, keyboard-first, and fully configurable with Lua.
+- **[VSCode](https://code.visualstudio.com/)**: The fallback, fast to spin up, decent Vim support and reliable across platforms.
 
 #### Terminal Multiplexing with tmux
 - **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal.
