@@ -46,7 +46,7 @@ Because WSL Still Has a Landlord, it need's help. Not required, but strongly rec
 
 #### ✔ Prerequisites
 
-On Windows, there’s honestly a lot, and I’m not going to walk through every click. At a high level: fresh Windows install ([LinusTechTips](https://youtu.be/MBCiMK4AmEI?si=C1Hr_azvgjPjfAf2)) → debloat ([win11debloat](https://github.com/raphire/win11debloat)) → PowerToys + Windows-Terminal → PowerShell7 → WSL2 + Ubuntu + WezTerm. From there, you’re mostly living in Linux and you can take over.  Also, install a [Nerd Font](https://www.nerdfonts.com/) on the Windows side so your terminal renders correctly. And bring a healthy fear of GUIs.
+On Windows, there’s honestly a lot, and I’m not going to walk through every click. At a high level: fresh Windows install ([LinusTechTips](https://youtu.be/MBCiMK4AmEI?si=C1Hr_azvgjPjfAf2)) → debloat ([win11debloat](https://github.com/raphire/win11debloat)) → PowerToys + Windows-Terminal → PowerShell7 → WSL2 + Ubuntu + WezTerm. From there, you’re mostly living in Linux and you can take over.  Also, install a [Nerd Font](https://www.nerdfonts.com/) on the Windows side so your terminal renders correctly.
 
 _FYI — Don't bother setting up a dev environment in native windows (i.e PowerShell). You technically can get Neovim, SSH, Starship and replacement tools like oh_my_posh blah blah - but it's just not worth it, trust me. Sluggish, fragile and painful. Do everything through WSL and don't look back, I wish someone had told me that years ago._
 
