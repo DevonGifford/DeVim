@@ -76,8 +76,8 @@ Dont forget the 'Native Windows Essentails' mentioned above.
 - **[Starship](https://starship.rs/)**: Fast, portable, and Rust-powered. One binary, one starship.toml, works across every shell I care about.  
 
 #### Editors:
-- **[Neovim](https://neovim.io/)**: My main job, I mean editor - blazingly fast, keyboard-first, and fully configurable with [Lua](https://www.lua.org/).
-- **[VSCode](https://code.visualstudio.com/)**: The GOAT fallback - fast to spin up, decent Vim support, and reliable across platforms.
+- **[Neovim](https://neovim.io/)**: My main job, I mean editor. Blazingly fast, keyboard-first, and fully configurable with [Lua](https://www.lua.org/).
+- **[VSCode](https://code.visualstudio.com/)**: The fallback, fast to spin up, decent Vim support and reliable across platforms.
 
 #### Terminal Multiplexing with tmux
 - **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal.
