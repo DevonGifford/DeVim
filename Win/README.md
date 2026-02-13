@@ -34,7 +34,7 @@ Hey, I’m Devon - and this is DeVim, my personal, curated dotfiles and tooling 
 ## ⚙️ System Overview
 
 Windows out of the box isn’t exactly dev-friendly. Thankfully, even Microsoft knew that — so they gave us [WSL2](https://learn.microsoft.com/en-us/windows/wsl/), which lets you run a real Linux environment inside Windows. No VM pain, no dual-boot drama.
-That means your macOS/Linux-style dev workflow - dotfiles, shell configs, Node tooling, package managers, SSH, Git, and Docker — works the same way and more importantly stays fast. Just use WSL.
+That means your macOS/Linux-style dev workflow - _meaning; dotfiles, shell configs, package managers, SSH, Git and Docker etc._ - all works the same way and most importantly stays fast & snappy. Just use WSL.
 
 #### 🪟 Native Windows Essentials
 
