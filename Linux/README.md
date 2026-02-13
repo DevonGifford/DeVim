@@ -13,13 +13,13 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/code%20quality-excellent-brightgreen?style=for-the-badge" alt="Code Quality">
-  <img src="https://img.shields.io/github/stars/DevonGifford/DeVim?style=for-the-badge" alt="Stars">
+  <img src="https://img.shields.io/github/stars/DevonGifford/DeVim?style=for-the-badge" alt="
 </div>
 
 <br/>
 <br/>
 
-## Daily driving Arch Linux for full-stack development.
+## _Daily driving Arch Linux for full-stack development._
 
 Hey, I'm Devon - and this is DeVim, my personal dotfiles and tooling setup for Linux, built on top of [Omarchy](https://omarchy.com) by DHH. Minimal diffs, maximum comfort, zero regrets.
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
