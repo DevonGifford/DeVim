@@ -19,7 +19,7 @@
 <br/>
 <br/>
 
-## _Daily driving Arch Linux for full-stack development._
+## _**Daily driving Arch Linux for full-stack development.**_
 
 Hey, I'm Devon - and this is DeVim, my personal dotfiles and tooling setup for Linux, built on top of [Omarchy](https://omarchy.com) by DHH. Minimal diffs, maximum comfort, zero regrets.
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
