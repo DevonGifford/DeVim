@@ -13,7 +13,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/code%20quality-excellent-brightgreen?style=for-the-badge" alt="Code Quality">
-  <img src="https://img.shields.io/github/stars/DevonGifford/DeVim?style=for-the-badge" alt="
+  <img src="https://img.shields.io/github/stars/DevonGifford/DeVim?style=for-the-badge" alt="Stars">
 </div>
 
 <br/>
