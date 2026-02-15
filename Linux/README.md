@@ -25,8 +25,8 @@ Hey, I'm Devon - and this is DeVim, my personal dotfiles and tooling setup for L
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
 > [!WARNING]
-> This Linux setup is opinionated and always under active development. Things may change, move, or stomp on your existing config.
-> <br /> Take what you want, but back up your stuff first — _Omarchy doesn't negotiate with your existing dotfiles. You’ve been warned._
+> These dotfiles are always under active development. Things may change, move, or stomp on your existing config.
+> <br /> Take what you want, but back up first — _getting mogged by fig files can lead to reckless copy-pasting. You’ve been warned._
 
 <br />
 <br />
