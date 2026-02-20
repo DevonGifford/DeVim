@@ -50,8 +50,8 @@ On Windows, there’s honestly a lot, and I’m not going to walk through every 
 
 _FYI — Don't bother setting up a dev environment in native windows (i.e PowerShell). You technically can get Neovim, SSH, Starship and replacement tools like oh_my_posh blah blah - but it's just not worth it, trust me. Sluggish, fragile and painful. Do everything through WSL and don't look back, I wish someone had told me that years ago._
 
-> So yeah, it's a hybrid setup — because no matter how far you run... you're still on Windows. 🙃
-> <br/> *WSL-Linux shell for real work, Windows shell when you have no choice.*
+> So yeah, it's a hybrid setup — because no matter how far you run... you're still on Windows.
+> <br/> *WSL-Linux shell for real work, Windows shell when you have no choice.* 🙃
 
 <br />
 <br />
