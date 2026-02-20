@@ -35,8 +35,6 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤�
 
 I distro-hopped for a while. Some wanted to be Windows, some were cosplaying macOS and most were either undercooked or riced in all the wrong ways. Building from scratch with Arch always felt too much overhead for my lazy ahh.  Enter Omarchy. It just fits.  It’s riced roughly how I would have done it myself, which either says a lot about DHH’s taste or raises some questions about where he got his inspiration.
 
-My setup barely differs from the defaults: a few keybindings, a custom Waybar module or two, and the usual Neovim and tmux tweaks that are too deep in my muscle memory to change. Nothing more.
-
 #### 🐧 Omarchy. It uses Arch, btw.
 
 - **[Arch Linux](https://archlinux.org/)** - rolling release, AUR access, and a wiki that answers everything.
@@ -47,6 +45,9 @@ My setup barely differs from the defaults: a few keybindings, a custom Waybar mo
 
 Normally I'd list out package managers, runtimes and fonts you need to hunt down yourself. Not here, Omarchy ships with all of that.  
 Just have Omarchy [installed and booted](https://omarchy.com), ideally on a spare SSD you’re happy to wipe. Otherwise, use the [manual install](https://learn.omacom.io/2/the-omarchy-manual/96/manual-installation) and partition carefully. That’s genuinely it.
+
+> Omarchy does 99% of the work out of the box. Exception of a few custom waybar modules and unwanted apps.
+> This setup is just the tiny layer of Neovim, tmux, and keybinding damage I refuse to unlearn.
 
 <br />
 <br />
