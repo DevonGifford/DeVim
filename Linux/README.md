@@ -47,7 +47,7 @@ Normally I'd list out package managers, runtimes and fonts you need to hunt down
 Just have Omarchy [installed and booted](https://omarchy.com), ideally on a spare SSD you’re happy to wipe. Otherwise, use the [manual install](https://learn.omacom.io/2/the-omarchy-manual/96/manual-installation) and partition carefully. That’s genuinely it.
 
 > Omarchy does 99% of the work out of the box. Exception of a few custom waybar modules and unwanted apps.
-> This setup is just the tiny layer of Neovim, tmux, and keybinding damage I refuse to unlearn.
+> <br /> This setup is just the tiny layer of Neovim, tmux, and keybinding damage I refuse to unlearn.
 
 <br />
 <br />
