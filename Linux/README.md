@@ -38,8 +38,8 @@ I distro-hopped for a while. Some wanted to be Windows, some were cosplaying mac
 #### 🐧 Omarchy. It uses Arch, btw.
 
 - **[Arch Linux](https://archlinux.org/)** - rolling release, AUR access, and a wiki that answers everything.
-- **[Hyprland](https://hyprland.org/)** - tiling Wayland compositor. Snappy, GPU-accelerated, and genuinely fun once you stop fighting it.
-- **[Waybar](https://github.com/Alexays/Waybar)** - status bar with custom modules, including a live temperature monitor with color-coded alerts for CPU, GPU, and NVMe drives.
+- **[Hyprland](https://hyprland.org/)** - tiling Wayland compositor. Fast, pretty and GPU-accelerated.
+- **[Waybar](https://github.com/Alexays/Waybar)** - status bar with bring your own modules.
 
 #### ✔ Prerequisites
 
