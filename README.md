@@ -20,17 +20,16 @@
 
 ## _**Hi, my name is Devon and this is DeVim.**_
 
-DeVim is my personal dotfiles and dev tooling setup for full-stack development - fast, portable, and mildly over-thought in all the right places.
+**DeVim is my personal dotfiles and dev tooling setup for full-stack development accross the major operating systems.**  <br />
+Arch Linux is the daily driver; macOS and Windows are the work machines I keep civilized.  The goal is simple: keep my workflow familiar across operating systems without pretending they’re all the same - fast, portable, and mildly overthought in all the right places.
 
-Arch Linux is the daily driver, macOS and Windows are the work machines I keep somewhat civilized. The goal is simple: keep my workflow familiar across operating systems without pretending they’re all the same.
-
-Feel free to explore, tweak or shamelessly steal. Most of this was stolen, remixed, broken, fixed and then stolen again anyway. Suggestions welcome. ❤️
+_Feel free to explore, tweak or shamelessly steal. Most of this was stolen, remixed, broken, fixed and then stolen again anyway. <br /> Suggestions welcome. ❤️_
 
 > [!NOTE]
-> **DeVim is split into three operating systems:** [Mac](./Mac), [Windows](./Win) and [Linux](./Linux).
+> **DeVim is split into:** [Mac](./Mac), [Windows](./Win) & [Linux](./Linux).
 > <br /> Configs stay as aligned as possible across platforms, with enough room to experiment without nuking everything.
 >
-> _Consistency where it matters. Chaos where it’s productive._ 🌶️
+> _Consistency where it matters. Chaos where it’s productive._ 🔥
 
 <p align="center"> 
     <picture>
