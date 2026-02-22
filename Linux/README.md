@@ -33,7 +33,7 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤�
 
 ## ⚙️System Overview
 
-I distro-hopped for a while. Some wanted to be Windows, some were cosplaying macOS and most were either undercooked or riced in all the wrong ways. Building from scratch with Arch always felt too much overhead for my lazy ahh.  Enter Omarchy. It just fits.  It’s riced roughly how I would have done it myself, which either says a lot about DHH’s taste or raises some questions about where he got his inspiration.
+I distro-hopped for a while. Some wanted to be Windows, some were cosplaying macOS and most were either undercooked or riced in all the wrong ways. Building from scratch with Arch always felt too much overhead for my lazy ahh.  Enter Omarchy. It just fits. It gives me a polished, opinionated Arch-based setup with the keyboard-first workflow I wanted, without making me build the whole thing from scratch. It also seems to have a strong community behind it, and because it sits on top of Arch, there is still a clear path forward if I ever wanted to transition away from DHH's opinionated distro.
 
 #### 🐧 Omarchy. It uses Arch, btw.
 
@@ -47,7 +47,7 @@ Normally I'd list out package managers, runtimes and fonts you need to hunt down
 Just have Omarchy [installed and booted](https://omarchy.com), ideally on a spare SSD you’re happy to wipe. Otherwise, use the [manual install](https://learn.omacom.io/2/the-omarchy-manual/96/manual-installation) and partition carefully. That’s genuinely it.
 
 > Omarchy does 99% of the work out of the box. Exception of a few custom waybar modules and unwanted apps.
-> <br /> This setup is just the tiny layer of Neovim, tmux, and keybinding damage I refuse to unlearn. 😌
+> <br /> This setup is just the tiny layer of Neovim, tmux and keybindings I refuse to unlearn. 😌
 
 <br />
 <br />
@@ -60,10 +60,10 @@ A curated list of tools I use daily to support a fast, keyboard-driven terminal-
 - **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first, Vim-friendly note-taking. Cross-platform so your vault follows you everywhere.
 - **[LocalSend](https://localsend.org/)**: Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
 - **[KeePassXC](https://keepassxc.org/)**: Local password manager. No cloud, no subscription, no drama.
-- **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
+- **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff and whatever chaos I’m pretending to control.
 
 #### Terminal:
-- **[Alacritty](https://Alacritty.org/)**: Omarchy's default terminal. Lightweight, fast. No config needed.
+- **[Alacritty](https://Alacritty.org/)**: Omarchy's default terminal. Lightweight, fast and clean config included.
 - **[Ghostty](https://ghostty.org/)**: The backup, also cross-platform, bonus for being written in Zig.
 
 #### Shell & Prompt:
@@ -71,11 +71,11 @@ A curated list of tools I use daily to support a fast, keyboard-driven terminal-
 - **[Starship](https://starship.rs/)**: Fast, portable, Rust-powered. One config across every machine and shell I care about.
 
 #### Editors:
-- **[Neovim](https://neovim.io/)**: My main editor. Blazingly fast, keyboard-first, fully configured in Lua.
-- **[VSCode](https://code.visualstudio.com/)**: The reliable fallback. Decent Vim support when you need a GUI.
+- **[Neovim](https://neovim.io/)**: My main editor. Fast, keyboard-first, and fully configured in Lua.
+- **[Vim](https://www.vim.org/)**: The OG fallback for when Neovim is down and I am personally having a kernel panic.
 
 #### Terminal Multiplexing with tmux:
-- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Same config as macOS - muscle memory is worth protecting.
+- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Muscle memory worth protecting.
 > *Hyprland does window tiling at the OS level. tmux does it inside the terminal.*
 
 <br/>
