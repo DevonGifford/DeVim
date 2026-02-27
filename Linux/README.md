@@ -33,7 +33,8 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤�
 
 ## ⚙️System Overview
 
-I distro-hopped for a while. Some wanted to be Windows, some were cosplaying macOS and most were either undercooked or riced in all the wrong ways. Building from scratch with Arch always felt too much overhead for my lazy ahh.  Enter Omarchy. It just fits. It gives me a polished, opinionated Arch-based setup with the keyboard-first workflow I wanted, without making me build the whole thing from scratch. It also seems to have a strong community behind it, and because it sits on top of Arch, there is still a clear path forward if I ever wanted to transition away from DHH's opinionated distro.
+I distro-hopped for a while. Some were undercooked, others were riced in all the wrong ways. Building from scratch with Arch always felt like too much overhead for my lazy ahh.
+Enter Omarchy. It just fits. It gives me the polished, keyboard-first Arch setup I wanted, without making me build the whole thing from scratch. And since it is still Arch underneath, I am not locked into DHH-opinion's forever.
 
 #### 🐧 Omarchy. It uses Arch, btw.
 
