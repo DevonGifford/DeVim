@@ -21,7 +21,6 @@
 
 ## _**Who says you can't Vim and look good on Windows?**_
 
-
 Hey, I’m Devon - and this is DeVim, my personal, curated dotfiles and tooling setup for Windows + WSL2. It’s built around a keyboard-driven workflow, utilizing the best of WSL and NeoVim to keep development fast and terminal-focused.  Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
 > [!WARNING]
@@ -48,7 +47,7 @@ Because WSL Still Has a Landlord, it need's help. Not required, but strongly rec
 
 On Windows, there’s honestly a lot, and I’m not going to walk through every click. At a high level: fresh Windows install ([LinusTechTips](https://youtu.be/MBCiMK4AmEI?si=C1Hr_azvgjPjfAf2)) → debloat ([win11debloat](https://github.com/raphire/win11debloat)) → PowerToys + Windows-Terminal → PowerShell7 → WSL2 + Ubuntu + WezTerm. From there, you’re mostly living in Linux and you can take over.  Also, install a [Nerd Font](https://www.nerdfonts.com/) on the Windows side so your terminal renders correctly.
 
-_FYI — Don't bother setting up a dev environment in native windows (i.e PowerShell). You technically can get Neovim, SSH, Starship and replacement tools like oh_my_posh blah blah - but it's just not worth it, trust me. Sluggish, fragile and painful. Do everything through WSL and don't look back, I wish someone had told me that years ago._
+_FYI — Don't bother setting up a dev environment in native windows (i.e PowerShell). You technically can get Neovim, SSH, Starship and replacement tools like oh_my_posh blah blah - but it's just not worth it, trust me. Sluggish, fragile and painful. Do everything through WSL and don't look back._
 
 > So yeah, it's a hybrid setup — because no matter how far you run... you're still on Windows.
 > <br/> *WSL-Linux shell for real work, Windows shell when you have no choice.* 🙃
@@ -80,7 +79,7 @@ Dont forget the 'Native Windows Essentails' mentioned above.
 - **[VSCode](https://code.visualstudio.com/)**: The fallback, fast to spin up, decent Vim support and reliable across platforms.
 
 #### Terminal Multiplexing with tmux
-- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal.
+- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal. 
 > *WezTerm’s pane support is tempting, but tmux has the ecosystem, the shortcuts, and years of muscle memory behind it.*
 
 <br/>
@@ -105,8 +104,8 @@ These tools are now part of the core experience (via Homebrew in WSL):
 <br/>
 
 #### 📁 What's Not In This Repo
-This repo only tracks configs that differ from Omarchy's defaults. The following are installed and configured on the machine but intentionally not tracked here:
 Windows still has its own pile of app state, GUI settings, tokens, caches, profiles, and “why is this locked by OneDrive?” nonsense. That stuff lives on the machine, not in git. If you’re copying this setup and something looks different, it’s probably one of these:
+The following are installed and configured on the machine but intentionally not tracked here:
 
 - WSL distro install/state — the distro itself is not tracked; this repo assumes you already have WSL2 + Ubuntu installed
 - Windows Terminal settings — may be documented, but full local profile state is machine-specific
@@ -114,12 +113,12 @@ Windows still has its own pile of app state, GUI settings, tokens, caches, profi
 - PowerShell profile — separate from Linux shell config; only track it if you actually use it
 - Browser profiles — cookies, sessions, extensions, history; absolutely not
 - VS Code / Cursor Remote WSL state — extensions/settings may be documented, but full app state is not tracked
-- `C:\Users\<you>\.ssh\` — Windows-side SSH keys stay private
-- `/mnt/c/...` — Windows files mounted into WSL; do not build your Linux home inside there unless you enjoy pain
 - `~/.ssh/`, `~/.gnupg/` — keys and trust state stay private
 - `~/.docker/`, `~/.kube/` — local contexts, auth, and machine-specific config
 - `~/.aws/`, `~/.config/gcloud/`, `~/.azure/` — cloud credentials and profiles
 - `~/.npmrc`, `~/.yarnrc.yml` — package-manager auth/local settings
+- `C:\Users\<you>\.ssh\` — Windows-side SSH keys stay private
+- `/mnt/c/...` — Windows files mounted into WSL; do not build your Linux home inside there unless you enjoy pain
 
 <br/>
 <br/>
