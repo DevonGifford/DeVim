@@ -41,7 +41,7 @@ The stock terminal? Meh. Window management? Barely there. Tiling? Bring your own
 Because macOS still needs a bit of help.  Not required, but strongly recommended - these fix the friction points and make the whole thing feel like it was designed for developers:
 
 - **[Raycast](https://www.raycast.com/)** - like Spotlight, but actually good. App launcher, script runner, and productivity Swiss Army knife.
-- **[Rectangle](https://rectangleapp.com/)** - snap windows like it's Windows. One of the first things I install on any Mac.
+- **[Rectangle](https://rectangleapp.com/)** - snap windows around properly. One of the first things I install.
 - **[AltTab](https://alt-tab-macos.netlify.app/)** - Cmd+Tab the way it was meant to be, with full previews and sanity.
 
 #### ✔ Prerequisites
@@ -103,22 +103,22 @@ These tools are now part of the core experience (via Homebrew in WSL):
 <br/>
 
 #### 📁 What's Not In This Repo
-This repo only tracks configs that differ from Omarchy's defaults. The following are installed and configured on the machine but intentionally not tracked here:
 macOS also creates a mountain of app state, GUI preferences, caches, tokens, and “why is this 900MB?” folders. That stuff lives on the machine, not in git. If you’re copying this setup and something looks different, it’s probably one of these:
+The following are installed and configured on the machine but intentionally not tracked here:
 
-- `~/Library/Application Support/` — app state, caches, auth, local settings; not portable
-- `~/Library/Preferences/` — noisy macOS/app `.plist` files
-- `~/Library/Keychains/` — passwords, certificates, secrets; absolutely not tracked
+- Raycast / Alfred / Rectangle / Karabiner — personal workflow tools, not core dotfiles
+- VS Code / Cursor profiles — extensions/settings may be documented, but full app state is not tracked
+- macOS System Settings — some defaults can be scripted, but I’m not pretending macOS GUI state belongs in git
+- Browser profiles — cookies, sessions, extensions, history; no thanks
 - `~/.ssh/`, `~/.gnupg/` — keys and trust state stay private
 - `~/.docker/`, `~/.kube/` — local contexts, auth, machine-specific config
 - `~/.aws/`, `~/.config/gcloud/`, `~/.azure/` — cloud credentials and profiles
 - `~/.npmrc`, `~/.yarnrc.yml` — package-manager auth/local settings
 - `/Applications/`, `~/Applications/` — apps come from Homebrew/Brewfile or manual install
+- `~/Library/Application Support/` — app state, caches, auth, local settings; not portable
+- `~/Library/Preferences/` — noisy macOS/app `.plist` files
+- `~/Library/Keychains/` — passwords, certificates, secrets; absolutely not tracked
 - `~/Library/Fonts/` — fonts are installed separately; grab a Nerd Font if icons look broken
-- Browser profiles — cookies, sessions, extensions, history; no thanks
-- Raycast / Alfred / Rectangle / Karabiner — personal workflow tools, not core dotfiles
-- VS Code / Cursor profiles — extensions/settings may be documented, but full app state is not tracked
-- macOS System Settings — some defaults can be scripted, but I’m not pretending macOS GUI state belongs in git
 
 <br/>
 <br/>
