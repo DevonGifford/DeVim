@@ -58,10 +58,10 @@ Just have Omarchy [installed and booted](https://omarchy.com), ideally on a spar
 A curated list of tools I use daily to support a fast, keyboard-driven terminal-first development workflow on Omarchy machine. 
 
 #### General Tools:
-- **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first, Vim-friendly note-taking. Cross-platform so your vault follows you everywhere.
-- **[LocalSend](https://localsend.org/)**: Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
-- **[KeePassXC](https://keepassxc.org/)**: Local password manager. No cloud, no subscription, no drama.
-- **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff and whatever chaos I’m pretending to control.
+- **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first note-taking app. Vim-friendly & cross-platform.
+- **[LocalSend](https://localsend.org/)**: Open-source AirDrop alternative. Cross-platform across Linux, macOS, Windows, Android, and iOS.
+- **[KeePassXC](https://keepassxc.org/)**: Open-source password manager. No cloud, no subscription, no drama.
+- **[Todoist](https://todoist.com/)**: Cross-platform to-do app, for pretending to control chaos.
 
 #### Terminal:
 - **[Alacritty](https://Alacritty.org/)**: Omarchy's default terminal. Lightweight, fast and clean config included.
@@ -72,7 +72,7 @@ A curated list of tools I use daily to support a fast, keyboard-driven terminal-
 - **[Starship](https://starship.rs/)**: Fast, portable, Rust-powered. One config across every machine and shell I care about.
 
 #### Editors:
-- **[Neovim](https://neovim.io/)**: My main editor. Fast, keyboard-first, and fully configured in Lua.
+- **[Neovim](https://neovim.io/)**: My main job, I mean editor. Blazingly fast, keyboard-first and fully configurable with Lua.
 - **[Vim](https://www.vim.org/)**: The OG fallback for when Neovim is down and I am personally having a kernel panic.
 
 #### Terminal Multiplexing with tmux:
