@@ -57,25 +57,25 @@ _FYI — Don't bother setting up a dev environment in native windows (i.e PowerS
 
 ## 📝Developer Tools Collection
 
-A curated list of tools I use daily to support a fast, keyboard-driven terminal-first development workflow on Windows machine. These fill in the gaps, improve the defaults, 
+A curated list of tools I use daily to support a fast, keyboard-driven terminal-first development workflow on Windows. These fill in the gaps, improve the defaults, 
 Dont forget the 'Native Windows Essentails' mentioned above.
 
 #### General Tools:
-- **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first, Vim-friendly note-taking. Cross-platform so your vault follows you everywhere.
-- **[LocalSend](https://localsend.org/)**: Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
-- **[KeePassXC](https://keepassxc.org/)**: Local password manager. No cloud, no subscription, no drama.
-- **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
+- **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first note-taking app. Vim-friendly & cross-platform.
+- **[LocalSend](https://localsend.org/)**: Open-source AirDrop alternative. Cross-platform across Linux, macOS, Windows, Android, and iOS.
+- **[KeePassXC](https://keepassxc.org/)**: Open-source password manager. No cloud, no subscription, no drama.
+- **[Todoist](https://todoist.com/)**: Cross-platform to-do app, for pretending to control chaos.
 
 #### Terminal:
-- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, lua-configurable and powered by Rust - the one I actually use.
-- **[Windows Terminal](https://github.com/microsoft/terminal)**: Still the best native terminal on Windows - my fallback for tasks beyond WSL's scope.
+- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: My main terminal. GPU-accelerated, cross-platform, Rust-powered, and Lua-configurable.
+- **[Windows Terminal](https://github.com/microsoft/terminal)**: Fallback terminal for the occasional Windows-native task that refuses to live politely inside WSL.
 
 #### Shell & Prompt
 - **[zsh](https://www.zsh.org/) + [Oh My Zsh](https://ohmyz.sh/)**: Fast, scriptable, and gets out of the way. Selective plugins make it feel modern. 
 - **[Starship](https://starship.rs/)**: Fast, portable, and Rust-powered. One binary, one starship.toml, works across every shell I care about.  
 
 #### Editors:
-- **[Neovim](https://neovim.io/)**: My main job, I mean editor. Blazingly fast, keyboard-first, and fully configurable with [Lua](https://www.lua.org/).
+- **[Neovim](https://neovim.io/)**: My main job, I mean editor. Blazingly fast, keyboard-first and fully configurable with Lua.
 - **[VSCode](https://code.visualstudio.com/)**: The fallback, fast to spin up, decent Vim support and reliable across platforms.
 
 #### Terminal Multiplexing with tmux
