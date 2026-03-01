@@ -46,7 +46,7 @@ Because macOS still needs a bit of help.  Not required, but strongly recommended
 
 #### ✔ Prerequisites
 
-[Homebrew](https://brew.sh/) is the only real prerequisite, everything else flows from there. A Nerd Font helps ([Hack](https://www.nerdfonts.com/) or [JetBrains Mono](https://www.nerdfonts.com/) are solid choices), but honestly just `brew install` your way through the rest.  Oh, and a healthy fear of GUIs is recommended. This setup assumes you're comfortable in the terminal and can Vim your way out of trouble.
+[Homebrew](https://brew.sh/) is the only real prerequisite, everything else flows from there. A Nerd Font helps ([Hack](https://www.nerdfonts.com/) or [JetBrains Mono](https://www.nerdfonts.com/) are solid choices) but honestly just `brew install` your way through the rest.  Oh, and a healthy fear of GUIs is recommended. This setup assumes you're comfortable in the terminal and can Vim your way out of trouble.
 
 > macOS does 80% of the job with style. This setup’s for the last 20% that actually matters.
 > <br /> *It’s clean, it’s quiet, it mostly Just Works™* 🙌
