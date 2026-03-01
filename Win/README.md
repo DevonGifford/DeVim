@@ -28,6 +28,13 @@ Hey, I’m Devon - and this is DeVim, my personal, curated dotfiles and tooling 
 > <br /> Take what you want, but back up first — _getting mogged by fig files can lead to reckless copy-pasting. You’ve been warned._
 
 <br />
+
+<p align="center"> 
+    <picture>
+      <img src="../Docs/images/Devim_showcase.png" height="500">
+    </picture>
+</p>
+
 <br />
 
 ## ⚙️ System Overview
@@ -45,7 +52,7 @@ Because WSL Still Has a Landlord, it need's help. Not required, but strongly rec
 
 #### ✔ Prerequisites
 
-On Windows, there’s honestly a lot, and I’m not going to walk through every click. At a high level: fresh Windows install ([LinusTechTips](https://youtu.be/MBCiMK4AmEI?si=C1Hr_azvgjPjfAf2)) → debloat ([win11debloat](https://github.com/raphire/win11debloat)) → PowerToys + Windows-Terminal → PowerShell7 → WSL2 + Ubuntu + WezTerm. From there, you’re mostly living in Linux and you can take over.  Also, install a [Nerd Font](https://www.nerdfonts.com/) on the Windows side so your terminal renders correctly.
+On Windows, there’s honestly a lot, and I’m not going to walk through every click. At a high level: ([Fresh Windows Install](https://youtu.be/MBCiMK4AmEI?si=C1Hr_azvgjPjfAf2)) → ([Windows 11 Debloat](https://github.com/raphire/win11debloat)) → PowerToys + Windows-Terminal → PowerShell7 → WSL2 + Ubuntu + WezTerm. From there, you’re mostly living in Linux and you can take over.  Also, install a [Nerd Font](https://www.nerdfonts.com/) on the Windows side so your terminal renders correctly.
 
 _FYI — Don't bother setting up a dev environment in native windows (i.e PowerShell). You technically can get Neovim, SSH, Starship and replacement tools like oh_my_posh blah blah - but it's just not worth it, trust me. Sluggish, fragile and painful. Do everything through WSL and don't look back._
 
@@ -80,47 +87,56 @@ Dont forget the 'Native Windows Essentails' mentioned above.
 
 #### Terminal Multiplexing with tmux
 - **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal. 
-> *WezTerm’s pane support is tempting, but tmux has the ecosystem, the shortcuts, and years of muscle memory behind it.*
+
+#### Other CLI Tools
+> <details>
+>   <summary><em>See list of packages</em></summary>
+>
+> - **[`zoxide`](https://github.com/ajeetdsouza/zoxide)** - Modern `cd`. Learns your most used directories and lets you jump to them faster with fuzzy matches. Rust gang.
+> - **[`eza`](https://github.com/eza-community/eza)** - Modern `ls`. The rewrite of deprecated `exa`, with built-in color, icons, and better defaults. Rust gang.
+> - **[`fzf`](https://github.com/junegunn/fzf)** - Fuzzy search for files, history, Git, and basically everything else. Type less, find more. Go gang.
+> - **[`bat`](https://github.com/sharkdp/bat)** - Drop-in replacement for `cat` with syntax highlighting, line numbers, and paging support. Tokyo themed.
+> - **[`ripgrep`](https://github.com/BurntSushi/ripgrep)** - Blazing fast `grep` alternative. Used by modern editors. Rust gang.
+> - **[`fd`](https://github.com/sharkdp/fd)** - A simpler, faster alternative to `find`. Better syntax, better defaults, less pain.
+> - **[`lazygit`](https://github.com/jesseduffield/lazygit)** - TUI Git client that simplifies staging, branching, rebasing, and reviewing commits. Go gang.
+> - **[`tldr`](https://tldr.sh/)** - Simplified, community-driven man pages with real-world examples and no fluff.
+> - **[`nvm`](https://github.com/nvm-sh/nvm)** - Node version manager. Staple tool, cross-platform and reliable.
+> - **[`thefuck`](https://github.com/nvbn/thefuck)** - Messed up a command? It suggests the right one. Surprisingly useful, endlessly satisfying. Python gang.
+> - **[`GitHub Copilot CLI`](https://github.com/github/gh-copilot)** - AI for your terminal. Generate commands, explain errors, and pretend you did it yourself.
+> - **[`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)** - Suggests commands from your history as you type.
+> - **[`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)** - Adds real-time syntax highlighting to your Zsh input.
+>
+> </details>
 
 <br/>
 <br/>
 
-#### 🧰 Other CLI Tools
-These tools are now part of the core experience (via Homebrew in WSL):
-- **[`zoxide`](https://github.com/ajeetdsouza/zoxide)** – Modern `cd`. Learns your most used dirs, jump to them faster with fuzzy matches.  (Rust gang)  
-- **[`eza`](https://github.com/eza-community/eza)** – Modern `ls`, the rewrite of deprecated exa with built-in color, icons, and better defaults.   (Rust gang)  
-- **[`fzf`](https://github.com/junegunn/fzf)** – Fuzzy search for files, history, Git, you name it. Type less, find more it’ll guess what you meant.  (Go gang)
-- **[`bat`](https://github.com/sharkdp/bat)** – Drop-in replacement for `cat` with syntax highlighting, line numbers, and paging support. Tokyo themed.
-- **[`ripgrep`](https://github.com/BurntSushi/ripgrep)** – Blazing fast `grep` alternative. Used by modern editors. (Rust gang) 
-- **[`fd`](https://github.com/sharkdp/fd)** – A simpler, faster alternative to `find`. Better syntax, better defaults, less pain.  
-- **[`lazygit`](https://github.com/jesseduffield/lazygit)** – TUI Git client that simplifies staging, branching, rebasing, and reviewing commits.(Go gang) 
-- **[`tldr`](https://tldr.sh/)** – Simplified, community-driven man pages, with real-world examples and no fluff.
-- **[`nvm`](https://github.com/nvm-sh/nvm)** – Node version manager. Staple tool, cross-platform and reliable.
-- **[`thefuck`](https://github.com/nvbn/thefuck)** – Messed up a command? It’ll suggest the right one. Surprisingly useful, endlessly satisfying. (Python gang)
-- **[`GitHub Copilot CLI`](https://github.com/github/cli-copilot)** – AI for your terminal, generate commands, explain errors and pretend you did it yourself. 
-- **[`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)** – Suggests commands from your history as you type.
-- **[`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)** – Adds real-time syntax highlighting to your Zsh input. 
 
-<br/>
 
-#### 📁 What's Not In This Repo
-Windows still has its own pile of app state, GUI settings, tokens, caches, profiles, and “why is this locked by OneDrive?” nonsense. That stuff lives on the machine, not in git. If you’re copying this setup and something looks different, it’s probably one of these:
-The following are installed and configured on the machine but intentionally not tracked here:
-
-- WSL distro install/state — the distro itself is not tracked; this repo assumes you already have WSL2 + Ubuntu installed
-- Windows Terminal settings — may be documented, but full local profile state is machine-specific
-- PowerToys — useful, but configured through Windows and not core dotfiles
-- PowerShell profile — separate from Linux shell config; only track it if you actually use it
-- Browser profiles — cookies, sessions, extensions, history; absolutely not
-- VS Code / Cursor Remote WSL state — extensions/settings may be documented, but full app state is not tracked
-- `~/.ssh/`, `~/.gnupg/` — keys and trust state stay private
-- `~/.docker/`, `~/.kube/` — local contexts, auth, and machine-specific config
-- `~/.aws/`, `~/.config/gcloud/`, `~/.azure/` — cloud credentials and profiles
-- `~/.npmrc`, `~/.yarnrc.yml` — package-manager auth/local settings
-- `C:\Users\<you>\.ssh\` — Windows-side SSH keys stay private
-- `/mnt/c/...` — Windows files mounted into WSL; do not build your Linux home inside there unless you enjoy pain
-
-<br/>
-<br/>
+> [!IMPORTANT]
+> #### 📁 What's Not In This Repo
+>
+> Windows still has its own pile of app state, GUI settings, tokens, caches, profiles, and nonsense. That stuff lives on the machine, not in git. If you’re copying this setup and something looks different, it’s probably one of these:
+>
+> <details>
+>   <summary><strong><em>See more?</em></strong></summary>
+>
+> - WSL distro install/state - the distro itself is not tracked; this repo assumes you already have WSL2 + Ubuntu installed
+> - Windows Terminal settings - may be documented, but full local profile state is machine-specific
+> - PowerToys - useful, but configured through Windows and not core dotfiles
+> - PowerShell profile - separate from Linux shell config; only track it if you actually use it
+> - Browser profiles - cookies, sessions, extensions, history; absolutely not
+> - VS Code / Cursor Remote WSL state - extensions/settings may be documented, but full app state is not tracked
+> - `~/.ssh/`, `~/.gnupg/` - keys and trust state stay private
+> - `~/.docker/`, `~/.kube/` - local contexts, auth, and machine-specific config
+> - `~/.aws/`, `~/.config/gcloud/`, `~/.azure/` - cloud credentials and profiles
+> - `~/.npmrc`, `~/.yarnrc.yml` - package-manager auth/local settings
+> - `C:\Users\<you>\.ssh\` - Windows-side SSH keys stay private
+> - `/mnt/c/...` - Windows files mounted into WSL; do not build your Linux home inside there unless you enjoy pain
+>
+> </details>
 
 ---
+
+<br/>
+<br/>
