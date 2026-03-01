@@ -24,11 +24,14 @@
 Hi, I’m Devon - and this is DeVim, my personal, curated dotfiles setup for macOS. It’s the toolkit I use daily for full-stack development, optimized around the terminal and powered by NeoVim.
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
-> [!WARNING]
-> These dotfiles are always under active development. Things may change, move, or stomp on your existing config.
-> <br /> Take what you want, but back up first — _getting mogged by fig files can lead to reckless copy-pasting. You’ve been warned._
-
 <br />
+
+<p align="center"> 
+    <picture>
+      <img src="../Docs/images/Devim_showcase.png" height="500">
+    </picture>
+</p>
+
 <br />
 
 ## ⚙️ System Overview
@@ -81,46 +84,56 @@ Dont forget the 'Native MacOS Essentails' mentioned above.
 - **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal.
 > *WezTerm’s pane support is tempting, but tmux has the ecosystem, the shortcuts, and years of muscle memory behind it.*
 
-<br/>
-<br/>
-
-#### 🧰 Other CLI Tools
-These tools are now part of the core experience (via Homebrew in WSL):
-- **[`zoxide`](https://github.com/ajeetdsouza/zoxide)** – Modern `cd`. Learns your most used dirs, jump to them faster with fuzzy matches.  (Rust gang)  
-- **[`eza`](https://github.com/eza-community/eza)** – Modern `ls`, the rewrite of deprecated exa with built-in color, icons, and better defaults.   (Rust gang)  
-- **[`fzf`](https://github.com/junegunn/fzf)** – Fuzzy search for files, history, Git, you name it. Type less, find more it’ll guess what you meant.  (Go gang)
-- **[`bat`](https://github.com/sharkdp/bat)** – Drop-in replacement for `cat` with syntax highlighting, line numbers, and paging support. Tokyo themed.
-- **[`ripgrep`](https://github.com/BurntSushi/ripgrep)** – Blazing fast `grep` alternative. Used by modern editors. (Rust gang) 
-- **[`fd`](https://github.com/sharkdp/fd)** – A simpler, faster alternative to `find`. Better syntax, better defaults, less pain.  
-- **[`lazygit`](https://github.com/jesseduffield/lazygit)** – TUI Git client that simplifies staging, branching, rebasing, and reviewing commits.(Go gang) 
-- **[`tldr`](https://tldr.sh/)** – Simplified, community-driven man pages, with real-world examples and no fluff.
-- **[`nvm`](https://github.com/nvm-sh/nvm)** – Node version manager. Staple tool, cross-platform and reliable.
-- **[`thefuck`](https://github.com/nvbn/thefuck)** – Messed up a command? It’ll suggest the right one. Surprisingly useful, endlessly satisfying. (Python gang)
-- **[`GitHub Copilot CLI`](https://github.com/github/cli-copilot)** – AI for your terminal, generate commands, explain errors and pretend you did it yourself. 
-- **[`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)** – Suggests commands from your history as you type.
-- **[`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)** – Adds real-time syntax highlighting to your Zsh input. 
-
-<br/>
-
-#### 📁 What's Not In This Repo
-macOS also creates a mountain of app state, GUI preferences, caches, tokens, and “why is this 900MB?” folders. That stuff lives on the machine, not in git. If you’re copying this setup and something looks different, it’s probably one of these:
-The following are installed and configured on the machine but intentionally not tracked here:
-
-- Raycast / Alfred / Rectangle / Karabiner — personal workflow tools, not core dotfiles
-- VS Code / Cursor profiles — extensions/settings may be documented, but full app state is not tracked
-- macOS System Settings — some defaults can be scripted, but I’m not pretending macOS GUI state belongs in git
-- Browser profiles — cookies, sessions, extensions, history; no thanks
-- `~/.ssh/`, `~/.gnupg/` — keys and trust state stay private
-- `~/.docker/`, `~/.kube/` — local contexts, auth, machine-specific config
-- `~/.aws/`, `~/.config/gcloud/`, `~/.azure/` — cloud credentials and profiles
-- `~/.npmrc`, `~/.yarnrc.yml` — package-manager auth/local settings
-- `/Applications/`, `~/Applications/` — apps come from Homebrew/Brewfile or manual install
-- `~/Library/Application Support/` — app state, caches, auth, local settings; not portable
-- `~/Library/Preferences/` — noisy macOS/app `.plist` files
-- `~/Library/Keychains/` — passwords, certificates, secrets; absolutely not tracked
-- `~/Library/Fonts/` — fonts are installed separately; grab a Nerd Font if icons look broken
+#### Other CLI Tools
+> <details>
+>   <summary><em>See list of packages</em></summary>
+>
+> - **[`zoxide`](https://github.com/ajeetdsouza/zoxide)** - Modern `cd`. Learns your most used directories and lets you jump to them faster with fuzzy matches. Rust gang.
+> - **[`eza`](https://github.com/eza-community/eza)** - Modern `ls`. The rewrite of deprecated `exa`, with built-in color, icons, and better defaults. Rust gang.
+> - **[`fzf`](https://github.com/junegunn/fzf)** - Fuzzy search for files, history, Git, and basically everything else. Type less, find more. Go gang.
+> - **[`bat`](https://github.com/sharkdp/bat)** - Drop-in replacement for `cat` with syntax highlighting, line numbers, and paging support. Tokyo themed.
+> - **[`ripgrep`](https://github.com/BurntSushi/ripgrep)** - Blazing fast `grep` alternative. Used by modern editors. Rust gang.
+> - **[`fd`](https://github.com/sharkdp/fd)** - A simpler, faster alternative to `find`. Better syntax, better defaults, less pain.
+> - **[`lazygit`](https://github.com/jesseduffield/lazygit)** - TUI Git client that simplifies staging, branching, rebasing, and reviewing commits. Go gang.
+> - **[`tldr`](https://tldr.sh/)** - Simplified, community-driven man pages with real-world examples and no fluff.
+> - **[`nvm`](https://github.com/nvm-sh/nvm)** - Node version manager. Staple tool, cross-platform and reliable.
+> - **[`thefuck`](https://github.com/nvbn/thefuck)** - Messed up a command? It suggests the right one. Surprisingly useful, endlessly satisfying. Python gang.
+> - **[`GitHub Copilot CLI`](https://github.com/github/gh-copilot)** - AI for your terminal. Generate commands, explain errors, and pretend you did it yourself.
+> - **[`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)** - Suggests commands from your history as you type.
+> - **[`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)** - Adds real-time syntax highlighting to your Zsh input.
+>
+> </details>
 
 <br/>
 <br/>
+
+
+
+> [!IMPORTANT]
+> #### 📁 What's Not In This Repo
+>
+> macOS also creates a mountain of app state, GUI preferences, caches, tokens, and “why is this 900MB?” folders. That stuff lives on the machine, not in git. If you’re copying this setup and something looks different, it’s probably one of these:
+>
+> <details>
+>   <summary><strong><em>See more?</em></strong></summary>
+>
+> - Raycast / Alfred / Rectangle / Karabiner — personal workflow tools, not core dotfiles
+> - VS Code / Cursor profiles — extensions/settings may be documented, but full app state is not tracked
+> - macOS System Settings — some defaults can be scripted, but I’m not pretending macOS GUI state belongs in git
+> - Browser profiles — cookies, sessions, extensions, history; no thanks
+> - `~/.ssh/`, `~/.gnupg/` — keys and trust state stay private
+> - `~/.docker/`, `~/.kube/` — local contexts, auth, machine-specific config
+> - `~/.aws/`, `~/.config/gcloud/`, `~/.azure/` — cloud credentials and profiles
+> - `~/.npmrc`, `~/.yarnrc.yml` — package-manager auth/local settings
+> - `/Applications/`, `~/Applications/` — apps come from Homebrew/Brewfile or manual install
+> - `~/Library/Application Support/` — app state, caches, auth, local settings; not portable
+> - `~/Library/Preferences/` — noisy macOS/app `.plist` files
+> - `~/Library/Keychains/` — passwords, certificates, secrets; absolutely not tracked
+> - `~/Library/Fonts/` — fonts are installed separately; grab a Nerd Font if icons look broken
+>
+> </details>
 
 ---
+
+<br/>
+<br/>
