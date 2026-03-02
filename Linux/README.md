@@ -79,70 +79,79 @@ A curated list of tools I use daily to support a fast, keyboard-driven terminal-
 - **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Muscle memory worth protecting.
 > *Hyprland does window tiling at the OS level. tmux does it inside the terminal.*
 
-<br/>
-<br/>
-
-#### 🧰 CLI Tools
-
-Installed via `yay`, mostly shipped with omarchy.
-
-- **[`lazygit`](https://github.com/jesseduffield/lazygit)** — TUI Git client. Staging, branching, rebasing without leaving the terminal. (Go gang)
-- **[`lazydocker`](https://github.com/jesseduffield/lazydocker)** — Same energy, but for Docker. (Go gang)
-- **[`k9s`](https://k9scli.io/)** — TUI for Kubernetes. Like lazydocker but for clusters. (Go gang)
-- **[`gh`](https://cli.github.com/)** — GitHub from the terminal. PRs, issues, workflows.
-- **[`mise`](https://mise.jdx.dev/)** — Runtime version manager. Node, Python, Ruby — one tool, XDG-compliant.
-- **[`jq`](https://jqlang.github.io/jq/)** — JSON processor. Essential for any API or DevOps work.
-- **[`docker`](https://docker.com)** + **[`docker-compose`](https://docs.docker.com/compose/)** — containers. lazydocker makes it bearable.
-- **[`tobi-try`](https://github.com/tobi/try)** — dated scratch directories for experiments. git worktrees under the hood.
-- **[`claude-code`](https://claude.ai/code)** — Claude in the terminal. Agentic coding, file editing, codebase questions.
-- **[`opencode`](https://opencode.ai/)** — AI coding assistant. Model-agnostic, terminal-native.
-- **[`eza`](https://github.com/eza-community/eza)** — Modern `ls` with icons, color, and git status. (Rust gang)
-- **[`bat`](https://github.com/sharkdp/bat)** — `cat` with syntax highlighting. Tokyo Night themed.
-- **[`fzf`](https://github.com/junegunn/fzf)** — Fuzzy finder for everything. Files, history, git. (Go gang)
-- **[`zoxide`](https://github.com/ajeetdsouza/zoxide)** — Smarter `cd`. Learns where you actually go. (Rust gang)
-- **[`ripgrep`](https://github.com/BurntSushi/ripgrep)** — Fast `grep`. NeoVim depends on it. (Rust gang)
-- **[`fd`](https://github.com/sharkdp/fd)** — Better `find`. Sane syntax, faster results.
-- **[`dust`](https://github.com/bootandy/dust)** — Visual `du`. See what's eating your disk at a glance.
-- **[`tldr`](https://tldr.sh/)** — Man pages for humans. Real examples, no fluff.
-- **[`gum`](https://github.com/charmbracelet/gum)** — Makes shell scripts look beautiful. 
-- **[`wl-clipboard`](https://github.com/bugaevc/wl-clipboard)** — Wayland clipboard from the terminal (`wl-copy`, `wl-paste`).
-- **[`playerctl`](https://github.com/altdesktop/playerctl)** — Control media players from keybinds or terminal.
-- **[`btop`](https://github.com/aristocrathic/btop)** — System monitor that doesn't look like 1995.
-- **[`nvtop`](https://github.com/Syllo/nvtop)** — GPU equivalent of btop. NVIDIA/AMD process monitor.
-- **[`bluetui`](https://github.com/pythops/bluetui)** — Bluetooth manager TUI. No need to leave the terminal to pair headphones.
-- **[`impala`](https://github.com/pythops/impala)** — WiFi manager TUI. Same energy. 
-- **[`grim`](https://sr.ht/~emersion/grim/)** + **[`slurp`](https://github.com/emersion/slurp)** — screenshot capture. grim grabs, slurp selects the region.
-- **[`satty`](https://github.com/gabm/satty)** — Screenshot annotation. Draw on screenshots before sharing.
-- **[`gpu-screen-recorder`](https://git.dec05eba.com/gpu-screen-recorder)** — low overhead screen recording, GPU accelerated.
-
-<br/>
-
-#### 📁 What's Not In This Repo
-This repo only tracks configs that differ from Omarchy's defaults. The following are installed and configured on the machine but intentionally not tracked here:
-
-- `walker/` — app launcher
-- `swayosd/` — volume/brightness OSD
-- `voxtype/` — voice to text
-- `wiremix/`, `wireplumber/` — audio routing
-- `gtk-3.0/`, `gtk-4.0/` — theming
-- `fontconfig/` — font rendering
-- `elephant/` — Omarchy note/reminder tool
-- `fastfetch/` — system info display (Omarchy themed)
-- `foot/` — Omarchy default terminal, no custom config
-- `kitty/` — came with Omarchy, unused
-- `spotify/` — no config worth tracking
-- `libreoffice/` — default config
-- `thunderbird/` — email data lives in `~/.thunderbird/`
-- `obs-studio/` — scene configs are machine-specific
-- `kdenlive/` — project files not config
-- `pinta/` — image editor, no meaningful config
-- `chromium/` — browser profile (~400MB, cookies, sessions)
-- `obsidian/` — vault config contains local machine paths
-- `github-copilot/` — auth tokens
-- `dconf/`, `fcitx5/`, `pulse/` — system managed
-- `nextjs-nodejs/` — Next.js telemetry (`NEXT_TELEMETRY_DISABLED=1`)
+#### Other CLI Tools
+> <details>
+>   <summary><em> Installed via `yay`, mostly shipped with omarchy.  See list of packages </em></summary>
+>
+> - **[`lazygit`](https://github.com/jesseduffield/lazygit)** — TUI Git client. Staging, branching, rebasing without leaving the terminal. (Go gang)
+> - **[`lazydocker`](https://github.com/jesseduffield/lazydocker)** — Same energy, but for Docker. (Go gang)
+> - **[`k9s`](https://k9scli.io/)** — TUI for Kubernetes. Like lazydocker but for clusters. (Go gang)
+> - **[`gh`](https://cli.github.com/)** — GitHub from the terminal. PRs, issues, workflows.
+> - **[`mise`](https://mise.jdx.dev/)** — Runtime version manager. Node, Python, Ruby — one tool, XDG-compliant.
+> - **[`jq`](https://jqlang.github.io/jq/)** — JSON processor. Essential for any API or DevOps work.
+> - **[`docker`](https://docker.com)** + **[`docker-compose`](https://docs.docker.com/compose/)** — containers. lazydocker makes it bearable.
+> - **[`tobi-try`](https://github.com/tobi/try)** — dated scratch directories for experiments. git worktrees under the hood.
+> - **[`claude-code`](https://claude.ai/code)** — Claude in the terminal. Agentic coding, file editing, codebase questions.
+> - **[`opencode`](https://opencode.ai/)** — AI coding assistant. Model-agnostic, terminal-native.
+> - **[`eza`](https://github.com/eza-community/eza)** — Modern `ls` with icons, color, and git status. (Rust gang)
+> - **[`bat`](https://github.com/sharkdp/bat)** — `cat` with syntax highlighting. Tokyo Night themed.
+> - **[`fzf`](https://github.com/junegunn/fzf)** — Fuzzy finder for everything. Files, history, git. (Go gang)
+> - **[`zoxide`](https://github.com/ajeetdsouza/zoxide)** — Smarter `cd`. Learns where you actually go. (Rust gang)
+> - **[`ripgrep`](https://github.com/BurntSushi/ripgrep)** — Fast `grep`. NeoVim depends on it. (Rust gang)
+> - **[`fd`](https://github.com/sharkdp/fd)** — Better `find`. Sane syntax, faster results.
+> - **[`dust`](https://github.com/bootandy/dust)** — Visual `du`. See what's eating your disk at a glance.
+> - **[`tldr`](https://tldr.sh/)** — Man pages for humans. Real examples, no fluff.
+> - **[`gum`](https://github.com/charmbracelet/gum)** — Makes shell scripts look beautiful. 
+> - **[`wl-clipboard`](https://github.com/bugaevc/wl-clipboard)** — Wayland clipboard from the terminal (`wl-copy`, `wl-paste`).
+> - **[`playerctl`](https://github.com/altdesktop/playerctl)** — Control media players from keybinds or terminal.
+> - **[`btop`](https://github.com/aristocrathic/btop)** — System monitor that doesn't look like 1995.
+> - **[`nvtop`](https://github.com/Syllo/nvtop)** — GPU equivalent of btop. NVIDIA/AMD process monitor.
+> - **[`bluetui`](https://github.com/pythops/bluetui)** — Bluetooth manager TUI. No need to leave the terminal to pair headphones.
+> - **[`impala`](https://github.com/pythops/impala)** — WiFi manager TUI. Same energy. 
+> - **[`grim`](https://sr.ht/~emersion/grim/)** + **[`slurp`](https://github.com/emersion/slurp)** — screenshot capture. grim grabs, slurp selects the region.
+> - **[`satty`](https://github.com/gabm/satty)** — Screenshot annotation. Draw on screenshots before sharing.
+> - **[`gpu-screen-recorder`](https://git.dec05eba.com/gpu-screen-recorder)** — low overhead screen recording, GPU accelerated.
+>
+> </details>
 
 <br/>
 <br/>
+
+
+
+> [!IMPORTANT]
+> #### 📁 What's Not In This Repo
+>
+> This repo only tracks configs that differ from Omarchy's defaults. The following are installed and configured on the machine but intentionally not tracked here:
+> <details>
+>
+>   <summary><strong><em>See more?</em></strong></summary>
+>
+> - `walker/` — app launcher
+> - `swayosd/` — volume/brightness OSD
+> - `voxtype/` — voice to text
+> - `wiremix/`, `wireplumber/` — audio routing
+> - `gtk-3.0/`, `gtk-4.0/` — theming
+> - `fontconfig/` — font rendering
+> - `elephant/` — Omarchy note/reminder tool
+> - `fastfetch/` — system info display (Omarchy themed)
+> - `foot/` — Omarchy default terminal, no custom config
+> - `kitty/` — came with Omarchy, unused
+> - `spotify/` — no config worth tracking
+> - `libreoffice/` — default config
+> - `thunderbird/` — email data lives in `~/.thunderbird/`
+> - `obs-studio/` — scene configs are machine-specific
+> - `kdenlive/` — project files not config
+> - `pinta/` — image editor, no meaningful config
+> - `chromium/` — browser profile (~400MB, cookies, sessions)
+> - `obsidian/` — vault config contains local machine paths
+> - `github-copilot/` — auth tokens
+> - `dconf/`, `fcitx5/`, `pulse/` — system managed
+> - `nextjs-nodejs/` — Next.js telemetry (`NEXT_TELEMETRY_DISABLED=1`)
+>
+> </details>
 
 ---
+
+<br/>
+<br/>
