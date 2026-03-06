@@ -75,7 +75,7 @@ A curated list of tools I use daily to support a fast, keyboard-driven terminal-
 - **[Neovim](https://neovim.io/)**: My main job, I mean editor. Blazingly fast, keyboard-first and fully configurable with Lua.
 - **[Vim](https://www.vim.org/)**: The OG fallback for when Neovim is down and I am personally having a kernel panic.
 
-#### Terminal Multiplexing with tmux:
+#### Terminal Multiplexing:
 - **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Muscle memory worth protecting.
 
 #### Other CLI Tools
