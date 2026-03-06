@@ -77,7 +77,6 @@ A curated list of tools I use daily to support a fast, keyboard-driven terminal-
 
 #### Terminal Multiplexing with tmux:
 - **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Muscle memory worth protecting.
-> *Hyprland does window tiling at the OS level. tmux does it inside the terminal.*
 
 #### Other CLI Tools
 > <details>
