@@ -82,7 +82,6 @@ Dont forget the 'Native MacOS Essentails' mentioned above.
 
 #### Terminal Multiplexing:
 - **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal.
-> *WezTerm’s pane support is tempting, but tmux has the ecosystem, the shortcuts, and years of muscle memory behind it.*
 
 #### Other CLI Tools
 > <details>
