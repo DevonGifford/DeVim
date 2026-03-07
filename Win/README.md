@@ -85,7 +85,7 @@ Dont forget the 'Native Windows Essentails' mentioned above.
 - **[Neovim](https://neovim.io/)**: My main job, I mean editor. Blazingly fast, keyboard-first and fully configurable with Lua.
 - **[VSCode](https://code.visualstudio.com/)**: The fallback, fast to spin up, decent Vim support and reliable across platforms.
 
-#### Terminal Multiplexing with tmux
+#### Terminal Multiplexing:
 - **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal. 
 
 #### Other CLI Tools
@@ -117,8 +117,8 @@ Dont forget the 'Native Windows Essentails' mentioned above.
 > #### 📁 What's Not In This Repo
 >
 > Windows still has its own pile of app state, GUI settings, tokens, caches, profiles, and nonsense. That stuff lives on the machine, not in git. If you’re copying this setup and something looks different, it’s probably one of these:
->
 > <details>
+ >
 >   <summary><strong><em>See more?</em></strong></summary>
 >
 > - WSL distro install/state - the distro itself is not tracked; this repo assumes you already have WSL2 + Ubuntu installed
