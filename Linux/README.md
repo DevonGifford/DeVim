@@ -29,6 +29,13 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤�
 > <br /> Take what you want, but back up first — _getting mogged by fig files can lead to reckless copy-pasting. You’ve been warned._
 
 <br />
+
+<p align="center"> 
+    <picture>
+      <img src="../Docs/images/Devim_showcase.png" height="500">
+    </picture>
+</p>
+
 <br />
 
 ## ⚙️System Overview
