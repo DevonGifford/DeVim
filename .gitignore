@@ -49,7 +49,6 @@ coverage/
 *.tgz
 *.swp
 .cache/
-*.bak
 *.swp
 *.swo
 *.tmp
