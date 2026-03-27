@@ -33,7 +33,7 @@ _Feel free to explore, tweak or shamelessly steal. Most of this was stolen, remi
 
 <p align="center"> 
     <picture>
-      <img src="./Docs/images/Devim_showcase.png" height="500">
+      <img src="./_docs/images/Devim_showcase.png" height="500">
     </picture>
 </p>
 
