@@ -28,7 +28,7 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ‚ù§Ô
 
 <p align="center"> 
     <picture>
-      <img src="../Docs/images/Devim_showcase.png" height="500">
+      <img src="../_docs/images/Devim_showcase.png" height="500">
     </picture>
 </p>
 
