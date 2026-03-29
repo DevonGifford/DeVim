@@ -1,6 +1,6 @@
 <p align="center"> 
     <picture>
-      <img src="../Docs/images/Devim_logo.png" height="180">
+      <img src="../_docs/images/Devim_logo.png" height="180">
     </picture>
 </p>
 
