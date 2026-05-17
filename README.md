@@ -1,6 +1,6 @@
  <p align="center"> 
     <picture>
-      <img src="./_docs/images/devim-readme-banner.png" height="180">
+      <img src="./_docs/images/devim-readme-banner.png" height="250">
     </picture>
 </p>
 
@@ -20,20 +20,14 @@
 
 ## _**Hi, my name is Devon and this is DeVim.**_
 
-**DeVim is my personal dotfiles and dev tooling setup for full-stack development accross the major operating systems.**  <br />
-Arch Linux is the daily driver; macOS and Windows are the work machines I keep civilized.  The goal is simple: keep my workflow familiar across operating systems without pretending they’re all the same - fast, portable, and mildly overthought in all the right places.
+**DeVim is my personal dev tooling for full-stack development accross the major operating systems.**  <br />
+[Linux](./Linux) is the daily driver; [MacOS](./MacOS) and [Windows](./Windows) are the work machines I keep civilized.  The goal is simple: keep my workflow familiar across operating systems without pretending they’re all the same - fast, portable, and mildly overthought in all the right places.
 
 _Feel free to explore, tweak or shamelessly steal. Most of this was stolen, remixed, broken, fixed and then stolen again anyway. Suggestions welcome. ❤️_
 
-> [!NOTE]
-> **DeVim is split into:** [MacOS](./MacOS), [Windows](./Windows) & [Linux](./Linux).
-> <br /> Configs stay as aligned as possible across platforms, with enough room to experiment without nuking everything.
->
-> _Consistency where it matters. Chaos where it’s productive._ 🔥
-
 <p align="center"> 
     <picture>
-      <img src="./_docs/images/DeVim-Linux.png" height="500">
+      <img src="./_docs/images/DeVim-Linux.png" height="400">
     </picture>
 </p>
 

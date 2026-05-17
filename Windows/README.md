@@ -1,5 +1,5 @@
  <p align="center"> <picture>
-      <img src="./_docs/images/devim-readme-banner.png" height="180">
+      <img src="../_docs/images/devim-readme-banner.png" height="250">
     </picture>
 </p>
 
@@ -24,7 +24,7 @@ Hey, I’m Devon - and this is DeVim, my personal, curated dotfiles and tooling 
 
 <p align="center"> 
     <picture>
-      <img src="../_docs/images/DeVim_Windows.png" height="500">
+      <img src="../_docs/images/DeVim_Windows.png" height="400">
     </picture>
 </p>
 

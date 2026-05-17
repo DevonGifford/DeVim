@@ -1,6 +1,6 @@
 <p align="center"> 
     <picture>
-      <img src="./_docs/images/devim-readme-banner.png" height="180">
+      <img src="../_docs/images/devim-readme-banner.png" height="250">
     </picture>
 </p>
 
@@ -26,7 +26,7 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ‚ù§Ô
 
 <p align="center"> 
     <picture>
-      <img src="../_docs/images/DeVim-Linux.png" height="500">
+      <img src="../_docs/images/DeVim-Linux.png" height="400">
     </picture>
 </p>
 
