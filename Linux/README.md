@@ -19,68 +19,63 @@
 <br/>
 <br/>
 
-## Daily driving Arch Linux for full-stack development.
+## _**Daily driving Arch Linux for full-stack development.**_
 
-Hey, I'm Devon — and this is DeVim, my personal dotfiles and tooling setup for Linux, built on top of [Omarchy](https://omarchy.com) by DHH. Minimal diffs, maximum comfort, zero regrets.
-
+Hey, I'm Devon - and this is DeVim, my personal dotfiles and tooling setup for Linux, built on top of [Omarchy](https://omarchy.com) by DHH. Minimal diffs, maximum comfort, zero regrets.
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
-> [!WARNING]\
-> This setup is under **active development**. Things may change frequently, and existing config files might get overwritten.
-> <br /> This repo only tracks configs that differ from Omarchy's defaults. Install Omarchy first, then layer these on top.
-> <br /> _Make sure to back up anything you want to keep._
+> [!WARNING]
+> These dotfiles are always under active development. Things may change, move, or stomp on your existing config.
+> <br /> Take what you want, but back up first — _getting mogged by fig files can lead to reckless copy-pasting. You’ve been warned._
 
 <br />
 <br />
 
-## ⚙️ System Overview
+## ⚙️System Overview
 
-[Omarchy](https://omarchy.com) is an opinionated Arch-based distro built by the infamouse DHH. After distro hopping around a bit - some distros trying too hard to be Windows, some cosplaying macOS, most either undercooked or riced in all the wrong ways - this one just fits. It's riced roughly how I would have done it myself, which either says a lot about DHH's taste or raises some questions about where he got his inspiration.
-
-My setup barely differs from the defaults — a few keybindings, a custom Waybar module or two, and the usual NeoVim and tmux that are too deeply in my muscle memory to ever change. That's genuinely it.
+I distro-hopped for a while. Some wanted to be Windows, some were cosplaying macOS and most were either undercooked or riced in all the wrong ways. Building from scratch with Arch always felt too much overhead for my lazy ahh.  Enter Omarchy. It just fits.  It’s riced roughly how I would have done it myself, which either says a lot about DHH’s taste or raises some questions about where he got his inspiration.
 
 #### 🐧 Omarchy. It uses Arch, btw.
-- **[Arch Linux](https://archlinux.org/)** — rolling release, AUR access, and a wiki that answers everything.
-- **[Hyprland](https://hyprland.org/)** — tiling Wayland compositor. Snappy, GPU-accelerated, and genuinely fun once you stop fighting it.
-- **[Waybar](https://github.com/Alexays/Waybar)** — status bar with custom modules, including a live temperature monitor with color-coded alerts for CPU, GPU, and NVMe drives.
 
-####  ✔ Prerequisites
-Normally I'd list out package managers, runtimes, fonts, and a handful of other things you need to hunt down yourself. Not here — Omarchy is opinionated and ships with all of that. So the list is short:
-- **[Omarchy](https://omarchy.com)** — installed and booted. Follow their guide, come back here when you're staring at your desktop.
-- **[A free SSD](https://wiki.archlinux.org/title/Installation_guide)** — or partition an existing drive if you know what you're doing. Either way, that's between you and the internet.
-- **[A healthy fear of GUIs](https://www.freecodecamp.org/news/command-line-for-beginners/)** — this setup assumes you're comfortable in the terminal and can Vim your way out of trouble.
+- **[Arch Linux](https://archlinux.org/)** - rolling release, AUR access, and a wiki that answers everything.
+- **[Hyprland](https://hyprland.org/)** - tiling Wayland compositor. Fast, pretty and GPU-accelerated.
+- **[Waybar](https://github.com/Alexays/Waybar)** - status bar with bring your own modules.
+
+#### ✔ Prerequisites
+
+Normally I'd list out package managers, runtimes and fonts you need to hunt down yourself. Not here, Omarchy ships with all of that.  
+Just have Omarchy [installed and booted](https://omarchy.com), ideally on a spare SSD you’re happy to wipe. Otherwise, use the [manual install](https://learn.omacom.io/2/the-omarchy-manual/96/manual-installation) and partition carefully. That’s genuinely it.
+
+> Omarchy does 99% of the work out of the box. Exception of a few custom waybar modules and unwanted apps.
+> <br /> This setup is just the tiny layer of Neovim, tmux, and keybinding damage I refuse to unlearn. 😌
 
 <br />
 <br />
 
 ## 📝 Developer Tools Collection
 
-A curated list of tools I use daily for a fast, keyboard-driven development workflow on Linux. These either come with Omarchy or are installed on top.
+A curated list of tools I use daily to support a fast, keyboard-driven terminal-first development workflow on Omarchy machine. 
 
 #### General Tools:
 - **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first, Vim-friendly note-taking. Cross-platform so your vault follows you everywhere.
 - **[LocalSend](https://localsend.org/)**: Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
 - **[KeePassXC](https://keepassxc.org/)**: Local password manager. No cloud, no subscription, no drama.
 - **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
-> *Linux doesn't need much help in the productivity department. The terminal IS the productivity layer.*
 
 #### Terminal:
 - **[Alacritty](https://Alacritty.org/)**: Omarchy's default terminal. Lightweight, fast. No config needed.
-- **[Ghostty](https://ghostty.org/)**: Linux backup — cross-platform, written in Zig, native feel on every OS.
-> *Omarchy has some opinionated terminals, normally I use wezterm, but DHH and Alacritty is fine.*
+- **[Ghostty](https://ghostty.org/)**: The backup, also cross-platform, bonus for being written in Zig.
 
 #### Shell & Prompt:
-- **[Bash](https://www.gnu.org/software/bash/)**: Omarchy default. I stay close to the base config and only add what's necessary.
+- **[Bash](https://www.gnu.org/software/bash/)**: Omarchy default. Opinionated no zsh taking some adapting.
 - **[Starship](https://starship.rs/)**: Fast, portable, Rust-powered. One config across every machine and shell I care about.
-> *Normally prefer zsh but trying to stick close to DHH and his opinon that zsh was a mistake.*
 
 #### Editors:
-- **[Neovim](https://neovim.io/)**: My main editor — blazingly fast, keyboard-first, fully configured in Lua.
+- **[Neovim](https://neovim.io/)**: My main editor. Blazingly fast, keyboard-first, fully configured in Lua.
 - **[VSCode](https://code.visualstudio.com/)**: The reliable fallback. Decent Vim support when you need a GUI.
-> *Use what works, configure what doesn't, and end up falling back to vscode.*
 
 #### Terminal Multiplexing with tmux:
-- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Same config as macOS — muscle memory is worth protecting.
+- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: Split panes, persistent sessions, parallel processes. Same config as macOS - muscle memory is worth protecting.
 > *Hyprland does window tiling at the OS level. tmux does it inside the terminal.*
 
 <br/>
@@ -145,3 +140,8 @@ This repo only tracks configs that differ from Omarchy's defaults. The following
 - `github-copilot/` — auth tokens
 - `dconf/`, `fcitx5/`, `pulse/` — system managed
 - `nextjs-nodejs/` — Next.js telemetry (`NEXT_TELEMETRY_DISABLED=1`)
+
+<br/>
+<br/>
+
+---

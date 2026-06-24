@@ -21,29 +21,32 @@
 
 ## _**A minimal Mac setup for full-stack development.**_
 
-Hi, I’m Devon — and this is DeVim, my personal, curated dotfiles setup for macOS. It’s the toolkit I use daily for full-stack development, optimized around the terminal and powered by NeoVim.
-
+Hi, I’m Devon - and this is DeVim, my personal, curated dotfiles setup for macOS. It’s the toolkit I use daily for full-stack development, optimized around the terminal and powered by NeoVim.
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
-> [!WARNING]\
-> This setup is under **active development**. Things may change frequently, and existing config files might get overwritten.  
-> <br /> _Make sure to back up anything you want to keep._  
+> [!WARNING]
+> These dotfiles are always under active development. Things may change, move, or stomp on your existing config.
+> <br /> Take what you want, but back up first — _getting mogged by fig files can lead to reckless copy-pasting. You’ve been warned._
 
 <br />
 <br />
 
 ## ⚙️ System Overview
 
-macOS is a solid base for dev work — Unix roots, slick UI, and fewer headaches than most Linux setups. But it’s far from perfect. The stock terminal? Meh. Window management? Nonexistent. And the productivity layer is barely there. This setup fills in the blanks with tools that actually keep up. (without going fully linux)
+MacOS is a solid machine for dev work. Unix roots, Apple silicone, pretty UI and generally fewer headaches than Windows. But let's not pretend it's perfect. 
+The stock terminal? Meh. Window management? Barely there. Tiling? Bring your own. Xcode? No thanks.  This setup fills in the blanks with tools that actually keep up.
 
+#### 🍎 Native MacOS Essentials
 
-#### Because macOS Still Needs a Bit of Help
+Because macOS still needs a bit of help.  Not required, but strongly recommended - these fix the friction points and make the whole thing feel like it was designed for developers:
 
-These tools fix the friction points, smarter multitasking, better window management, faster navigation and less time wasted:
+- **[Raycast](https://www.raycast.com/)** - like Spotlight, but actually good. App launcher, script runner, and productivity Swiss Army knife.
+- **[Rectangle](https://rectangleapp.com/)** - snap windows like it's Windows. One of the first things I install on any Mac.
+- **[AltTab](https://alt-tab-macos.netlify.app/)** - Cmd+Tab the way it was meant to be, with full previews and sanity.
 
-- **[Raycast](https://www.raycast.com/)**: Like Spotlight, but actually good. App launcher, script runner, and productivity Swiss Army knife.
-- **[Rectangle](https://rectangleapp.com/)**: Snap windows like it’s Windows. One of the first things I install on any Mac.
-- **[AltTab](https://alt-tab-macos.netlify.app/)**: Cmd+Tab the way it was meant to be — with full previews and sanity restored.
+#### ✔ Prerequisites
+
+[Homebrew](https://brew.sh/) is the only real prerequisite, everything else flows from there. A Nerd Font helps ([Hack](https://www.nerdfonts.com/) or [JetBrains Mono](https://www.nerdfonts.com/) are solid choices), but honestly just `brew install` your way through the rest.  Oh, and a healthy fear of GUIs is recommended. This setup assumes you're comfortable in the terminal and can Vim your way out of trouble.
 
 > macOS does 80% of the job with style. This setup’s for the last 20% that actually matters.
 > <br /> *It’s clean, it’s quiet, it mostly Just Works™* 🙌
@@ -51,58 +54,31 @@ These tools fix the friction points, smarter multitasking, better window managem
 <br />
 <br />
 
-## ✔ Prerequisites
-
-Before diving in, make sure you’ve got these installed — or at least know what they’re for:
-
-- **[Homebrew](https://brew.sh/)** – The package manager. You’ll use it for almost everything.
-- **[Node.js](https://nodejs.org/)** – `nvm` recommended. Don't fight the versions manually.
-- **[C compiler](https://clang.llvm.org/)** – Comes bundled with Xcode CLI tools.
-- **[Lua](https://www.lua.org/)** – Needed for Neovim config, but not as scary as it sounds.
-- **[GitHub CLI](https://cli.github.com/)** – Makes GitHub feel local. Essential for Copilot CLI too.
-- **[Nerd Fonts](https://www.nerdfonts.com/)** – Hack Nerd and Fira Code Nerd are both great choices.
-- **[A healthy fear of GUIs](https://www.freecodecamp.org/news/command-line-for-beginners/)** – this setup assumes you're comfortable in the terminal and can Vim your way out of trouble.
-
-<br />
-<br />
-
 ## 📝Developer Tools Collection
 
-A curated list of tools I use daily to support a fast, keyboard-driven development workflow on macOS. These fill in the gaps, improve the defaults, and make terminal-first dev life smoother.
+A curated list of tools I use daily to support a fast, keyboard-driven terminal-first development workflow on macOS. These fill in the gaps, improve the defaults, 
+Dont forget the 'Native MacOS Essentails' mentioned above.
 
 #### General Tools:
--   **[Raycast](https://www.raycast.com/)**: The macOS launcher Apple wishes it built. Run scripts, manage extensions, control your system — all from your keyboard.
--   **[Obsidian](https://github.com/obsidianmd)**: Markdown-based, local-first, Vim-friendly, cross-platform note-taking app, Excalidraw plugin is cool too.
--   **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
-> *macOS is a solid base for development, but there are still areas where the default experience falls short.*
-<br/>
+- **[Obsidian](https://obsidian.md/)**: Markdown-based, local-first, Vim-friendly, Cross-platform note-taking tool.
+- **[LocalSend](https://localsend.org/)**: Cross-platform AirDrop alternative. Useful across Linux/Mac/Windows.
+- **[KeePassXC](https://keepassxc.org/)**: Local password manager. No cloud, no subscription, no drama.
+- **[Todoist](https://todoist.com/)**: A clean, cross-platform to-do app for personal tasks, dev stuff, and whatever chaos I’m pretending to control.
 
 #### Terminal:
-- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, Lua-configurable, and powered by Rust — my daily driver.
-- **[iTerm2](https://iterm2.com/)**: Polished and mac-native. Still a strong contender.
-> *For fonts, I use [Nerd Fonts](https://www.nerdfonts.com/), usually Hack Nerd or JetBrains Mono. Because vibes matter.*
-<br/>
+- **[WezTerm](https://wezfurlong.org/wezterm/index.html)**: GPU-accelerated, cross-platform, Lua-configurable, and powered by Rust - my daily driver.
+- **[iTerm2](https://iterm2.com/)**: Polished and mac-native fallback terminal. Still a strong terminal.
 
-#### Shell:
+#### Shell + Prompt:
 - **[Zsh](https://www.zsh.org/)** + **[Oh My Zsh](https://ohmyz.sh/)**: Fast, scriptable, and gets out of the way. With just enough plugins to feel modern.
-> *Don't skip the extras — autosuggestions and syntax highlighting go a long way.*
-<br/>
-
-#### Prompt:
-- **[Powerlevel10k](https://github.com/romkatv/powerlevel10k)**: Flashy, customizable, and great if you want everything *just so*.
-> *Phasing it out in favor of [Starship](https://starship.rs/) – for lighter, cross-shell setup*
-<br/>
+- **[Starship](https://starship.rs/)**: Fast, portable, Rust-powered cross-shell prompt. 
 
 #### Editors
-Over the years, I’ve used everything from Notepad and Sublime to the cursed Xcode.
-- **[VSCode](https://code.visualstudio.com/)**: The GOAT fallback — fast to spin up, decent Vim support, and reliable across platforms.
-- **[Neovim](https://neovim.io/)**: My main job, I mean editor — blazingly fast, keyboard-first, and fully configurable with [Lua](https://www.lua.org/).
-- **[Cursor](https://cursor.sh/)**: The experimental one — AI-heavy, Copilot-native, and weirdly useful when vibe matters more than precision.
-> *Use what works, configure what doesn't, and pretend the defaults were fine all along.*
-<br/>
+- **[Neovim](https://neovim.io/)**: My main job, I mean editor. Blazingly fast, keyboard-first, and fully configurable with Lua.
+- **[VSCode](https://code.visualstudio.com/)**: The fallback, fast to spin up, decent Vim support and reliable across platforms.
 
 #### Terminal Multiplexing with tmux
-**[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive — even after closing the terminal.
+- **[`tmux`](https://en.wikipedia.org/wiki/Tmux)**: A terminal multiplexer for splitting panes, running parallel processes, and keeping sessions alive - even after closing the terminal.
 > *WezTerm’s pane support is tempting, but tmux has the ecosystem, the shortcuts, and years of muscle memory behind it.*
 
 <br/>
@@ -123,6 +99,26 @@ These tools are now part of the core experience (via Homebrew in WSL):
 - **[`GitHub Copilot CLI`](https://github.com/github/cli-copilot)** – AI for your terminal, generate commands, explain errors and pretend you did it yourself. 
 - **[`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)** – Suggests commands from your history as you type.
 - **[`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)** – Adds real-time syntax highlighting to your Zsh input. 
+
+<br/>
+
+#### 📁 What's Not In This Repo
+This repo only tracks configs that differ from Omarchy's defaults. The following are installed and configured on the machine but intentionally not tracked here:
+macOS also creates a mountain of app state, GUI preferences, caches, tokens, and “why is this 900MB?” folders. That stuff lives on the machine, not in git. If you’re copying this setup and something looks different, it’s probably one of these:
+
+- `~/Library/Application Support/` — app state, caches, auth, local settings; not portable
+- `~/Library/Preferences/` — noisy macOS/app `.plist` files
+- `~/Library/Keychains/` — passwords, certificates, secrets; absolutely not tracked
+- `~/.ssh/`, `~/.gnupg/` — keys and trust state stay private
+- `~/.docker/`, `~/.kube/` — local contexts, auth, machine-specific config
+- `~/.aws/`, `~/.config/gcloud/`, `~/.azure/` — cloud credentials and profiles
+- `~/.npmrc`, `~/.yarnrc.yml` — package-manager auth/local settings
+- `/Applications/`, `~/Applications/` — apps come from Homebrew/Brewfile or manual install
+- `~/Library/Fonts/` — fonts are installed separately; grab a Nerd Font if icons look broken
+- Browser profiles — cookies, sessions, extensions, history; no thanks
+- Raycast / Alfred / Rectangle / Karabiner — personal workflow tools, not core dotfiles
+- VS Code / Cursor profiles — extensions/settings may be documented, but full app state is not tracked
+- macOS System Settings — some defaults can be scripted, but I’m not pretending macOS GUI state belongs in git
 
 <br/>
 <br/>

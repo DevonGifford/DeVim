@@ -18,20 +18,20 @@
 
 <br/>
 
-## _**Hi my name is Devon and this is DeVim.**_
+## _**Hi, my name is Devon and this is DeVim.**_
 
-DeVim is my personal dotfiles and tooling setup for full-stack development. It helps me keep a consistent, fast-to-setup environment across both macOS and Windows (via WSL).
+**DeVim is my personal dotfiles and dev tooling setup for full-stack development accross the major operating systems.**  <br />
+Arch Linux is the daily driver; macOS and Windows are the work machines I keep civilized.  The goal is simple: keep my workflow familiar across operating systems without pretending they’re all the same - fast, portable, and mildly overthought in all the right places.
 
-Feel free to explore, tweak, or shamelessly steal — most of it was stolen to begin with. Suggestions welcome. ❤️
+_Feel free to explore, tweak or shamelessly steal. Most of this was stolen, remixed, broken, fixed and then stolen again anyway. <br /> Suggestions welcome. ❤️_
 
-> [!NOTE]\
-> **DeVim is intentionally split into macOS and Windows setups.**
+> [!NOTE]
+> **DeVim is split into:** [Mac](./Mac), [Windows](./Win) & [Linux](./Linux).
+> <br /> Configs stay as aligned as possible across platforms, with enough room to experiment without nuking everything.
 >
-> This keeps personal and work environments isolated and reduces the risk of accidental breakage.  
-> The configs stay as aligned as possible across platforms, while still leaving room to experiment safely.
-> _Consistency where it matters. Flexibility where it counts._ 🌶️
+> _Consistency where it matters. Chaos where it’s productive._ 🔥
 
- <p align="center"> 
+<p align="center"> 
     <picture>
       <img src="./Docs/images/Devim_showcase.png" height="500">
     </picture>
@@ -42,28 +42,30 @@ Feel free to explore, tweak, or shamelessly steal — most of it was stolen to b
 ## 🛠️ Setup and Learning Resources
 
 > ⚠️ **The bad news:**  
-> This repo doesn’t come with an installer, wizard, or training montage.  
-> It also won’t teach you how to Vim or tweak Lua.
+> This repo doesn't come with an installer, wizard, or training montage.  
+> It also won't teach you how to Vim or tweak Lua.
 
 <br/>
 
 > ✅ **The good news:**  
-> If you know your way around a terminal, setup is chill.  
-> I’ve dropped a lil markdown with my keybindings in the docs — should help you get started.
+> If you know your way around a terminal, setup is pretty chill.  
+> I’ve included some docs and keybinding notes to help you steal responsibly.
 
 <br />
 <br />
 
 ## 🙌 Special Thanks
 
-Shout-out to the following people for inspiration, ideas, and support:
+Shout-out to the following people for inspiration, ideas and support:
 
 - [@maxischmaxi](https://github.com/maxischmaxi)
 - [@jayson-lennon](https://github.com/jayson-lennon)
 - [@scottmckendry](https://github.com/scottmckendry)
-- [@JazzyGrim](https://github.com/JazzyGrim) (Sindo)
 - [@devaslife](https://www.devas.life/)
 - [@tjdevries](https://github.com/tjdevries)
 - [@ThePrimeagen](https://github.com/theprimeagen)
+- [@JazzyGrim](https://github.com/JazzyGrim) (Sindo)
+- [@David Heinemeier Hansson](https://github.com/dhh) (DHH)
+
 
 ---
