@@ -1,6 +1,6 @@
  <p align="center"> 
     <picture>
-      <img src="./Docs/images/Devim_logo.png" height="180">
+      <img src="./_docs/images/Devim_logo.png" height="180">
     </picture>
 </p>
 
@@ -26,14 +26,14 @@ Arch Linux is the daily driver; macOS and Windows are the work machines I keep c
 _Feel free to explore, tweak or shamelessly steal. Most of this was stolen, remixed, broken, fixed and then stolen again anyway. <br /> Suggestions welcome. ❤️_
 
 > [!NOTE]
-> **DeVim is split into:** [Mac](./Mac), [Windows](./Win) & [Linux](./Linux).
+> **DeVim is split into:** [MacOS](./MacOS), [Windows](./Windows) & [Linux](./Linux).
 > <br /> Configs stay as aligned as possible across platforms, with enough room to experiment without nuking everything.
 >
 > _Consistency where it matters. Chaos where it’s productive._ 🔥
 
 <p align="center"> 
     <picture>
-      <img src="./Docs/images/Devim_showcase.png" height="500">
+      <img src="./_docs/images/Devim_showcase.png" height="500">
     </picture>
 </p>
 
