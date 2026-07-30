@@ -30,7 +30,7 @@ Hey, I’m Devon - and this is DeVim, my personal, curated dotfiles and tooling 
 
 <p align="center"> 
     <picture>
-      <img src="../_docs/images/Devim_showcase.png" height="500">
+      <img src="../_docs/images/DeVim_Windows.png" height="500">
     </picture>
 </p>
 
