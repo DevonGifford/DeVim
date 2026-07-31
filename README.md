@@ -33,7 +33,7 @@ _Feel free to explore, tweak or shamelessly steal. Most of this was stolen, remi
 
 <p align="center"> 
     <picture>
-      <img src="./_docs/images/DeVim-Linux-2.png" height="500">
+      <img src="./_docs/images/DeVim-Linux.png" height="500">
     </picture>
 </p>
 
