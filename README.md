@@ -28,8 +28,7 @@ _Feel free to explore, tweak or shamelessly steal. Most of this was stolen, remi
 > [!NOTE]
 > **DeVim is split into:** [MacOS](./MacOS), [Windows](./Windows) & [Linux](./Linux).
 > <br /> Configs stay as aligned as possible across platforms, with enough room to experiment without nuking everything.
->
-> _Consistency where it matters. Chaos where it’s productive._ 🔥
+> <br />  _Consistency where it matters. Chaos where it’s productive._ 🔥
 
 <p align="center"> 
     <picture>
