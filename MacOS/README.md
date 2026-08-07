@@ -25,11 +25,11 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ‚ù§Ô
 
 <br />
 
-<!-- <p align="center">  -->
-<!--     <picture> -->
-<!--       <img src="../_docs/images/PENDING_NEW_SCREENSHOTS" height="500"> -->
-<!--     </picture> -->
-<!-- </p> -->
+<p align="center">
+     <picture> 
+       <img src="../_docs/images/DeVim-MacOS.png" height="500"> 
+     </picture> 
+ </p> 
 
 <br />
 
