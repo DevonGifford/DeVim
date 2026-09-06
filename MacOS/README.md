@@ -7,13 +7,7 @@
 <div align="center">
   <img src="https://img.shields.io/github/last-commit/DevonGifford/DeVim?style=for-the-badge" alt="Last Commit">
   <img src="https://img.shields.io/badge/synced-yes-green?style=for-the-badge" alt="Synced">
-  <img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge" alt="Build">
-  <img src="https://img.shields.io/badge/version-v1.0-blue?style=for-the-badge" alt="Version">
-</div>
-
-<div align="center">
   <img src="https://img.shields.io/badge/code%20quality-excellent-brightgreen?style=for-the-badge" alt="Code Quality">
-  <img src="https://img.shields.io/github/stars/DevonGifford/DeVim?style=for-the-badge" alt="Stars">
 </div>
 
 <br/>
@@ -24,13 +18,18 @@
 Hi, I’m Devon - and this is DeVim, my personal, curated dotfiles setup for macOS. It’s the toolkit I use daily for full-stack development, optimized around the terminal and powered by NeoVim.
 Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ❤️
 
+> [!WARNING]
+> These dotfiles are always under active development. Things may change, move, or stomp on your existing config.
+> <br /> Take what you want, but back up first — _getting mogged by fig files can lead to reckless copy-pasting. You’ve been warned._
+
+
 <br />
 
-<p align="center"> 
-    <picture>
-      <img src="../_docs/images/Devim_showcase.png" height="500">
-    </picture>
-</p>
+<p align="center">
+     <picture> 
+       <img src="../_docs/images/DeVim-MacOS.png" height="500"> 
+     </picture> 
+ </p> 
 
 <br />
 

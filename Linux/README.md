@@ -7,13 +7,7 @@
 <div align="center">
   <img src="https://img.shields.io/github/last-commit/DevonGifford/DeVim?style=for-the-badge" alt="Last Commit">
   <img src="https://img.shields.io/badge/synced-yes-green?style=for-the-badge" alt="Synced">
-  <img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge" alt="Build">
-  <img src="https://img.shields.io/badge/version-v1.0-blue?style=for-the-badge" alt="Version">
-</div>
-
-<div align="center">
   <img src="https://img.shields.io/badge/code%20quality-excellent-brightgreen?style=for-the-badge" alt="Code Quality">
-  <img src="https://img.shields.io/github/stars/DevonGifford/DeVim?style=for-the-badge" alt="Stars">
 </div>
 
 <br/>
@@ -32,7 +26,7 @@ Feel free to explore, customize, or shamelessly steal. Suggestions welcome. ‚ù§Ô
 
 <p align="center"> 
     <picture>
-      <img src="../_docs/images/Devim_showcase.png" height="500">
+      <img src="../_docs/images/DeVim-Linux.png" height="500">
     </picture>
 </p>
 
