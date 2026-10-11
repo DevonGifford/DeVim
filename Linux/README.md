@@ -1,6 +1,6 @@
 <p align="center"> 
     <picture>
-      <img src="../_docs/images/Devim_logo.png" height="180">
+      <img src="./_docs/images/devim-readme-banner.png" height="180">
     </picture>
 </p>
 
